@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Admin — Frenkli.dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --navy:#0f1f3d;--cream:#f8f5ef;--cream2:#efe9df;--white:#fff;
+      --accent:#2563ff;--red:#e85d3a;--green:#059669;
+      --text:#0f1f3d;--muted:#6b7694;--border:rgba(15,31,61,0.1);
+      --fh:'Plus Jakarta Sans',sans-serif;--fm:'JetBrains Mono',monospace;
+    }
+    body{background:var(--cream);color:var(--text);font-family:var(--fh);font-size:15px;line-height:1.6;}
+
+    /* LOGIN */
+    .login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);}
+    .login-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2.5rem;width:360px;box-shadow:0 20px 60px rgba(15,31,61,0.1);}
+    .login-logo{width:44px;height:44px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;color:var(--cream);margin-bottom:1.5rem;}
+    .login-title{font-weight:800;font-size:1.4rem;letter-spacing:-0.03em;margin-bottom:0.25rem;}
+    .login-sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.75rem;}
+    .field{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;}
+    .field label{font-family:var(--fm);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+    .field input,.field textarea,.field select{background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:0.75rem 1rem;color:var(--text);font-family:var(--fh);font-size:0.9rem;outline:none;transition:border-color 0.15s;width:100%;}
+    .field input:focus,.field textarea:focus{border-color:var(--accent);background:var(--white);}
+    .field textarea{resize:vertical;min-height:80px;}
+    .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:50px;font-family:var(--fh);font-size:0.85rem;font-weight:600;cursor:pointer;border:none;transition:all 0.15s;text-decoration:none;}
+    .btn-primary{background:var(--navy);color:var(--cream);width:100%;justify-content:center;}
+    .btn-primary:hover{background:var(--accent);}
+    .btn-sm{padding:0.4rem 1rem;font-size:0.78rem;border-radius:50px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:var(--fh);font-weight:500;transition:all 0.15s;}
+    .btn-sm:hover{background:var(--navy);color:var(--cream);border-color:var(--navy);}
+    .btn-danger{border-color:rgba(232,93,58,0.3);color:var(--red);}
+    .btn-danger:hover{background:var(--red);color:white;border-color:var(--red);}
+    .btn-success{border-color:rgba(5,150,105,0.3);color:var(--green);}
+    .btn-success:hover{background:var(--green);color:white;border-color:var(--green);}
+    .btn-accent{background:var(--accent);color:white;border:none;}
+    .btn-accent:hover{background:#1a4ae0;}
+    .err{font-size:0.8rem;color:var(--red);margin-top:0.5rem;display:none;}
+
+    /* LAYOUT */
+    .app{display:none;min-height:100vh;}
+    .topbar{background:var(--white);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+    .topbar-logo{font-weight:800;font-size:1rem;letter-spacing:-0.03em;color:var(--navy);}
+    .topbar-logo span{color:var(--accent);}
+    .topbar-right{display:flex;align-items:center;gap:1rem;}
+    .topbar-link{font-size:0.8rem;color:var(--muted);text-decoration:none;font-family:var(--fm);}
+    .topbar-link:hover{color:var(--navy);}
+    .saved-badge{font-family:var(--fm);font-size:0.7rem;background:rgba(5,150,105,0.1);color:var(--green);padding:0.3rem 0.8rem;border-radius:50px;display:none;}
+
+    .content{max-width:860px;margin:0 auto;padding:2.5rem 2rem;}
+
+    /* TABS */
+    .tabs{display:flex;gap:0.25rem;margin-bottom:2rem;background:var(--cream2);border-radius:50px;padding:4px;width:fit-content;}
+    .tab{font-size:0.8rem;font-weight:500;padding:0.5rem 1.1rem;border-radius:50px;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all 0.15s;font-family:var(--fh);}
+    .tab.active{background:var(--white);color:var(--navy);box-shadow:0 1px 4px rgba(15,31,61,0.1);}
+
+    .tab-content{display:none;}
+    .tab-content.active{display:block;}
+
+    /* SECTION */
+    .section-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.75rem;margin-bottom:1.25rem;}
+    .section-card-title{font-weight:700;font-size:1rem;letter-spacing:-0.02em;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:space-between;}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+
+    /* ITEMS LIST */
+    .item-list{display:flex;flex-direction:column;gap:0.75rem;}
+    .item-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.25rem;}
+    .item-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;}
+    .item-card-title{font-weight:600;font-size:0.9rem;}
+    .item-card-sub{font-size:0.78rem;color:var(--muted);margin-top:2px;}
+    .item-actions{display:flex;gap:0.5rem;}
+    .add-btn{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--accent);background:rgba(37,99,255,0.08);border:none;padding:0.5rem 1rem;border-radius:50px;cursor:pointer;font-weight:600;font-family:var(--fh);margin-top:1rem;transition:all 0.15s;}
+    .add-btn:hover{background:rgba(37,99,255,0.15);}
+
+    /* MODAL */
+    .modal-overlay{position:fixed;inset:0;background:rgba(15,31,61,0.4);display:flex;align-items:center;justify-content:center;z-index:100;display:none;}
+    .modal{background:var(--white);border-radius:20px;padding:2rem;width:540px;max-width:95vw;max-height:90vh;overflow-y:auto;}
+    .modal-title{font-weight:800;font-size:1.1rem;letter-spacing:-0.03em;margin-bottom:1.5rem;}
+    .modal-actions{display:flex;gap:0.75rem;justify-content:flex-end;margin-top:1.5rem;}
+
+    /* EXPORT */
+    .export-bar{background:var(--navy);color:var(--cream);border-radius:16px;padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+    .export-bar-text div:first-child{font-weight:700;font-size:0.95rem;margin-bottom:0.2rem;}
+    .export-bar-text div:last-child{font-size:0.8rem;color:rgba(248,245,239,0.55);}
+    .btn-export{background:var(--accent);color:white;border:none;padding:0.65rem 1.5rem;border-radius:50px;font-size:0.82rem;font-weight:600;cursor:pointer;font-family:var(--fh);transition:all 0.15s;}
+    .btn-export:hover{background:#1a4ae0;transform:translateY(-1px);}
+
+    .tag-input-wrap{display:flex;flex-wrap:wrap;gap:0.4rem;background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:0.6rem;min-height:44px;cursor:text;}
+    .tag-pill{background:var(--navy);color:var(--cream);font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:50px;display:flex;align-items:center;gap:0.3rem;font-family:var(--fm);}
+    .tag-pill button{background:none;border:none;color:rgba(248,245,239,0.6);cursor:pointer;font-size:0.8rem;line-height:1;padding:0;}
+    .tag-pill button:hover{color:var(--cream);}
+    .tag-input{border:none;background:transparent;outline:none;font-size:0.85rem;font-family:var(--fh);color:var(--text);min-width:80px;flex:1;}
+  </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">FZ</div>
+    <div class="login-title">Admin Panel</div>
+    <div class="login-sub">Sign in to manage your portfolio</div>
+    <div class="field">
+      <label>Username</label>
+      <input type="text" id="loginUser" placeholder="frenkli"/>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" id="loginPass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <div class="err" id="loginErr">Wrong credentials. Please try again.</div>
+    <button class="btn btn-primary" style="margin-top:0.5rem;" onclick="doLogin()">Sign in →</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div class="app" id="app">
+  <div class="topbar">
+    <div class="topbar-logo">frenkli<span>.</span>admin</div>
+    <div class="topbar-right">
+      <span class="saved-badge" id="savedBadge">✓ Saved</span>
+      <a href="/" target="_blank" class="topbar-link">↗ View site</a>
+      <button class="btn-sm" onclick="doLogout()">Sign out</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="export-bar">
+      <div class="export-bar-text">
+        <div>Ready to publish your changes?</div>
+        <div>Download the updated index.html and upload it to GitHub to go live.</div>
+      </div>
+      <button class="btn-export" onclick="exportSite()">⬇ Download index.html</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('hero')">Hero</button>
+      <button class="tab" onclick="switchTab('projects')">Projects</button>
+      <button class="tab" onclick="switchTab('experience')">Experience</button>
+      <button class="tab" onclick="switchTab('skills')">Skills</button>
+      <button class="tab" onclick="switchTab('contact')">Contact</button>
+    </div>
+
+    <!-- HERO TAB -->
+    <div class="tab-content active" id="tab-hero">
+      <div class="section-card">
+        <div class="section-card-title">Hero & Bio</div>
+        <div class="grid2">
+          <div class="field"><label>Full Name</label><input id="h-name" placeholder="Frenkli Zeqollari"/></div>
+          <div class="field"><label>Role / Title</label><input id="h-role" placeholder="Software Engineering Student"/></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label>Location</label><input id="h-location" placeholder="Berlin, Germany"/></div>
+          <div class="field"><label>Status Badge</label><input id="h-status" placeholder="Available for opportunities"/></div>
+        </div>
+        <div class="field"><label>Hero Description</label><textarea id="h-desc" rows="3" placeholder="Short bio shown in hero section..."></textarea></div>
+        <div class="field"><label>University</label><input id="h-uni" placeholder="UE Potsdam"/></div>
+        <div class="field"><label>Current Build (shown on card)</label><input id="h-building" placeholder="Taply &amp; Navi"/></div>
+        <button class="btn-sm btn-success" style="margin-top:0.5rem;" onclick="saveHero()">Save Hero</button>
+      </div>
+    </div>
+
+    <!-- PROJECTS TAB -->
+    <div class="tab-content" id="tab-projects">
+      <div class="section-card">
+        <div class="section-card-title">
+          Projects
+          <button class="add-btn" onclick="openModal('project')">+ Add project</button>
+        </div>
+        <div class="item-list" id="projects-list"></div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE TAB -->
+    <div class="tab-content" id="tab-experience">
+      <div class="section-card">
+        <div class="section-card-title">Tech & IT Experience</div>
+        <div class="item-list" id="exp-tech-list"></div>
+        <button class="add-btn" onclick="openModal('exp','tech')">+ Add IT role</button>
+      </div>
+      <div class="section-card">
+        <div class="section-card-title">Leadership & Other</div>
+        <div class="item-list" id="exp-other-list"></div>
+        <button class="add-btn" onclick="openModal('exp','other')">+ Add role</button>
+      </div>
+    </div>
+
+    <!-- SKILLS TAB -->
+    <div class="tab-content" id="tab-skills">
+      <div class="section-card">
+        <div class="section-card-title">Mobile & Frontend</div>
+        <div class="tag-input-wrap" id="skills-mobile" onclick="focusTagInput(this)"></div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-title">Backend & Data</div>
+        <div class="tag-input-wrap" id="skills-backend" onclick="focusTagInput(this)"></div>
+      </div>
+      <div class="section-card">
+        <div class="section-card-title">DevOps & IT</div>
+        <div class="tag-input-wrap" id="skills-devops" onclick="focusTagInput(this)"></div>
+      </div>
+      <button class="btn-sm btn-success" onclick="saveSkills()">Save Skills</button>
+    </div>
+
+    <!-- CONTACT TAB -->
+    <div class="tab-content" id="tab-contact">
+      <div class="section-card">
+        <div class="section-card-title">Contact Information</div>
+        <div class="grid2">
+          <div class="field"><label>Email</label><input id="c-email" placeholder="frenklif50@gmail.com"/></div>
+          <div class="field"><label>Phone</label><input id="c-phone" placeholder="+49 178 3972640"/></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label>LinkedIn URL</label><input id="c-linkedin" placeholder="linkedin.com/in/frenkli-zeqollari"/></div>
+          <div class="field"><label>GitHub URL</label><input id="c-github" placeholder="github.com/FrenkliZeqollari"/></div>
+        </div>
+        <button class="btn-sm btn-success" onclick="saveContact()">Save Contact</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div class="modal-title" id="modalTitle">Add Project</div>
+    <div id="modalBody"></div>
+    <div class="modal-actions">
+      <button class="btn-sm" onclick="closeModal()">Cancel</button>
+      <button class="btn-sm btn-accent" onclick="saveModal()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const PASS = 'frenkli2026';
+const USER = 'frenkli';
+
+let data = {
+  hero: {
+    name:'Frenkli Zeqollari', role:'Software Engineering Student',
+    location:'Berlin, Germany', status:'Available for opportunities',
+    desc:"I'm Frenkli Zeqollari — a software engineering student in Berlin, building AI-powered products and clean digital experiences. Currently crafting Taply & Navi, smart mobile apps.",
+    uni:'UE Potsdam', building:'Taply & Navi'
+  },
+  projects: [
+    {id:1,title:'Navi',sub:'Personal Life Assistant App',desc:'A personal life assistant for iOS built with React Native and Expo. Features task management, habit tracking, subscription monitoring, travel planner, and AI-powered daily briefings.',tags:['React Native','Expo','Supabase','JavaScript'],link:''},
+    {id:2,title:'Taply',sub:'AI-powered bill splitting',desc:'An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system.',tags:['Flutter','Dart','AI / ML','Mobile'],link:''},
+    {id:3,title:'EduCampus',sub:'Student collaboration platform',desc:'A web platform for academic collaboration across Potsdam\'s universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication.',tags:['React','TypeScript','Tailwind','Figma'],link:'https://github.com/Student-Collabaration-System/educampus-collaboration-platform'},
+    {id:4,title:'BAföG Digital',sub:'GovTech UX Redesign',desc:'A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback.',tags:['UX Design','GUI Design','Figma','GovTech'],link:'https://badge-plugin-93538907.figma.site'},
+    {id:5,title:'Student Registration System',sub:'Python · Desktop App',desc:'A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID & email generation, age calculation, and persistent file storage.',tags:['Python','Tkinter','CRUD','File Storage'],link:'https://github.com/FrenkliZeqollari/student-registration-system'}
+  ],
+  experience: {
+    tech: [
+      {id:1,company:'General Clean',role:'Website Developer · Freelance',period:'Jul 2023 – Dec 2024',location:'Frankfurt am Main',bullets:['Designed and maintained the company website','Executed digital marketing strategy via SEO','Built an internal platform connecting housekeeping with reception']}
+    ],
+    other: [
+      {id:1,company:'University of Europe for Applied Sciences',role:'Student Council President & Quality Board Rep',period:'Nov 2025 – Present',location:'Potsdam',bullets:['Close collaboration with university leadership on strategic development','Active involvement in quality assurance and accreditation','Representing student interests in university decision-making']},
+      {id:2,company:'University of Europe for Applied Sciences',role:'Peer Leader',period:'Mar 2025 – Mar 2026',location:'Potsdam',bullets:['Primary point of contact for university inquiries','Led planning and execution of campus events including orientation','Fostered meaningful social engagement for new students']},
+      {id:3,company:'a&o Hostels & Hotels',role:'Front Desk & Operations',period:'Nov 2024 – Present',location:'Berlin · Milan',bullets:['Main point of contact for national and international guests','Managing daily front desk operations','Played a key role launching a&o\'s new location in Milan (Aug 2025)']}
+    ]
+  },
+  skills: {
+    mobile:['Flutter','Dart','React','React Native','TypeScript','JavaScript','Tailwind CSS','Figma'],
+    backend:['Python','Java','C++','SQL','Supabase','Machine Learning','Big Data & Analytics'],
+    devops:['AWS','Cloud Computing','IT Security','Computer Architecture','SEO','Google Analytics','Microsoft Office']
+  },
+  contact: {
+    email:'frenklif50@gmail.com', phone:'+49 178 3972640',
+    linkedin:'linkedin.com/in/frenkli-zeqollari', github:'github.com/FrenkliZeqollari'
+  }
+};
+
+let modalMode = null, modalType = null, modalEditId = null;
+
+function doLogin() {
+  const u = document.getElementById('loginUser').value;
+  const p = document.getElementById('loginPass').value;
+  if(u===USER && p===PASS) {
+    document.getElementById('loginScreen').style.display='none';
+    document.getElementById('app').style.display='block';
+    loadAll();
+  } else {
+    document.getElementById('loginErr').style.display='block';
+  }
+}
+
+function doLogout() {
+  document.getElementById('app').style.display='none';
+  document.getElementById('loginScreen').style.display='flex';
+}
+
+function showSaved() {
+  const b = document.getElementById('savedBadge');
+  b.style.display='block';
+  setTimeout(()=>b.style.display='none', 2000);
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i)=>{
+    const tabs=['hero','projects','experience','skills','contact'];
+    t.classList.toggle('active', tabs[i]===name);
+  });
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+}
+
+function loadAll() { loadHero(); loadProjects(); loadExperience(); loadSkills(); loadContact(); }
+
+function loadHero() {
+  const h = data.hero;
+  document.getElementById('h-name').value=h.name;
+  document.getElementById('h-role').value=h.role;
+  document.getElementById('h-location').value=h.location;
+  document.getElementById('h-status').value=h.status;
+  document.getElementById('h-desc').value=h.desc;
+  document.getElementById('h-uni').value=h.uni;
+  document.getElementById('h-building').value=h.building;
+}
+
+function saveHero() {
+  data.hero = {
+    name:document.getElementById('h-name').value,
+    role:document.getElementById('h-role').value,
+    location:document.getElementById('h-location').value,
+    status:document.getElementById('h-status').value,
+    desc:document.getElementById('h-desc').value,
+    uni:document.getElementById('h-uni').value,
+    building:document.getElementById('h-building').value
+  };
+  showSaved();
+}
+
+function loadProjects() {
+  const list = document.getElementById('projects-list');
+  list.innerHTML = data.projects.map((p,i)=>`
+    <div class="item-card">
+      <div class="item-card-header">
+        <div>
+          <div class="item-card-title">${p.title}</div>
+          <div class="item-card-sub">${p.sub}</div>
+        </div>
+        <div class="item-actions">
+          <button class="btn-sm" onclick="editProject(${i})">Edit</button>
+          <button class="btn-sm btn-danger" onclick="deleteProject(${i})">Remove</button>
+        </div>
+      </div>
+      <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">${p.desc.substring(0,100)}...</div>
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">${p.tags.map(t=>`<span style="font-family:var(--fm);font-size:0.68rem;padding:0.2rem 0.6rem;border-radius:50px;background:var(--cream2);color:var(--muted);">${t}</span>`).join('')}</div>
+    </div>
+  `).join('');
+}
+
+function deleteProject(i) {
+  if(confirm('Remove this project?')) { data.projects.splice(i,1); loadProjects(); showSaved(); }
+}
+
+function editProject(i) {
+  const p = data.projects[i];
+  modalMode='edit'; modalType='project'; modalEditId=i;
+  document.getElementById('modalTitle').textContent='Edit Project';
+  document.getElementById('modalBody').innerHTML = projectForm(p);
+  document.getElementById('modalOverlay').style.display='flex';
+}
+
+function openModal(type, subtype) {
+  modalMode='add'; modalType=type; modalType2=subtype;
+  document.getElementById('modalTitle').textContent = type==='project'?'Add Project':'Add Role';
+  document.getElementById('modalBody').innerHTML = type==='project'?projectForm():expForm();
+  document.getElementById('modalOverlay').style.display='flex';
+}
+
+let modalType2 = null;
+
+function projectForm(p={}) {
+  return `
+    <div class="field"><label>Project Title</label><input id="m-title" value="${p.title||''}"/></div>
+    <div class="field"><label>Subtitle</label><input id="m-sub" value="${p.sub||''}"/></div>
+    <div class="field"><label>Description</label><textarea id="m-desc">${p.desc||''}</textarea></div>
+    <div class="field"><label>Tags (press Enter to add)</label>
+      <div class="tag-input-wrap" id="m-tags-wrap" onclick="focusTagInput(this)">
+        ${(p.tags||[]).map(t=>`<span class="tag-pill">${t}<button onclick="removeTag(this)">×</button></span>`).join('')}
+        <input class="tag-input" placeholder="e.g. React" onkeydown="addTag(event,this)"/>
+      </div>
+    </div>
+    <div class="field"><label>Link (GitHub / Live demo)</label><input id="m-link" value="${p.link||''}" placeholder="https://..."/></div>
+  `;
+}
+
+function expForm(e={}) {
+  return `
+    <div class="field"><label>Company</label><input id="m-company" value="${e.company||''}"/></div>
+    <div class="field"><label>Role / Title</label><input id="m-role" value="${e.role||''}"/></div>
+    <div class="grid2">
+      <div class="field"><label>Period</label><input id="m-period" value="${e.period||''}" placeholder="Jan 2024 – Present"/></div>
+      <div class="field"><label>Location</label><input id="m-location" value="${e.location||''}"/></div>
+    </div>
+    <div class="field"><label>Bullet Points (one per line)</label><textarea id="m-bullets" rows="4">${(e.bullets||[]).join('\n')}</textarea></div>
+  `;
+}
+
+function saveModal() {
+  if(modalType==='project') {
+    const p = {
+      id: Date.now(),
+      title: document.getElementById('m-title').value,
+      sub: document.getElementById('m-sub').value,
+      desc: document.getElementById('m-desc').value,
+      tags: Array.from(document.querySelectorAll('#m-tags-wrap .tag-pill')).map(t=>t.textContent.replace('×','')).map(s=>s.trim()),
+      link: document.getElementById('m-link').value
+    };
+    if(modalMode==='edit') data.projects[modalEditId]=p;
+    else data.projects.push(p);
+    loadProjects();
+  } else {
+    const e = {
+      id: Date.now(),
+      company: document.getElementById('m-company').value,
+      role: document.getElementById('m-role').value,
+      period: document.getElementById('m-period').value,
+      location: document.getElementById('m-location').value,
+      bullets: document.getElementById('m-bullets').value.split('\n').filter(b=>b.trim())
+    };
+    if(modalMode==='edit') {
+      const arr = data.experience[modalType2];
+      const idx = arr.findIndex(x=>x.id===modalEditId);
+      if(idx>-1) arr[idx]=e; else arr.push(e);
+    } else {
+      data.experience[modalType2].push(e);
+    }
+    loadExperience();
+  }
+  closeModal(); showSaved();
+}
+
+function closeModal() { document.getElementById('modalOverlay').style.display='none'; }
+function closeModalOutside(e) { if(e.target.id==='modalOverlay') closeModal(); }
+
+function loadExperience() {
+  ['tech','other'].forEach(type=>{
+    const list = document.getElementById(`exp-${type}-list`);
+    list.innerHTML = data.experience[type].map((e,i)=>`
+      <div class="item-card">
+        <div class="item-card-header">
+          <div>
+            <div class="item-card-title">${e.company}</div>
+            <div class="item-card-sub">${e.role} · ${e.period}</div>
+          </div>
+          <div class="item-actions">
+            <button class="btn-sm" onclick="editExp('${type}',${i})">Edit</button>
+            <button class="btn-sm btn-danger" onclick="deleteExp('${type}',${i})">Remove</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  });
+}
+
+function editExp(type,i) {
+  const e = data.experience[type][i];
+  modalMode='edit'; modalType='exp'; modalType2=type; modalEditId=e.id;
+  document.getElementById('modalTitle').textContent='Edit Role';
+  document.getElementById('modalBody').innerHTML=expForm(e);
+  document.getElementById('modalOverlay').style.display='flex';
+}
+
+function deleteExp(type,i) {
+  if(confirm('Remove this role?')) { data.experience[type].splice(i,1); loadExperience(); showSaved(); }
+}
+
+function loadSkills() {
+  ['mobile','backend','devops'].forEach(key=>{
+    const wrap = document.getElementById('skills-'+key);
+    wrap.innerHTML = data.skills[key].map(t=>`<span class="tag-pill">${t}<button onclick="removeTag(this)">×</button></span>`).join('')
+      + `<input class="tag-input" placeholder="Add skill..." onkeydown="addTag(event,this)"/>`;
+  });
+}
+
+function saveSkills() {
+  ['mobile','backend','devops'].forEach(key=>{
+    data.skills[key] = Array.from(document.querySelectorAll(`#skills-${key} .tag-pill`))
+      .map(t=>t.textContent.replace('×','').trim());
+  });
+  showSaved();
+}
+
+function loadContact() {
+  const c = data.contact;
+  document.getElementById('c-email').value=c.email;
+  document.getElementById('c-phone').value=c.phone;
+  document.getElementById('c-linkedin').value=c.linkedin;
+  document.getElementById('c-github').value=c.github;
+}
+
+function saveContact() {
+  data.contact = {
+    email:document.getElementById('c-email').value,
+    phone:document.getElementById('c-phone').value,
+    linkedin:document.getElementById('c-linkedin').value,
+    github:document.getElementById('c-github').value
+  };
+  showSaved();
+}
+
+function addTag(e,input) {
+  if(e.key==='Enter' && input.value.trim()) {
+    e.preventDefault();
+    const pill = document.createElement('span');
+    pill.className='tag-pill';
+    pill.innerHTML=`${input.value.trim()}<button onclick="removeTag(this)">×</button>`;
+    input.parentNode.insertBefore(pill,input);
+    input.value='';
+  }
+}
+
+function removeTag(btn) { btn.parentNode.remove(); }
+function focusTagInput(wrap) { wrap.querySelector('.tag-input')?.focus(); }
+
+function exportSite() {
+  // Fetch the current index.html and inject updated data
+  fetch('/index.html')
+    .then(r=>r.text())
+    .then(html=>{
+      // Update hero
+      html = html.replace(/FRENKLI<br\/><span class="accent">ZEQOLLARI<\/span>/,
+        `${data.hero.name.split(' ')[0].toUpperCase()}<br/><span class="accent">${data.hero.name.split(' ').slice(1).join(' ').toUpperCase()}</span>`);
+
+      // Update contact links
+      html = html.replace(/href="mailto:[^"]*"/, `href="mailto:${data.contact.email}"`);
+      html = html.replace(/>frenklif50@gmail\.com</, `>${data.contact.email}<`);
+      html = html.replace(/href="tel:[^"]*"/, `href="tel:${data.contact.phone.replace(/\s/g,'').replace('+','00')}"`);
+      html = html.replace(/>\+49 178 3972640</, `>${data.contact.phone}<`);
+
+      const blob = new Blob([html], {type:'text/html'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    })
+    .catch(()=>{
+      alert('Note: The export works best when viewing your site live. Download will still work but some replacements may need manual checking.');
+    });
+}
+</script>
+</body>
+</html>
