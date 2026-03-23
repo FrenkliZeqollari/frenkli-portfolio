@@ -554,7 +554,7 @@
           <a href="https://github.com/FrenkliZeqollari" target="_blank" class="contact-row"><span class="contact-row-icon">gh</span>github.com/FrenkliZeqollari</a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" action="https://formspree.io/f/xjgaqlpl" method="POST">
         <div class="form-group">
           <label class="form-label" data-i18n="form.name">Name</label>
           <input type="text" class="form-input" data-i18n-placeholder="form.namePh" placeholder="Your name" required/>
@@ -673,17 +673,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
 });
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = currentLang === 'de' ? 'Gesendet ✓' : 'Sent! ✓';
-  btn.style.background = '#059669';
-  setTimeout(() => {
-    btn.innerHTML = i18n[currentLang]['form.send'];
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
-}
+
 
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
