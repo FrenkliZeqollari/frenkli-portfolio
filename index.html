@@ -83,32 +83,36 @@ section{padding:6rem 2.5rem;}
 .lang-lvl{font-family:var(--fm);font-size:0.67rem;color:var(--muted);}
 .pills-wrap{display:flex;flex-wrap:wrap;gap:0.45rem;}
 .tag{font-family:var(--fm);font-size:0.67rem;font-weight:500;padding:0.28rem 0.75rem;border-radius:50px;background:var(--white);border:1px solid var(--border);color:var(--muted);}
+
+/* EXPERIENCE */
 #experience{background:var(--cream);}
 .exp-section-title{font-family:var(--fh);font-weight:700;font-size:1rem;color:var(--navy);letter-spacing:-0.02em;margin-bottom:1.5rem;margin-top:2.5rem;display:flex;align-items:center;gap:0.75rem;}
 .exp-section-title:first-child{margin-top:0;}
 .exp-section-title::after{content:'';flex:1;height:1px;background:var(--border);}
 .exp-list{display:flex;flex-direction:column;}
-.exp-item{display:grid;grid-template-columns:200px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--border);}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--border);}
 .exp-item:last-child{border-bottom:none;}
-.exp-item.current{border-left:3px solid var(--accent);padding-left:1.25rem;background:linear-gradient(135deg,rgba(37,99,255,0.03),transparent);border-radius:0 12px 12px 0;}
-.exp-period{font-family:var(--fm);font-size:0.7rem;color:var(--accent);margin-bottom:0.25rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;}
-.present-badge{background:var(--accent);color:white;font-family:var(--fm);font-size:0.58rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:50px;letter-spacing:0.06em;text-transform:uppercase;}
+.exp-meta{}
+.exp-period{font-family:var(--fm);font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;}
+.current-dot{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(5,150,105,0.1);color:#059669;font-family:var(--fm);font-size:0.6rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:50px;letter-spacing:0.04em;}
+.current-dot::before{content:'';width:5px;height:5px;border-radius:50%;background:#059669;animation:pulse 2s infinite;}
 .exp-loc{font-family:var(--fm);font-size:0.67rem;color:var(--muted);}
-.exp-logo{margin-top:0.75rem;}
-.exp-logo img{height:24px;width:auto;object-fit:contain;opacity:0.8;border-radius:4px;background:white;padding:2px 4px;}
-.exp-logo-text{font-family:var(--fh);font-weight:700;font-size:0.75rem;color:white;background:var(--navy);padding:0.25rem 0.65rem;border-radius:6px;display:inline-block;}
-.exp-company{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--navy);margin-bottom:0.2rem;letter-spacing:-0.02em;}
-.exp-role{font-size:0.78rem;font-weight:500;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.85rem;}
+.exp-visit{margin-top:0.75rem;}
+.exp-role-title{font-family:var(--fh);font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:0.15rem;letter-spacing:-0.02em;}
+.exp-company{font-size:0.82rem;font-weight:500;color:var(--muted);margin-bottom:0.85rem;}
 .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.35rem;}
 .exp-bullets li{font-size:0.9rem;color:var(--muted);padding-left:1.1rem;position:relative;}
 .exp-bullets li::before{content:'↳';position:absolute;left:0;color:var(--navy2);font-size:0.78rem;}
-.exp-visit{margin-top:0.85rem;}
+
+/* SKILLS */
 #skills{background:var(--white);}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .skill-card{background:var(--cream);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--border);transition:transform 0.15s,box-shadow 0.15s;}
 .skill-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(15,31,61,0.1);}
 .skill-card-title{font-family:var(--fh);font-weight:700;font-size:0.95rem;color:var(--navy);margin-bottom:1rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:0.6rem;}
 .tag-wrap{display:flex;flex-wrap:wrap;gap:0.45rem;}
+
+/* PROJECTS */
 #projects{background:var(--navy);}
 #projects .section-label{color:rgba(248,245,239,0.45);}
 #projects .section-heading{color:var(--cream);}
@@ -116,6 +120,7 @@ section{padding:6rem 2.5rem;}
 .proj-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:2rem;display:flex;flex-direction:column;transition:background 0.15s,transform 0.15s;cursor:pointer;}
 .proj-card:hover{background:rgba(255,255,255,0.09);transform:translateY(-4px);}
 .proj-img{width:100%;height:160px;border-radius:12px;background:rgba(255,255,255,0.07);margin-bottom:1.25rem;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.08);}
+.proj-img img{width:100%;height:100%;object-fit:cover;}
 .proj-img-placeholder{font-family:var(--fm);font-size:0.7rem;color:rgba(248,245,239,0.25);text-align:center;padding:1rem;}
 .proj-num{font-family:var(--fm);font-size:0.65rem;color:rgba(248,245,239,0.3);letter-spacing:0.1em;margin-bottom:1rem;}
 .proj-title{font-family:var(--fh);font-weight:700;font-size:1.25rem;color:var(--cream);margin-bottom:0.25rem;letter-spacing:-0.03em;}
@@ -128,13 +133,16 @@ section{padding:6rem 2.5rem;}
 .proj-link:hover{color:rgba(248,245,239,0.9);border-color:rgba(255,255,255,0.4);}
 .proj-explore{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--fm);font-size:0.68rem;color:white;text-decoration:none;border-radius:50px;padding:0.4rem 1rem;background:var(--accent);transition:all 0.15s;border:none;cursor:pointer;font-weight:600;}
 .proj-explore:hover{background:#1a4ae0;}
+
+/* PROJECT MODAL */
 .proj-modal-overlay{position:fixed;inset:0;background:rgba(15,31,61,0.75);z-index:200;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px);}
 .proj-modal-overlay.open{display:flex;}
 .proj-modal{background:var(--white);border-radius:var(--radius);width:100%;max-width:760px;max-height:90vh;overflow-y:auto;position:relative;}
 .proj-modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:rgba(15,31,61,0.1);border:none;cursor:pointer;font-size:1rem;color:var(--navy);z-index:10;transition:all 0.15s;}
 .proj-modal-close:hover{background:var(--navy);color:white;}
-.proj-modal-hero{width:100%;height:260px;background:var(--navy);border-radius:var(--radius) var(--radius) 0 0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.proj-modal-hero-placeholder{color:rgba(248,245,239,0.25);font-family:var(--fm);font-size:0.78rem;text-align:center;}
+.proj-modal-hero{width:100%;height:260px;background:var(--navy);border-radius:var(--radius) var(--radius) 0 0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.proj-modal-hero img{width:100%;height:100%;object-fit:cover;}
+.proj-modal-hero-placeholder{color:rgba(248,245,239,0.25);font-family:var(--fm);font-size:0.78rem;}
 .proj-modal-body{padding:2rem;}
 .proj-modal-num{font-family:var(--fm);font-size:0.65rem;color:var(--accent);letter-spacing:0.1em;margin-bottom:0.4rem;}
 .proj-modal-title{font-family:var(--fh);font-weight:800;font-size:1.75rem;color:var(--navy);letter-spacing:-0.03em;margin-bottom:0.2rem;}
@@ -145,21 +153,26 @@ section{padding:6rem 2.5rem;}
 .proj-modal-tags{display:flex;flex-wrap:wrap;gap:0.45rem;}
 .proj-modal-tag{font-family:var(--fm);font-size:0.7rem;padding:0.3rem 0.8rem;border-radius:50px;background:var(--cream);border:1px solid var(--border);color:var(--muted);}
 .proj-modal-links{display:flex;gap:0.75rem;flex-wrap:wrap;}
+
+/* EDUCATION */
 #education{background:var(--cream);}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
 .edu-card{background:var(--white);border-radius:var(--radius);padding:2rem;border:1px solid var(--border);transition:transform 0.15s,box-shadow 0.15s;}
 .edu-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(15,31,61,0.08);}
-.edu-logo-text{font-family:var(--fh);font-weight:700;font-size:0.82rem;color:var(--navy);margin-bottom:0.85rem;display:block;}
 .edu-period{font-family:var(--fm);font-size:0.68rem;color:var(--accent);margin-bottom:0.5rem;}
 .edu-school{font-family:var(--fh);font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:0.25rem;letter-spacing:-0.02em;}
-.edu-degree{font-size:0.88rem;color:var(--muted);}
-.edu-courses{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem;}
-.cert-list{display:flex;flex-direction:column;gap:1rem;margin-top:0.75rem;}
+.edu-degree{font-size:0.88rem;color:var(--muted);margin-bottom:1rem;}
+.edu-courses{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.edu-sem-title{font-family:var(--fm);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:1rem 0 0.5rem;width:100%;}
+.cert-list{display:flex;flex-direction:column;gap:1rem;margin-top:0.5rem;}
 .cert-item{display:flex;align-items:flex-start;gap:0.85rem;padding:0.85rem;background:var(--cream);border-radius:12px;border:1px solid var(--border);}
-.cert-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--cream2);}
+.cert-logo{width:36px;height:36px;border-radius:8px;flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:white;border:1px solid var(--border);}
+.cert-logo img{width:100%;height:100%;object-fit:contain;padding:4px;}
 .cert-name{font-size:0.82rem;font-weight:600;color:var(--navy);margin-bottom:0.1rem;}
 .cert-issuer{font-family:var(--fm);font-size:0.65rem;color:var(--accent);margin-bottom:0.25rem;}
 .cert-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+
+/* CONTACT */
 #contact{background:var(--white);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
 .contact-info p{color:var(--muted);margin-bottom:2rem;font-size:1rem;}
@@ -214,6 +227,7 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </nav>
+
 <section id="hero">
 <div class="hero-blob blob-1"></div>
 <div class="hero-blob blob-2"></div>
@@ -249,6 +263,7 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </section>
+
 <section id="about">
 <div class="section-inner">
 <div class="about-grid">
@@ -290,89 +305,89 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </section>
+
 <section id="experience">
 <div class="section-inner">
 <div class="section-label" data-i18n="exp.label">Experience</div>
 <h2 class="section-heading" data-i18n="exp.heading">Where I've worked.</h2>
+
 <div class="exp-section-title" data-i18n="exp.tech">💻 Tech &amp; IT</div>
 <div class="exp-list">
 <div class="exp-item">
 <div class="exp-meta">
 <div class="exp-period">Jul 2023 – Dec 2024</div>
 <div class="exp-loc">Frankfurt am Main</div>
-<div class="exp-logo"><img src="gc-logo.png" alt="General Clean" onerror="this.style.display='none'"/></div>
+<div class="exp-visit" style="margin-top:0.5rem;"><a href="https://general-clean.de" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Website</a></div>
 </div>
 <div>
-<div class="exp-company">General Clean</div>
-<div class="exp-role" data-i18n="role.webdev">Website Developer · Freelance</div>
+<div class="exp-role-title" data-i18n="role.webdev">Website Developer</div>
+<div class="exp-company">General Clean · Freelance</div>
 <ul class="exp-bullets">
 <li data-i18n="gc.1">Designed and maintained the company website</li>
 <li data-i18n="gc.2">Executed digital marketing strategy via SEO</li>
 <li data-i18n="gc.3">Built an internal platform connecting housekeeping with reception</li>
 </ul>
-<div class="exp-visit"><a href="https://general-clean.de" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Visit website</a></div>
 </div>
 </div>
 </div>
+
 <div class="exp-section-title" data-i18n="exp.other">🎓 Leadership &amp; Other</div>
 <div class="exp-list">
-<div class="exp-item current">
+<div class="exp-item">
 <div class="exp-meta">
-<div class="exp-period">Nov 2025 – <span class="present-badge" data-i18n="exp.present">Present</span></div>
+<div class="exp-period">Nov 2025 – <span class="current-dot" data-i18n="exp.present">Currently</span></div>
 <div class="exp-loc">Potsdam</div>
-<div class="exp-logo"><span class="exp-logo-text">UE</span></div>
+<div class="exp-visit" style="margin-top:0.5rem;"><a href="https://www.ue-germany.com" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Website</a></div>
 </div>
 <div>
+<div class="exp-role-title" data-i18n="role.president">Student Council President &amp; Quality Board Rep</div>
 <div class="exp-company">University of Europe for Applied Sciences</div>
-<div class="exp-role" data-i18n="role.president">Student Council President &amp; Quality Board Rep</div>
 <ul class="exp-bullets">
 <li data-i18n="ue1.1">Close collaboration with university leadership on strategic development of study programmes</li>
 <li data-i18n="ue1.2">Active involvement in quality assurance, accreditation, and programme development</li>
 <li data-i18n="ue1.3">Analysis of quality and evaluation reports to identify improvement potential</li>
 <li data-i18n="ue1.4">Representing student interests in university decision-making and quality committees</li>
 </ul>
-<div class="exp-visit"><a href="https://www.ue-germany.com" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Visit website</a></div>
 </div>
 </div>
 <div class="exp-item">
 <div class="exp-meta">
 <div class="exp-period">Mar 2025 – Mar 2026</div>
 <div class="exp-loc">Potsdam</div>
-<div class="exp-logo"><span class="exp-logo-text">UE</span></div>
+<div class="exp-visit" style="margin-top:0.5rem;"><a href="https://www.ue-germany.com" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Website</a></div>
 </div>
 <div>
+<div class="exp-role-title" data-i18n="role.peer">Peer Leader</div>
 <div class="exp-company">University of Europe for Applied Sciences</div>
-<div class="exp-role" data-i18n="role.peer">Peer Leader</div>
 <ul class="exp-bullets">
 <li data-i18n="pl.1">Primary point of contact for inquiries about university and student experience</li>
 <li data-i18n="pl.2">Fostered meaningful social engagement and networking opportunities for new students</li>
 <li data-i18n="pl.3">Led planning and execution of campus and off-campus events, including orientation</li>
 <li data-i18n="pl.4">Collaborated with leadership through regular meetings and strategic task fulfillment</li>
 </ul>
-<div class="exp-visit"><a href="https://www.ue-germany.com" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Visit website</a></div>
 </div>
 </div>
-<div class="exp-item current">
+<div class="exp-item">
 <div class="exp-meta">
-<div class="exp-period">Nov 2024 – <span class="present-badge" data-i18n="exp.present">Present</span></div>
+<div class="exp-period">Nov 2024 – <span class="current-dot" data-i18n="exp.present">Currently</span></div>
 <div class="exp-loc">Berlin · Milan</div>
-<div class="exp-logo"><span class="exp-logo-text">a&o</span></div>
+<div class="exp-visit" style="margin-top:0.5rem;"><a href="https://www.aohostels.com/en/" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Website</a></div>
 </div>
 <div>
+<div class="exp-role-title" data-i18n="role.frontdesk">Front Desk &amp; Operations</div>
 <div class="exp-company">a&o Hostels &amp; Hotels</div>
-<div class="exp-role" data-i18n="role.frontdesk">Front Desk &amp; Operations</div>
 <ul class="exp-bullets">
 <li data-i18n="ao.1">Main point of contact for national and international guests throughout their stay</li>
 <li data-i18n="ao.2">Managing daily front desk operations and coordinating with other departments</li>
 <li data-i18n="ao.3">Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)</li>
 <li data-i18n="ao.4">Daily communication in German, English and Italian</li>
 </ul>
-<div class="exp-visit"><a href="https://www.aohostels.com/en/" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Visit website</a></div>
 </div>
 </div>
 </div>
 </div>
 </section>
+
 <section id="skills">
 <div class="section-inner">
 <div class="section-label" data-i18n="skills.label">Skills</div>
@@ -393,22 +408,23 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </section>
+
 <section id="projects">
 <div class="section-inner">
 <div class="section-label" data-i18n="projects.label">Projects</div>
 <h2 class="section-heading" data-i18n="projects.heading">Things I've built.</h2>
 <div class="proj-grid">
 <div class="proj-card" onclick="openProject(0)">
-<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Click to explore →</div></div>
+<div class="proj-img"><img src="proj-educampus.jpg" alt="EduCampus" onerror="this.parentNode.innerHTML='<div class=proj-img-placeholder>EduCampus</div>'"/></div>
 <div class="proj-num">01</div>
-<div class="proj-title">Navi</div>
-<div class="proj-sub" data-i18n="proj.navi.sub">Personal Life Assistant App</div>
-<p class="proj-desc" data-i18n="proj.navi.desc">A personal life assistant for iOS built with React Native and Expo. Features task management, habit tracking, subscription monitoring, travel planner, and AI-powered daily briefings.</p>
-<div class="proj-tags"><span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">Supabase</span><span class="proj-tag">JavaScript</span></div>
-<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(0)" data-i18n="proj.explore">Explore →</button></div>
+<div class="proj-title">EduCampus</div>
+<div class="proj-sub" data-i18n="proj.edu.sub">Student collaboration platform</div>
+<p class="proj-desc" data-i18n="proj.edu.desc">A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication.</p>
+<div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">TypeScript</span><span class="proj-tag">Tailwind</span><span class="proj-tag">Figma</span></div>
+<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(0)" data-i18n="proj.explore">Explore →</button><a href="https://github.com/Student-Collabaration-System/educampus-collaboration-platform" target="_blank" class="proj-link">↗ GitHub</a></div>
 </div>
 <div class="proj-card" onclick="openProject(1)">
-<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Click to explore →</div></div>
+<div class="proj-img"><img src="proj-taply.png" alt="Taply" onerror="this.parentNode.innerHTML='<div class=proj-img-placeholder>Taply</div>'"/></div>
 <div class="proj-num">02</div>
 <div class="proj-title">Taply</div>
 <div class="proj-sub" data-i18n="proj.taply.sub">AI-powered bill splitting</div>
@@ -417,60 +433,71 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 <div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(1)" data-i18n="proj.explore">Explore →</button></div>
 </div>
 <div class="proj-card" onclick="openProject(2)">
-<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Click to explore →</div></div>
+<div class="proj-img"><img src="proj-bafog.png" alt="BAföG Digital" onerror="this.parentNode.innerHTML='<div class=proj-img-placeholder>BAföG Digital</div>'"/></div>
 <div class="proj-num">03</div>
-<div class="proj-title">EduCampus</div>
-<div class="proj-sub" data-i18n="proj.edu.sub">Student collaboration platform</div>
-<p class="proj-desc" data-i18n="proj.edu.desc">A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication.</p>
-<div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">TypeScript</span><span class="proj-tag">Tailwind</span><span class="proj-tag">Figma</span></div>
-<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(2)" data-i18n="proj.explore">Explore →</button><a href="https://github.com/Student-Collabaration-System/educampus-collaboration-platform" target="_blank" class="proj-link">↗ GitHub</a></div>
-</div>
-<div class="proj-card" onclick="openProject(3)">
-<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Click to explore →</div></div>
-<div class="proj-num">04</div>
 <div class="proj-title">BAföG Digital</div>
 <div class="proj-sub" data-i18n="proj.bafog.sub">GovTech UX Redesign</div>
-<p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback.</p>
+<p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback.</p>
 <div class="proj-tags"><span class="proj-tag">UX Design</span><span class="proj-tag">GUI Design</span><span class="proj-tag">Figma</span><span class="proj-tag">GovTech</span></div>
-<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(3)" data-i18n="proj.explore">Explore →</button><a href="https://badge-plugin-93538907.figma.site" target="_blank" class="proj-link">↗ Live demo</a></div>
+<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(2)" data-i18n="proj.explore">Explore →</button><a href="https://badge-plugin-93538907.figma.site" target="_blank" class="proj-link">↗ Live demo</a></div>
 </div>
-<div class="proj-card" onclick="openProject(4)">
-<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Click to explore →</div></div>
-<div class="proj-num">05</div>
+<div class="proj-card" onclick="openProject(3)">
+<div class="proj-img"><img src="proj-student-reg.png" alt="Student Registration" onerror="this.parentNode.innerHTML='<div class=proj-img-placeholder>Student Registration</div>'"/></div>
+<div class="proj-num">04</div>
 <div class="proj-title">Student Registration System</div>
 <div class="proj-sub" data-i18n="proj.stu.sub">Python · Desktop App</div>
 <p class="proj-desc" data-i18n="proj.stu.desc">A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation, and persistent file storage.</p>
 <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Tkinter</span><span class="proj-tag">CRUD</span><span class="proj-tag">File Storage</span></div>
-<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(4)" data-i18n="proj.explore">Explore →</button><a href="https://github.com/FrenkliZeqollari/student-registration-system" target="_blank" class="proj-link">↗ GitHub</a></div>
+<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(3)" data-i18n="proj.explore">Explore →</button><a href="https://github.com/FrenkliZeqollari/student-registration-system" target="_blank" class="proj-link">↗ GitHub</a></div>
+</div>
+<div class="proj-card" onclick="openProject(4)">
+<div class="proj-img"><div class="proj-img-placeholder" data-i18n="proj.addimg">Add image via admin →</div></div>
+<div class="proj-num">05</div>
+<div class="proj-title">Navi</div>
+<div class="proj-sub" data-i18n="proj.navi.sub">Personal Life Assistant App</div>
+<p class="proj-desc" data-i18n="proj.navi.desc">A personal life assistant for iOS built with React Native and Expo. Features task management, habit tracking, subscription monitoring, travel planner, and AI-powered daily briefings.</p>
+<div class="proj-tags"><span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">Supabase</span><span class="proj-tag">JavaScript</span></div>
+<div class="proj-links" onclick="event.stopPropagation()"><button class="proj-explore" onclick="openProject(4)" data-i18n="proj.explore">Explore →</button></div>
 </div>
 </div>
 </div>
 </section>
+
+<!-- PROJECT MODAL -->
 <div class="proj-modal-overlay" id="projModal" onclick="if(event.target.id==='projModal')closeModal()">
 <div class="proj-modal">
 <button class="proj-modal-close" onclick="closeModal()">✕</button>
-<div class="proj-modal-hero" id="modalHero"><div class="proj-modal-hero-placeholder" data-i18n="proj.nopic">No image yet — upload via admin panel</div></div>
+<div class="proj-modal-hero" id="modalHero"></div>
 <div class="proj-modal-body">
-<div class="proj-modal-num" id="modalNum">01</div>
-<div class="proj-modal-title" id="modalTitle">Project</div>
-<div class="proj-modal-sub" id="modalSub">Subtitle</div>
+<div class="proj-modal-num" id="modalNum"></div>
+<div class="proj-modal-title" id="modalTitle"></div>
+<div class="proj-modal-sub" id="modalSub"></div>
 <div class="proj-modal-sec"><div class="proj-modal-sec-title" data-i18n="modal.about">About this project</div><div class="proj-modal-desc" id="modalDesc"></div></div>
 <div class="proj-modal-sec"><div class="proj-modal-sec-title" data-i18n="modal.tools">Tools &amp; Technologies</div><div class="proj-modal-tags" id="modalTags"></div></div>
 <div class="proj-modal-sec"><div class="proj-modal-sec-title" data-i18n="modal.links">Links</div><div class="proj-modal-links" id="modalLinks"></div></div>
 </div>
 </div>
 </div>
+
 <section id="education">
 <div class="section-inner">
 <div class="section-label" data-i18n="edu.label">Education &amp; Certifications</div>
 <h2 class="section-heading" data-i18n="edu.heading">Always learning.</h2>
 <div class="edu-grid">
 <div class="edu-card">
-<span class="edu-logo-text">🎓 University of Europe for Applied Sciences</span>
 <div class="edu-period">Sep 2024 – Aug 2027</div>
-<div class="edu-school" data-i18n="edu.ue">B.Sc. Software Engineering</div>
-<div class="edu-degree">Potsdam, Germany</div>
-<div class="edu-courses"><span class="tag">AI</span><span class="tag">Backend Dev</span><span class="tag">Cloud Computing</span><span class="tag">IT Security</span><span class="tag">Machine Learning</span><span class="tag">Big Data</span><span class="tag">Computer Architecture</span><span class="tag">Start-Up Management</span></div>
+<div class="edu-school">University of Europe for Applied Sciences</div>
+<div class="edu-degree" data-i18n="edu.degree">B.Sc. Software Engineering · Potsdam, Germany</div>
+<div class="edu-courses">
+<span class="edu-sem-title" data-i18n="sem.1">Semester 1</span>
+<span class="tag">Programming</span><span class="tag">Computer Architecture</span><span class="tag">Management Basics</span><span class="tag">Software Engineering 1</span><span class="tag">Mathematics &amp; Statistics</span><span class="tag">Employability: Business English</span>
+<span class="edu-sem-title" data-i18n="sem.2">Semester 2</span>
+<span class="tag">Big Data &amp; Analytics</span><span class="tag">Backend Development</span><span class="tag">Parallel Programming</span><span class="tag">StartUp Management</span><span class="tag">Digital Media &amp; Communication</span><span class="tag">Quantitative &amp; Qualitative Methods</span>
+<span class="edu-sem-title" data-i18n="sem.3">Semester 3</span>
+<span class="tag">IT Platform</span><span class="tag">Software Engineering 2</span><span class="tag">Cloud Computing &amp; Distributed Systems</span><span class="tag">Operating Systems</span><span class="tag">Software Quality Assurance</span><span class="tag">GUI Design &amp; Web Optimization</span>
+<span class="edu-sem-title" data-i18n="sem.4">Semester 4</span>
+<span class="tag">Artificial Intelligence</span><span class="tag">Frontend Programming</span><span class="tag">IT Security</span><span class="tag">IT Agile Development</span><span class="tag">Corporate Management</span><span class="tag">Machine Learning &amp; Smart Systems</span>
+</div>
 <div style="margin-top:1rem"><a href="https://www.ue-germany.com" target="_blank" class="btn-sm-link" data-i18n="exp.visit">↗ Visit website</a></div>
 </div>
 <div class="edu-card">
@@ -478,23 +505,29 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 <div class="edu-school" data-i18n="edu.certsTitle">Licenses &amp; Certifications</div>
 <div class="cert-list">
 <div class="cert-item">
-<div class="cert-icon">🔵</div>
+<div class="cert-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google" onerror="this.outerHTML='🔵'"/>
+</div>
 <div>
 <div class="cert-name" data-i18n="cert.ga.name">Google Analytics Individual Qualification</div>
 <div class="cert-issuer">Google</div>
-<div class="cert-desc" data-i18n="cert.ga.desc">Demonstrates proficiency in Google Analytics — tracking, reporting, and advanced data analysis concepts.</div>
+<div class="cert-desc" data-i18n="cert.ga.desc">Proficiency in Google Analytics — tracking, reporting, and advanced data analysis.</div>
 </div>
 </div>
 <div class="cert-item">
-<div class="cert-icon">🟢</div>
+<div class="cert-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google" onerror="this.outerHTML='🟢'"/>
+</div>
 <div>
 <div class="cert-name" data-i18n="cert.dm.name">Fundamentals of Digital Marketing</div>
 <div class="cert-issuer">Google Digital Garage</div>
-<div class="cert-desc" data-i18n="cert.dm.desc">Covers SEO, SEM, social media marketing, content strategy, and digital analytics fundamentals.</div>
+<div class="cert-desc" data-i18n="cert.dm.desc">Covers SEO, SEM, social media marketing, content strategy, and digital analytics.</div>
 </div>
 </div>
 <div class="cert-item">
-<div class="cert-icon">🔷</div>
+<div class="cert-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Logo_of_UNICEF.svg/512px-Logo_of_UNICEF.svg.png" alt="UNICEF" onerror="this.outerHTML='🔷'"/>
+</div>
 <div>
 <div class="cert-name" data-i18n="cert.un.name">Emergency Preparedness &amp; Response</div>
 <div class="cert-issuer">UNICEF</div>
@@ -506,6 +539,7 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </section>
+
 <section id="contact">
 <div class="section-inner">
 <div class="section-label" data-i18n="contact.label">Contact</div>
@@ -529,19 +563,23 @@ footer{flex-direction:column;gap:1rem;text-align:center;}
 </div>
 </div>
 </section>
+
 <footer>
 <span class="footer-copy">© 2026 Frenkli Zeqollari · Berlin, Germany</span>
 <a href="#hero" class="footer-back" data-i18n="footer.back">Back to top ↑</a>
 </footer>
+
 <script>
 document.addEventListener('DOMContentLoaded',function(){
+
 const projects=[
-{num:'01',title:'Navi',sub:'Personal Life Assistant App',desc:'A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks and calendar sync, habit tracking with streaks, subscription monitoring with spending analytics, a travel planner with packing lists and budget tracking, and an AI-powered daily briefings system. Backend built with Supabase (PostgreSQL + Auth + Storage). Currently in development with App Store launch planned.',tags:['React Native','Expo','Supabase','JavaScript','Flutter','PostgreSQL','AI'],links:[{label:'GitHub (coming soon)',url:'#'}]},
-{num:'02',title:'Taply',sub:'AI-powered bill splitting',desc:'An AI-powered mobile app that simplifies shared payments among groups by scanning receipts, splitting costs automatically, and rewarding users through a smart loyalty point system. The app reduces friction in social spending — splitting a dinner bill or planning a trip with friends. Built as the final project for Start-up Management at UE Potsdam.',tags:['Flutter','Dart','AI / ML','Mobile','Start-up Management'],links:[{label:'Taply Presentation',url:'#'}]},
-{num:'03',title:'EduCampus',sub:'Student collaboration platform',desc:'A web-based platform for academic collaboration between students across Potsdam\'s universities. EduCampus enables peer-to-peer resource sharing, study group formation, real-time communication, and academic collaboration — breaking down institutional barriers. Developed as part of Software Engineering II at UE Potsdam.',tags:['React','TypeScript','Tailwind CSS','Figma','UX Design'],links:[{label:'↗ View on GitHub',url:'https://github.com/Student-Collabaration-System/educampus-collaboration-platform'}]},
-{num:'04',title:'BAföG Digital',sub:'GovTech UX Redesign',desc:'A complete redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Anyone who has applied for BAföG knows the frustration: text walls, government German, error messages at the end. This redesign shows it can work differently. Built as the final project for GUI Design and Web Optimisation at UE.',tags:['UX Design','GUI Design','Figma','GovTech','User Research'],links:[{label:'↗ Live demo',url:'https://badge-plugin-93538907.figma.site'}]},
-{num:'05',title:'Student Registration System',sub:'Python · Desktop App',desc:'A Python-based student registration and management system with a Tkinter GUI. Features automatic student ID generation (S001, S002...), automatic university email creation, CRUD operations (register, view, update, delete, search), age calculation from birthdate, and persistent file storage. Built for the Programming course (SE 01) at UE Potsdam with Roudi Al Asmar.',tags:['Python','Tkinter','CRUD','File Storage','GUI'],links:[{label:'↗ View on GitHub',url:'https://github.com/FrenkliZeqollari/student-registration-system'}]}
+{num:'01',title:'EduCampus',sub:'Student collaboration platform',img:'proj-educampus.jpg',desc:'A web-based platform for academic collaboration between students across Potsdam\'s universities. EduCampus enables peer-to-peer resource sharing, study group formation, real-time communication, and academic collaboration. Developed as part of Software Engineering II at UE Potsdam.',tags:['React','TypeScript','Tailwind CSS','Figma','UX Design'],links:[{label:'↗ View on GitHub',url:'https://github.com/Student-Collabaration-System/educampus-collaboration-platform'}]},
+{num:'02',title:'Taply',sub:'AI-powered bill splitting',img:'proj-taply.png',desc:'An AI-powered mobile app that simplifies shared payments among groups by scanning receipts, splitting costs automatically, and rewarding users through a smart loyalty point system. The app reduces friction in social spending. Built as the final project for Start-up Management at UE Potsdam.',tags:['Flutter','Dart','AI / ML','Mobile','Start-up Management'],links:[{label:'Taply Presentation',url:'#'}]},
+{num:'03',title:'BAföG Digital',sub:'GovTech UX Redesign',img:'proj-bafog.png',desc:'A complete redesign of the German student aid (BAföG) portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the final project for GUI Design and Web Optimisation at UE. A personal mission as someone who went through the process.',tags:['UX Design','GUI Design','Figma','GovTech','User Research'],links:[{label:'↗ Live demo',url:'https://badge-plugin-93538907.figma.site'}]},
+{num:'04',title:'Student Registration System',sub:'Python · Desktop App',img:'proj-student-reg.png',desc:'A Python-based student registration and management system with a Tkinter GUI. Features automatic student ID generation, automatic university email creation, CRUD operations, age calculation from birthdate, and persistent file storage. Built for the Programming course (SE 01) at UE Potsdam with Roudi Al Asmar.',tags:['Python','Tkinter','CRUD','File Storage','GUI'],links:[{label:'↗ View on GitHub',url:'https://github.com/FrenkliZeqollari/student-registration-system'}]},
+{num:'05',title:'Navi',sub:'Personal Life Assistant App',img:null,desc:'A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks and calendar sync, habit tracking with streaks, subscription monitoring, a travel planner, and an AI-powered daily briefings system. Backend built with Supabase (PostgreSQL + Auth + Storage). App Store launch planned.',tags:['React Native','Expo','Supabase','JavaScript','Flutter','PostgreSQL','AI'],links:[{label:'GitHub (coming soon)',url:'#'}]}
 ];
+
 window.openProject=function(i){
 const p=projects[i];
 document.getElementById('modalNum').textContent=p.num;
@@ -550,14 +588,15 @@ document.getElementById('modalSub').textContent=p.sub;
 document.getElementById('modalDesc').textContent=p.desc;
 document.getElementById('modalTags').innerHTML=p.tags.map(t=>`<span class="proj-modal-tag">${t}</span>`).join('');
 document.getElementById('modalLinks').innerHTML=p.links.map(l=>`<a href="${l.url}" target="_blank" class="btn btn-primary" style="padding:0.6rem 1.25rem;font-size:0.8rem;">${l.label}</a>`).join('');
+const hero=document.getElementById('modalHero');
+if(p.img){hero.innerHTML=`<img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover"/>`;}
+else{hero.innerHTML='<div class="proj-modal-hero-placeholder" style="color:rgba(248,245,239,0.25);font-family:var(--fm);font-size:0.78rem;">No image yet</div>';}
 document.getElementById('projModal').classList.add('open');
 document.body.style.overflow='hidden';
 };
-window.closeModal=function(){
-document.getElementById('projModal').classList.remove('open');
-document.body.style.overflow='';
-};
+window.closeModal=function(){document.getElementById('projModal').classList.remove('open');document.body.style.overflow='';};
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
 const i18n={
 en:{
 "nav.about":"About","nav.experience":"Experience","nav.skills":"Skills","nav.projects":"Projects","nav.contact":"Contact",
@@ -572,23 +611,24 @@ en:{
 "about.p4":"I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.",
 "about.cta":"Let's work together →","about.languages":"Languages","about.soft":"Soft Skills","lang.native":"Native",
 "soft.teamwork":"Teamwork","soft.comm":"Communication","soft.problem":"Problem Solving","soft.leadership":"Leadership","soft.adapt":"Adaptability","soft.creative":"Creative Thinking","soft.initiative":"Initiative","soft.collab":"Collaboration","soft.empathy":"Empathy","soft.time":"Time Management",
-"exp.label":"Experience","exp.heading":"Where I've worked.","exp.tech":"💻 Tech &amp; IT","exp.other":"🎓 Leadership &amp; Other","exp.visit":"↗ Visit website","exp.present":"Present",
-"role.webdev":"Website Developer · Freelance","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
+"exp.label":"Experience","exp.heading":"Where I've worked.","exp.tech":"💻 Tech &amp; IT","exp.other":"🎓 Leadership &amp; Other","exp.visit":"↗ Website","exp.present":"Currently",
+"role.webdev":"Website Developer","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
 "gc.1":"Designed and maintained the company website","gc.2":"Executed digital marketing strategy via SEO","gc.3":"Built an internal platform connecting housekeeping with reception",
 "ue1.1":"Close collaboration with university leadership on strategic development of study programmes","ue1.2":"Active involvement in quality assurance, accreditation, and programme development","ue1.3":"Analysis of quality and evaluation reports to identify improvement potential","ue1.4":"Representing student interests in university decision-making and quality committees",
 "pl.1":"Primary point of contact for inquiries about university and student experience","pl.2":"Fostered meaningful social engagement and networking opportunities for new students","pl.3":"Led planning and execution of campus and off-campus events, including orientation","pl.4":"Collaborated with leadership through regular meetings and strategic task fulfillment",
 "ao.1":"Main point of contact for national and international guests throughout their stay","ao.2":"Managing daily front desk operations and coordinating with other departments","ao.3":"Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)","ao.4":"Daily communication in German, English and Italian",
 "skills.label":"Skills","skills.heading":"My tech stack.","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Data","skills.devops":"DevOps &amp; IT",
-"projects.label":"Projects","projects.heading":"Things I've built.","proj.explore":"Explore →","proj.addimg":"Click to explore →","proj.nopic":"No image yet — upload via admin panel",
-"proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management, habit tracking, subscription monitoring, travel planner, and AI-powered daily briefings.",
-"proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system.",
+"projects.label":"Projects","projects.heading":"Things I've built.","proj.explore":"Explore →","proj.addimg":"Add image via admin →","proj.nopic":"No image yet",
 "proj.edu.sub":"Student collaboration platform","proj.edu.desc":"A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication.",
-"proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback.",
+"proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system.",
+"proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback.",
 "proj.stu.sub":"Python · Desktop App","proj.stu.desc":"A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation, and persistent file storage.",
+"proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management, habit tracking, subscription monitoring, travel planner, and AI-powered daily briefings.",
 "modal.about":"About this project","modal.tools":"Tools &amp; Technologies","modal.links":"Links",
-"edu.label":"Education &amp; Certifications","edu.heading":"Always learning.","edu.ue":"B.Sc. Software Engineering","edu.certs":"Certifications","edu.certsTitle":"Licenses &amp; Certifications",
-"cert.ga.name":"Google Analytics Individual Qualification","cert.ga.desc":"Demonstrates proficiency in Google Analytics — tracking, reporting, and advanced data analysis concepts.",
-"cert.dm.name":"Fundamentals of Digital Marketing","cert.dm.desc":"Covers SEO, SEM, social media marketing, content strategy, and digital analytics fundamentals.",
+"edu.label":"Education &amp; Certifications","edu.heading":"Always learning.","edu.degree":"B.Sc. Software Engineering · Potsdam, Germany","edu.certs":"Certifications","edu.certsTitle":"Licenses &amp; Certifications",
+"sem.1":"Semester 1","sem.2":"Semester 2","sem.3":"Semester 3","sem.4":"Semester 4",
+"cert.ga.name":"Google Analytics Individual Qualification","cert.ga.desc":"Proficiency in Google Analytics — tracking, reporting, and advanced data analysis.",
+"cert.dm.name":"Fundamentals of Digital Marketing","cert.dm.desc":"Covers SEO, SEM, social media marketing, content strategy, and digital analytics.",
 "cert.un.name":"Emergency Preparedness &amp; Response","cert.un.desc":"Certified in humanitarian emergency response protocols and crisis communication.",
 "contact.label":"Contact","contact.heading":"Let's build something<br/>great together.","contact.desc":"Always open to discussing new projects, creative ideas, or opportunities. Drop me a message and I'll get back to you quickly.",
 "form.name":"Name","form.email":"Email","form.message":"Message","form.send":"Send message →",
@@ -607,29 +647,31 @@ de:{
 "about.p4":"Ich arbeite gern an der Schnittstelle zwischen technischer Tiefe und menschlicher Zusammenarbeit — ob Backend-Architektur oder Studierendenratssitzung.",
 "about.cta":"Zusammenarbeiten →","about.languages":"Sprachen","about.soft":"Soziale Kompetenzen","lang.native":"Muttersprache",
 "soft.teamwork":"Teamarbeit","soft.comm":"Kommunikation","soft.problem":"Problemlösung","soft.leadership":"Führung","soft.adapt":"Anpassungsfähigkeit","soft.creative":"Kreatives Denken","soft.initiative":"Eigeninitiative","soft.collab":"Zusammenarbeit","soft.empathy":"Empathie","soft.time":"Zeitmanagement",
-"exp.label":"Erfahrung","exp.heading":"Wo ich gearbeitet habe.","exp.tech":"💻 Technik &amp; IT","exp.other":"🎓 Führung &amp; Weiteres","exp.visit":"↗ Website besuchen","exp.present":"Aktuell",
-"role.webdev":"Website-Entwickler · Freiberuflich","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
+"exp.label":"Erfahrung","exp.heading":"Wo ich gearbeitet habe.","exp.tech":"💻 Technik &amp; IT","exp.other":"🎓 Führung &amp; Weiteres","exp.visit":"↗ Website","exp.present":"Aktuell",
+"role.webdev":"Website-Entwickler","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
 "gc.1":"Gestaltung und Pflege der Unternehmenswebsite","gc.2":"Digitale Marketingstrategie über SEO","gc.3":"Entwicklung einer internen Plattform zur Verbindung von Hauswirtschaft und Rezeption",
 "ue1.1":"Enge Zusammenarbeit mit der Hochschulleitung zur Weiterentwicklung von Studienprogrammen","ue1.2":"Mitwirkung an Qualitätssicherung, Akkreditierung und Studiengangsweiterentwicklung","ue1.3":"Analyse von Qualitäts- und Evaluationsberichten zur Identifikation von Verbesserungspotenzialen","ue1.4":"Vertretung der Studierendeninteressen in universitären Entscheidungsprozessen und Qualitätsgremien",
 "pl.1":"Erste Anlaufstelle für Anfragen zur Universität und zum Studentenleben","pl.2":"Förderung von sozialem Engagement und Vernetzungsmöglichkeiten für Erstsemester","pl.3":"Planung und Durchführung von Campus- und außercamplichen Veranstaltungen","pl.4":"Zusammenarbeit mit der Hochschulleitung bei strategischen Aufgaben",
 "ao.1":"Hauptansprechpartner für nationale und internationale Gäste","ao.2":"Verwaltung des täglichen Rezeptionsbetriebs und Koordination mit anderen Abteilungen","ao.3":"Schlüsselrolle bei der Eröffnung des neuen a&o-Standorts in Mailand (Aug 2025)","ao.4":"Tägliche Kommunikation auf Deutsch, Englisch und Italienisch",
 "skills.label":"Kenntnisse","skills.heading":"Mein Tech-Stack.","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Daten","skills.devops":"DevOps &amp; IT",
-"projects.label":"Projekte","projects.heading":"Was ich gebaut habe.","proj.explore":"Erkunden →","proj.addimg":"Klicken zum Erkunden →","proj.nopic":"Noch kein Bild — über Admin-Panel hochladen",
-"proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-Briefings.",
-"proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem.",
+"projects.label":"Projekte","projects.heading":"Was ich gebaut habe.","proj.explore":"Erkunden →","proj.addimg":"Bild hinzufügen →","proj.nopic":"Noch kein Bild",
 "proj.edu.sub":"Studentische Kollaborationsplattform","proj.edu.desc":"Eine Webplattform für akademische Zusammenarbeit zwischen Studierenden in Potsdam. Ermöglicht Ressourcenteilung, Lerngruppen-Erstellung und Echtzeit-Kommunikation.",
-"proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals — bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt.",
+"proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem.",
+"proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals, das verwirrende bürokratische Abläufe durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt.",
 "proj.stu.sub":"Python · Desktop-App","proj.stu.desc":"Ein Python-basiertes Studentenverwaltungssystem mit Tkinter-GUI. CRUD-Operationen, automatische ID- &amp; E-Mail-Generierung, Altersberechnung und persistente Dateispeicherung.",
+"proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-Briefings.",
 "modal.about":"Über dieses Projekt","modal.tools":"Tools &amp; Technologien","modal.links":"Links",
-"edu.label":"Bildung &amp; Zertifikate","edu.heading":"Immer am Lernen.","edu.ue":"B.Sc. Softwaretechnik","edu.certs":"Zertifikate","edu.certsTitle":"Lizenzen &amp; Zertifikate",
-"cert.ga.name":"Google Analytics Individual Qualification","cert.ga.desc":"Nachgewiesene Kenntnisse in Google Analytics — Tracking, Reporting und fortgeschrittene Datenanalyse.",
+"edu.label":"Bildung &amp; Zertifikate","edu.heading":"Immer am Lernen.","edu.degree":"B.Sc. Softwaretechnik · Potsdam, Deutschland","edu.certs":"Zertifikate","edu.certsTitle":"Lizenzen &amp; Zertifikate",
+"sem.1":"Semester 1","sem.2":"Semester 2","sem.3":"Semester 3","sem.4":"Semester 4",
+"cert.ga.name":"Google Analytics Individual Qualification","cert.ga.desc":"Kenntnisse in Google Analytics — Tracking, Reporting und fortgeschrittene Datenanalyse.",
 "cert.dm.name":"Grundlagen des digitalen Marketings","cert.dm.desc":"Themen: SEO, SEM, Social Media Marketing, Content-Strategie und digitale Analysen.",
-"cert.un.name":"Notfallvorsorge &amp; -reaktion","cert.un.desc":"Zertifiziert in humanitären Notfallprotokollen und Krisenkommunikation.",
+"cert.un.name":"Notfallvorsorge &amp; Reaktion","cert.un.desc":"Zertifiziert in humanitären Notfallprotokollen und Krisenkommunikation.",
 "contact.label":"Kontakt","contact.heading":"Lass uns gemeinsam<br/>etwas aufbauen.","contact.desc":"Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten. Schreib mir — ich melde mich schnell.",
 "form.name":"Name","form.email":"E-Mail","form.message":"Nachricht","form.send":"Nachricht senden →",
 "footer.back":"Nach oben ↑"
 }
 };
+
 let currentLang='en';
 function setLang(lang){
 currentLang=lang;
@@ -638,6 +680,7 @@ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('d
 document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder');if(i18n[lang][k]!==undefined)el.placeholder=i18n[lang][k];});
 }
 document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.getAttribute('data-lang'))));
+
 const io=new IntersectionObserver((entries)=>{
 entries.forEach((entry,i)=>{
 if(entry.isIntersecting){
