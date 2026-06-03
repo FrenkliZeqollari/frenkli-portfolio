@@ -5,442 +5,434 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Frenkli Zeqollari is a software engineer in Berlin building AI-powered mobile and web products."/>
   <meta name="robots" content="index, follow"/>
-  <meta name="theme-color" content="#0f1f3d"/>
-  <link rel="canonical" href="https://frenkli-portfolio.vercel.app/"/>
+  <meta name="theme-color" content="#111111"/>
+  <link rel="canonical" href="https://frenkli.dev/"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Frenkli Zeqollari - Software Engineer"/>
+  <meta property="og:title" content="Frenkli — Software Engineer & Builder"/>
   <meta property="og:description" content="Portfolio of Frenkli Zeqollari: software engineering, AI-powered products, and digital experiences."/>
-  <meta property="og:url" content="https://frenkli-portfolio.vercel.app/"/>
-  <meta property="og:image" content="https://frenkli-portfolio.vercel.app/frenkli.jpg"/>
+  <meta property="og:url" content="https://frenkli.dev/"/>
+  <meta property="og:image" content="https://frenkli.dev/frenkli.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Frenkli Zeqollari - Software Engineer"/>
+  <meta name="twitter:title" content="Frenkli — Software Engineer & Builder"/>
   <meta name="twitter:description" content="Portfolio of Frenkli Zeqollari with projects, experience, and contact details."/>
-  <meta name="twitter:image" content="https://frenkli-portfolio.vercel.app/frenkli.jpg"/>
-  <title>Frenkli Zeqollari — Software Engineer</title>
+  <meta name="twitter:image" content="https://frenkli.dev/frenkli.jpg"/>
+  <title>Frenkli — Software Engineer & Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet"/></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:#0f1f3d; --navy2:#1a3260; --cream:#f8f5ef; --cream2:#efe9df;
-      --white:#ffffff; --accent:#2563ff; --coral:#e85d3a;
-      --text:#dde4f0; --muted:#7a8fb0; --border:rgba(255,255,255,0.09); --radius:20px;
-      --bg:#0a1628; --bg2:#0d1b33; --card:#111e3a;
-      --fh:'Plus Jakarta Sans',sans-serif; --fb:'Plus Jakarta Sans',sans-serif; --fm:'JetBrains Mono',monospace;
+      --bg: #F5F5F7;
+      --white: #ffffff;
+      --ink: #0a0a0a;
+      --ink2: #1a1a1a;
+      --muted: #6b7280;
+      --muted2: #9ca3af;
+      --accent: #111111;
+      --blue: #2563ff;
+      --green: #10b981;
+      --violet: #7c3aed;
+      --coral: #f97316;
+      --border: rgba(0,0,0,0.07);
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06);
+      --r: 24px;
+      --r-sm: 16px;
+      --r-xs: 10px;
+      --f: 'Plus Jakarta Sans', sans-serif;
+      --max: 1200px;
     }
     html { scroll-behavior: smooth; }
-    body { background:var(--bg); color:var(--text); font-family:var(--fb); font-size:16px; line-height:1.7; overflow-x:hidden; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--f); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
 
-    /* NAV */
-    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 2.5rem; background:rgba(10,22,40,0.95); backdrop-filter:blur(20px); border-bottom:1px solid rgba(255,255,255,0.07); }
-    .nav-logo { font-family:var(--fh); font-weight:800; font-size:1.1rem; color:var(--text); text-decoration:none; letter-spacing:-0.03em; }
-    .nav-logo span { color:var(--accent); }
-    .nav-right { display:flex; align-items:center; gap:0.5rem; }
-    .nav-links { display:flex; gap:0.25rem; list-style:none; }
-    .nav-links a { font-family:var(--fb); font-size:0.82rem; font-weight:500; color:var(--muted); text-decoration:none; padding:0.5rem 0.9rem; border-radius:50px; transition:background 0.18s,color 0.18s; }
-    .nav-links a:hover { background:rgba(255,255,255,0.08); color:var(--text); }
-    .nav-cta { background:var(--navy)!important; color:var(--cream)!important; padding:0.45rem 1.1rem!important; border-radius:50px!important; }
-    .nav-cta:hover { background:var(--accent)!important; }
-    .lang-toggle { display:flex; align-items:center; background:rgba(255,255,255,0.06); border-radius:50px; padding:3px; border:1px solid rgba(255,255,255,0.08); margin-left:0.5rem; }
-    .lang-btn { font-family:var(--fm); font-size:0.65rem; font-weight:500; padding:0.3rem 0.7rem; border-radius:50px; border:none; background:transparent; color:var(--muted); cursor:pointer; transition:all 0.15s; letter-spacing:0.04em; min-height:32px; min-width:36px; }
-    .lang-btn.active { background:var(--navy); color:var(--cream); }
-
-    /* HERO */
-    #hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:4rem; padding:7rem 2.5rem 0; position:relative; overflow:hidden; }
-    .hero-blob { position:absolute; border-radius:50%; filter:blur(90px); pointer-events:none; z-index:0; }
-    .blob-1 { width:500px; height:500px; background:rgba(37,99,255,0.12); top:-100px; right:-80px; }
-    .blob-2 { width:300px; height:300px; background:rgba(232,93,58,0.09); bottom:80px; left:20px; }
-    .hero-left { position:relative; z-index:1; }
-    .hero-right { position:relative; z-index:1; display:flex; justify-content:flex-end; }
-
-    .hero-eyebrow { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:50px; padding:0.35rem 1rem; font-family:var(--fm); font-size:0.68rem; font-weight:500; color:var(--accent); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:1.75rem; }
-    .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); animation:pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.5)} }
-
-    .hero-name { font-family:var(--fh); font-weight:800; font-size:clamp(2.8rem,6vw,5.5rem); line-height:1.05; letter-spacing:-0.04em; color:var(--text); margin-bottom:1.25rem; }
-    .hero-name em { font-style:normal; color:var(--accent); }
-    .hero-desc { font-size:1.05rem; color:var(--muted); font-weight:400; max-width:460px; margin-bottom:2.25rem; line-height:1.75; }
-    .hero-desc strong { color:var(--text); font-weight:600; }
-    .hero-ctas { display:flex; gap:0.85rem; flex-wrap:wrap; }
-
-    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:50px; font-family:var(--fb); font-size:0.88rem; font-weight:600; text-decoration:none; transition:all 0.15s; cursor:pointer; border:none; letter-spacing:-0.01em; }
-    .btn-primary { background:var(--navy); color:var(--cream); }
-    .btn-primary:hover { background:var(--accent); transform:translateY(-2px); box-shadow:0 8px 24px rgba(37,99,255,0.25); }
-    .btn-ghost { background:transparent; border:1.5px solid rgba(255,255,255,0.15); color:var(--text); }
-    .btn-ghost:hover { border-color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.08); color:var(--text); transform:translateY(-2px); }
-    .hcard-pills { display:flex; gap:0.4rem; }
-    .about-cta { margin-top:1.25rem; }
-    .form-submit { align-self:flex-start; min-height:44px; }
-
-    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-      outline:3px solid rgba(37,99,255,0.45);
-      outline-offset:2px;
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      background: rgba(245,245,247,0.85); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
     }
+    .nav-logo { font-weight: 800; font-size: 1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.04em; display: flex; align-items: center; gap: 0.4rem; }
+    .nav-logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); display: inline-block; }
+    .nav-center { display: flex; gap: 0.15rem; list-style: none; }
+    .nav-center a { font-size: 0.8rem; font-weight: 500; color: var(--muted); text-decoration: none; padding: 0.4rem 0.85rem; border-radius: 50px; transition: all 0.15s; }
+    .nav-center a:hover { background: var(--white); color: var(--ink); box-shadow: var(--shadow); }
+    .nav-right { display: flex; align-items: center; gap: 0.5rem; }
+    .lang-toggle { display: flex; align-items: center; background: var(--white); border-radius: 50px; padding: 3px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .lang-btn { font-size: 0.65rem; font-weight: 600; padding: 0.28rem 0.65rem; border-radius: 50px; border: none; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; letter-spacing: 0.03em; min-height: 28px; }
+    .lang-btn.active { background: var(--ink); color: white; }
+    .nav-cta { background: var(--ink); color: white; border: none; border-radius: 50px; padding: 0.5rem 1.25rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.15s; display: inline-flex; align-items: center; }
+    .nav-cta:hover { background: var(--blue); transform: translateY(-1px); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
-    /* BENTO GRID (hero) */
-    .bento-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; width:100%; max-width:400px; }
-    .bento-cell { background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius); padding:1.25rem 1.4rem; display:flex; flex-direction:column; gap:0.5rem; transition:box-shadow 0.18s,transform 0.18s; }
-    .bento-cell:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(15,31,61,0.09); }
-    .bento-name { grid-column:1/-1; flex-direction:row; align-items:center; gap:1rem; padding:1.4rem; }
-    .bento-avatar { width:46px; height:46px; border-radius:50%; background:var(--navy); color:var(--cream); display:flex; align-items:center; justify-content:center; font-family:var(--fh); font-weight:800; font-size:0.9rem; letter-spacing:-0.02em; flex-shrink:0; object-fit:cover; }
-    .bento-fullname { font-family:var(--fh); font-weight:700; font-size:0.95rem; color:var(--text); letter-spacing:-0.02em; }
-    .bento-role { font-size:0.74rem; color:var(--muted); }
-    .bento-status { background:rgba(16,185,129,0.04); border-color:rgba(16,185,129,0.15); }
-    .bento-builds { grid-column:1/-1; flex-direction:row; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
-    .bento-pills { display:flex; gap:0.45rem; flex-wrap:wrap; }
-    .bento-langs { grid-row:span 2; background:rgba(37,99,255,0.18); border-color:rgba(37,99,255,0.25); }
-    .bento-langs .bento-label { color:rgba(248,245,239,0.45); }
-    .bento-langs .bento-value { color:var(--cream); font-family:var(--fm); font-size:1.1rem; font-weight:500; }
-    .bento-langs:hover { box-shadow:0 8px 28px rgba(15,31,61,0.2); }
-    .bento-sublang { font-family:var(--fm); font-size:0.62rem; color:rgba(248,245,239,0.4); letter-spacing:0.06em; margin-top:auto; }
-    .bento-label { font-family:var(--fm); font-size:0.63rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
-    .bento-value { font-family:var(--fm); font-size:0.82rem; font-weight:500; color:var(--text); }
-    .pill { display:inline-block; padding:0.2rem 0.7rem; border-radius:50px; font-family:var(--fm); font-size:0.67rem; font-weight:500; }
-    .pill-blue  { background:rgba(37,99,255,0.1); color:var(--accent); }
-    .pill-green { background:rgba(16,185,129,0.1); color:#059669; }
-    .pill-navy  { background:var(--navy); color:var(--cream); }
+    /* ─── PAGE WRAPPER ─── */
+    .page { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
-    /* MARQUEE */
-    .marquee-wrap { width:100%; overflow:hidden; padding:2rem 0 0; position:relative; z-index:1; grid-column:1/-1; mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent); }
-    .marquee-track { display:flex; gap:1.5rem; width:max-content; animation:marquee 28s linear infinite; }
-    .marquee-track:hover { animation-play-state:paused; }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    .marquee-item { display:flex; align-items:center; gap:0.5rem; background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:50px; padding:0.45rem 1.1rem; font-family:var(--fm); font-size:0.72rem; color:var(--muted); white-space:nowrap; flex-shrink:0; }
-    .marquee-item span { font-size:0.85rem; }
+    /* ─── HERO ─── */
+    #hero { padding: 100px 2rem 60px; max-width: var(--max); margin: 0 auto; }
+    .hero-status-bar { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.3rem 0.85rem; font-size: 0.72rem; font-weight: 500; color: var(--muted); margin-bottom: 2rem; box-shadow: var(--shadow); }
+    .hero-status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: glow 2s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,0.4)} 50%{box-shadow:0 0 0 5px rgba(16,185,129,0)} }
 
-    /* SECTIONS */
-    section { padding:6rem 2.5rem; }
-    .section-inner { max-width:1080px; margin:0 auto; }
-    .section-label { font-family:var(--fm); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:0.6rem; }
-    .section-heading { font-family:var(--fh); font-weight:800; font-size:clamp(2.2rem,4.5vw,3.5rem); letter-spacing:-0.05em; line-height:1.05; color:var(--text); margin-bottom:3.5rem; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; align-items: center; }
 
-    /* ABOUT */
-    #about { background:var(--bg2); }
-    .about-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:6rem; align-items:start; }
-    .about-text p { color:var(--muted); margin-bottom:1.4rem; font-size:1.02rem; line-height:1.8; }
-    .about-text p strong { color:var(--text); font-weight:600; }
-    .about-text p em { color:var(--accent); font-style:normal; font-weight:600; }
-    .about-aside { display:flex; flex-direction:column; gap:1.25rem; }
-    .aside-card { background:var(--card); border-radius:var(--radius); padding:1.75rem; border:1px solid rgba(255,255,255,0.07); }
-    .aside-title { font-family:var(--fm); font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
-    .lang-row { display:flex; justify-content:space-between; align-items:center; padding:0.4rem 0; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .lang-row:last-child { border-bottom:none; }
-    .lang-name { font-size:0.88rem; font-weight:500; color:var(--text); }
-    .lang-lvl { font-family:var(--fm); font-size:0.67rem; color:var(--muted); }
-    .pills-wrap { display:flex; flex-wrap:wrap; gap:0.45rem; }
+    /* Hero Left */
+    .hero-left { display: flex; flex-direction: column; justify-content: space-between; padding: 0; }
+    .hero-title { font-size: clamp(3rem, 6vw, 5.8rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.05em; color: var(--ink); margin-bottom: 1.5rem; }
+    .hero-title em { font-style: italic; font-weight: 300; color: var(--muted); }
+    .hero-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 420px; margin-bottom: 2rem; }
+    .hero-desc strong { color: var(--ink); font-weight: 600; }
+    .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-dark { background: var(--ink); color: white; border: none; border-radius: 50px; padding: 0.8rem 1.75rem; font-size: 0.88rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .btn-dark:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,255,0.3); }
+    .btn-light { background: var(--white); color: var(--ink); border: 1.5px solid var(--border); border-radius: 50px; padding: 0.8rem 1.75rem; font-size: 0.88rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; box-shadow: var(--shadow); }
+    .btn-light:hover { border-color: var(--ink); transform: translateY(-2px); }
 
-    /* EXPERIENCE */
-    #experience { background:var(--bg); }
-    .exp-section-title { font-family:var(--fh); font-weight:700; font-size:1rem; color:var(--text); letter-spacing:-0.02em; margin-bottom:1.5rem; margin-top:2.5rem; display:flex; align-items:center; gap:0.75rem; }
-    .exp-section-title:first-child { margin-top:0; }
-    .exp-section-title::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.09); }
-    .exp-list { display:flex; flex-direction:column; }
-    .exp-item { display:grid; grid-template-columns:180px 1fr; gap:2.5rem; padding:2rem 0; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .exp-item:last-child { border-bottom:none; }
-    .exp-period { font-family:var(--fm); font-size:0.7rem; color:var(--accent); margin-bottom:0.25rem; }
-    .exp-loc { font-family:var(--fm); font-size:0.67rem; color:var(--muted); }
-    .exp-company { font-family:var(--fh); font-weight:700; font-size:1.1rem; color:var(--text); margin-bottom:0.2rem; letter-spacing:-0.02em; }
-    .exp-role { font-size:0.78rem; font-weight:500; color:var(--muted); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:0.85rem; }
-    .exp-bullets { list-style:none; display:flex; flex-direction:column; gap:0.35rem; }
-    .exp-bullets li { font-size:0.9rem; color:var(--muted); padding-left:1.1rem; position:relative; }
-    .exp-bullets li::before { content:'↳'; position:absolute; left:0; color:var(--navy2); font-size:0.78rem; }
+    /* Hero Middle */
+    .hero-middle { display: flex; flex-direction: column; gap: 0.75rem; }
+    .hero-profile-card { background: var(--white); border-radius: var(--r); padding: 2.5rem 2rem; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+    .hero-avatar { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); flex-shrink: 0; background: #eee; }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .hero-profile-name { font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--ink); }
+    .hero-profile-title { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+    .hero-profile-loc { display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--muted); }
+    .hero-langs-card { background: var(--white); border-radius: var(--r); padding: 1.25rem; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .card-micro-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted2); margin-bottom: 0.65rem; }
+    .lang-mini-row { display: flex; justify-content: space-between; align-items: center; padding: 0.22rem 0; font-size: 0.75rem; border-bottom: 1px solid var(--border); }
+    .lang-mini-row:last-child { border-bottom: none; }
+    .lang-mini-name { font-weight: 500; color: var(--ink); }
+    .lang-mini-lvl { font-size: 0.65rem; color: var(--muted); background: var(--bg); padding: 0.1rem 0.45rem; border-radius: 50px; }
 
-    /* SKILLS */
-    #skills { background:var(--bg2); }
-    .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
-    .skill-card { background:var(--card); border-radius:var(--radius); padding:2rem; border:1px solid rgba(255,255,255,0.07); border-left:3px solid transparent; transition:transform 0.18s,box-shadow 0.18s,border-left-color 0.18s; }
-    .skill-card:hover { transform:translateY(-5px); box-shadow:0 12px 40px rgba(0,0,0,0.3); border-left-color:var(--accent); }
-    .skill-card-title { font-family:var(--fh); font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:1rem; letter-spacing:-0.02em; display:flex; align-items:center; gap:0.6rem; }
-    .tag-wrap { display:flex; flex-wrap:wrap; gap:0.45rem; }
-    .tag { font-family:var(--fm); font-size:0.67rem; font-weight:500; padding:0.28rem 0.75rem; border-radius:50px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.09); color:var(--muted); }
+    /* Hero Right */
+    .hero-right { background: var(--white); border-radius: var(--r); padding: 1.75rem; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 1.25rem; }
+    .hero-widget { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+    .hero-widget:last-child { border-bottom: none; padding-bottom: 0; }
+    .hw-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted2); }
+    .hw-value { font-size: 0.92rem; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+    .hw-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 0.2rem 0.6rem; font-size: 0.72rem; font-weight: 500; color: var(--ink); }
+    .hw-badge.green { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2); color: #065f46; }
+    .hw-badge.blue { background: rgba(37,99,255,0.08); border-color: rgba(37,99,255,0.15); color: var(--blue); }
+    .hw-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: glow 2s ease-in-out infinite; }
 
-    /* PROJECTS */
-    #projects { background:var(--bg); }
-    #projects .section-label { color:rgba(221,228,240,0.4); }
-    #projects .section-heading { color:var(--text); }
-    .proj-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:1.25rem; }
-    .proj-card { grid-column:span 4; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:2.25rem; display:flex; flex-direction:column; transition:background 0.18s,transform 0.18s,border-color 0.18s; }
-    .proj-card:hover { background:rgba(255,255,255,0.08); transform:translateY(-4px); border-color:rgba(255,255,255,0.18); }
-    .proj-card:nth-child(1),.proj-card:nth-child(2) { grid-column:span 6; }
-    .proj-card:nth-child(1) .proj-title,.proj-card:nth-child(2) .proj-title { font-size:1.5rem; }
-    .proj-num { font-family:var(--fm); font-size:0.65rem; color:rgba(248,245,239,0.3); letter-spacing:0.1em; margin-bottom:1rem; }
-    .proj-title { font-family:var(--fh); font-weight:700; font-size:1.25rem; color:var(--cream); margin-bottom:0.25rem; letter-spacing:-0.03em; }
-    .proj-sub { font-family:var(--fm); font-size:0.67rem; color:rgba(248,245,239,0.4); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.9rem; }
-    .proj-desc { font-size:0.88rem; color:rgba(248,245,239,0.6); margin-bottom:1.5rem; flex:1; line-height:1.7; }
-    .proj-tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
-    .proj-tag { font-family:var(--fm); font-size:0.64rem; padding:0.25rem 0.7rem; border-radius:50px; border:1px solid rgba(255,255,255,0.15); color:rgba(248,245,239,0.5); }
-    .proj-link {
-      display:inline-flex;
-      align-items:center;
-      gap:0.4rem;
-      margin-top:1rem;
-      font-family:var(--fm);
-      font-size:0.7rem;
-      color:rgba(248,245,239,0.5);
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,0.15);
-      border-radius:50px;
-      padding:0.3rem 0.8rem;
-      transition:color 0.15s,border-color 0.15s;
+    /* ─── MARQUEE ─── */
+    .marquee-section { padding: 2rem 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
+    .marquee-track { display: flex; gap: 0.75rem; width: max-content; animation: slide 32s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes slide { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .marquee-chip { display: flex; align-items: center; gap: 0.4rem; background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.38rem 1rem; font-size: 0.72rem; color: var(--muted); white-space: nowrap; box-shadow: var(--shadow); font-weight: 500; }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 6rem 2rem; }
+    .sec-wrap { max-width: var(--max); margin: 0 auto; }
+    .sec-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .sec-heading { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1.05; color: var(--ink); margin-bottom: 3rem; }
+    .sec-heading em { font-style: italic; font-weight: 300; color: var(--muted); }
+
+    /* ─── CARD BASE ─── */
+    .card { background: var(--white); border-radius: var(--r); border: 1px solid var(--border); box-shadow: var(--shadow); transition: box-shadow 0.2s, transform 0.2s; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .card-p { padding: 2rem; }
+    .card-p-lg { padding: 2.5rem; }
+
+    /* ─── ABOUT ─── */
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; border-radius: var(--r); }
+    .about-photo-col { display: flex; flex-direction: column; gap: 1.25rem; }
+    .about-text p { color: var(--muted); margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.8; }
+    .about-text p strong { color: var(--ink); font-weight: 600; }
+    .about-text p em { color: var(--blue); font-style: normal; font-weight: 600; }
+    .about-langs-card { background: var(--bg); border-radius: var(--r-sm); padding: 1.5rem; border: 1px solid var(--border); }
+    .lang-row { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+    .lang-row:last-child { border-bottom: none; }
+    .lang-name { font-size: 0.88rem; font-weight: 500; color: var(--ink); }
+    .lang-lvl { font-size: 0.7rem; color: var(--muted); }
+    .soft-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .soft-pill { background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 0.25rem 0.8rem; font-size: 0.75rem; font-weight: 500; color: var(--ink); }
+
+    /* ─── SKILLS ─── */
+    #skills { background: var(--bg); }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .skill-card { background: var(--white); border-radius: var(--r); border: 1px solid var(--border); padding: 2rem; box-shadow: var(--shadow); transition: box-shadow 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .skill-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .skill-num { position: absolute; top: 1.25rem; right: 1.5rem; font-size: 3.5rem; font-weight: 800; color: rgba(0,0,0,0.04); line-height: 1; letter-spacing: -0.04em; pointer-events: none; }
+    .skill-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
+    .skill-title { font-weight: 700; font-size: 1rem; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 1rem; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .skill-tag { background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 0.25rem 0.75rem; font-size: 0.72rem; font-weight: 500; color: var(--ink); }
+
+    /* ─── EXPERIENCE ─── */
+    #experience { background: var(--white); }
+    .exp-category-header { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .exp-card { background: var(--bg); border-radius: var(--r); border: 1px solid var(--border); padding: 2rem; transition: box-shadow 0.2s, transform 0.2s; }
+    .exp-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); background: var(--white); }
+    .exp-card.current { border-top: 3px solid var(--green); }
+    .exp-role-title { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+    .exp-company-row { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+    .exp-company-name { font-size: 0.82rem; font-weight: 500; color: var(--muted); }
+    .exp-sep { font-size: 0.82rem; color: var(--muted2); }
+    .exp-loc-text { font-size: 0.82rem; color: var(--muted); }
+    .exp-meta-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+    .exp-period-badge { font-size: 0.68rem; font-weight: 600; color: var(--blue); background: rgba(37,99,255,0.08); border: 1px solid rgba(37,99,255,0.15); border-radius: 50px; padding: 0.18rem 0.6rem; }
+    .current-badge { font-size: 0.6rem; font-weight: 700; color: #065f46; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); border-radius: 50px; padding: 0.18rem 0.6rem; display: flex; align-items: center; gap: 0.3rem; }
+    .current-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); display: inline-block; animation: glow 2s infinite; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .exp-bullets li { font-size: 0.83rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.6; }
+    .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--blue); font-weight: 600; }
+    .exp-visit { margin-top: 1rem; }
+    .exp-visit a { font-size: 0.72rem; font-weight: 600; color: var(--blue); text-decoration: none; background: rgba(37,99,255,0.07); border: 1px solid rgba(37,99,255,0.15); border-radius: 50px; padding: 0.25rem 0.75rem; transition: all 0.15s; display: inline-block; }
+    .exp-visit a:hover { background: var(--blue); color: white; }
+
+    /* ─── PROJECTS ─── */
+    #projects { background: var(--bg); }
+    /* Featured row */
+    .proj-featured-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .proj-featured { border-radius: var(--r); padding: 2.5rem; display: flex; flex-direction: column; border: 1px solid transparent; transition: box-shadow 0.2s, transform 0.2s; min-height: 480px; }
+    .proj-featured:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .proj-featured.navi { background: linear-gradient(145deg, #eef2ff 0%, #e0e7ff 100%); border-color: rgba(99,102,241,0.2); }
+    .proj-featured.taply { background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%); border-color: rgba(37,99,255,0.2); }
+    .proj-featured-img { width: 100%; height: 200px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 1.5rem; background: rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .proj-featured-img img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-num { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.6rem; text-transform: uppercase; }
+    .proj-name { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 0.2rem; }
+    .proj-sub { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.85rem; }
+    .proj-desc { font-size: 0.85rem; color: var(--muted); flex: 1; line-height: 1.7; margin-bottom: 1.25rem; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .proj-tag { background: white; border: 1px solid var(--border); border-radius: 50px; padding: 0.22rem 0.65rem; font-size: 0.68rem; font-weight: 600; color: var(--ink); }
+    .proj-links { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .proj-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; font-weight: 600; color: var(--ink); text-decoration: none; background: white; border: 1.5px solid var(--border); border-radius: 50px; padding: 0.35rem 0.9rem; transition: all 0.15s; }
+    .proj-link:hover { border-color: var(--blue); color: var(--blue); }
+    .proj-link.primary { background: var(--ink); color: white; border-color: var(--ink); }
+    .proj-link.primary:hover { background: var(--blue); border-color: var(--blue); }
+    /* Secondary row */
+    .proj-secondary-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .proj-card { background: var(--white); border-radius: var(--r); padding: 1.75rem; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s; }
+    .proj-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .proj-card-img { width: 100%; height: 130px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 1.25rem; background: var(--bg); }
+    .proj-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .proj-card .proj-name { font-size: 1.15rem; }
+
+    /* ─── TAPLY SPOTLIGHT ─── */
+    #taply-featured { background: var(--ink); padding: 6rem 2rem; }
+    .taply-wrap { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .taply-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.75rem; }
+    .taply-title { font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.05em; color: white; line-height: 1; margin-bottom: 0.5rem; }
+    .taply-sub { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(37,99,255,0.7); margin-bottom: 1.5rem; }
+    .taply-desc { color: rgba(255,255,255,0.55); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; max-width: 440px; }
+    .taply-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.25rem; }
+    .taply-tag { font-size: 0.68rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.55); }
+    .taply-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--blue); color: white; border: none; border-radius: 50px; padding: 0.9rem 2rem; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: all 0.15s; cursor: pointer; }
+    .taply-cta:hover { background: #1a4ae0; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37,99,255,0.5); }
+    .taply-img-wrap { border-radius: var(--r); overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+    .taply-img-wrap img { width: 100%; display: block; }
+
+    /* ─── EDUCATION ─── */
+    #education { background: var(--white); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .edu-card { background: var(--bg); border-radius: var(--r); border: 1px solid var(--border); padding: 2rem; transition: box-shadow 0.2s, transform 0.2s; }
+    .edu-card:first-child { border-top: 3px solid var(--blue); }
+    .edu-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .edu-period { font-size: 0.68rem; font-weight: 600; color: var(--blue); margin-bottom: 0.5rem; }
+    .edu-school { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 0.25rem; }
+    .edu-degree { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+    .edu-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .edu-tag { background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.22rem 0.7rem; font-size: 0.7rem; font-weight: 500; color: var(--ink); }
+    .cert-list { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem; }
+    .cert-item { background: var(--white); border-radius: var(--r-xs); padding: 0.9rem 1rem; border: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.75rem; }
+    .cert-icon { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1rem; background: var(--bg); }
+    .cert-name { font-size: 0.8rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .cert-issuer { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--bg); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    /* Form side */
+    .contact-form-card { background: var(--white); border-radius: var(--r); border: 1px solid var(--border); padding: 2.5rem; box-shadow: var(--shadow); }
+    .contact-form-title { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 0.25rem; }
+    .contact-form-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.75rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .form-input, .form-textarea { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r-xs); padding: 0.85rem 1rem; color: var(--ink); font-family: var(--f); font-size: 0.92rem; outline: none; transition: border-color 0.15s, background 0.15s; width: 100%; }
+    .form-input:focus, .form-textarea:focus { border-color: var(--blue); background: white; }
+    .form-textarea { height: 120px; resize: vertical; }
+    /* Links side */
+    .contact-links-card { background: var(--ink2); border-radius: var(--r); padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .contact-links-headline { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.04em; color: white; line-height: 1.2; margin-bottom: 0.5rem; }
+    .contact-links-sub { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 0.75rem; }
+    .contact-sticker { display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--r-sm); padding: 1rem 1.25rem; text-decoration: none; transition: all 0.15s; }
+    .contact-sticker:hover { background: rgba(255,255,255,0.12); transform: translateX(4px); }
+    .sticker-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; font-weight: 700; color: white; font-size: 0.8rem; }
+    .sticker-text { display: flex; flex-direction: column; }
+    .sticker-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1px; }
+    .sticker-value { font-size: 0.85rem; font-weight: 500; color: white; }
+
+    /* ─── FOOTER ─── */
+    footer { background: #060a12; color: rgba(255,255,255,0.25); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 0.72rem; letter-spacing: 0.02em; }
+    .footer-back { font-size: 0.72rem; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.15s; }
+    .footer-back:hover { color: white; }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-profile-card { max-width: 320px; }
+      .about-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; }
+      .about-photo-col { display: none; }
+      .proj-featured-row { grid-template-columns: 1fr; }
+      .proj-secondary-row { grid-template-columns: 1fr 1fr; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .taply-wrap { grid-template-columns: 1fr; gap: 3rem; }
     }
-    .proj-link:hover { color:rgba(248,245,239,0.9); border-color:rgba(255,255,255,0.4); }
-
-    /* EDUCATION */
-    #education { background:var(--bg); }
-    .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
-    .edu-card { background:var(--card); border-radius:var(--radius); padding:2rem; border:1px solid rgba(255,255,255,0.07); transition:transform 0.15s,box-shadow 0.15s; }
-    .edu-card:first-child { border-top:3px solid var(--accent); }
-    .edu-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
-    .edu-period { font-family:var(--fm); font-size:0.68rem; color:var(--accent); margin-bottom:0.5rem; }
-    .edu-school { font-family:var(--fh); font-weight:700; font-size:1.05rem; color:var(--text); margin-bottom:0.25rem; letter-spacing:-0.02em; }
-    .edu-degree { font-size:0.88rem; color:var(--muted); }
-    .edu-courses { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1rem; }
-    .cert-pills { display:flex; flex-direction:column; gap:0.5rem; margin-top:0.9rem; }
-    .cert-pill { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(37,99,255,0.12); border:1px solid rgba(37,99,255,0.25); border-radius:50px; padding:0.35rem 0.9rem; font-family:var(--fm); font-size:0.67rem; color:var(--accent); }
-
-    /* CONTACT */
-    #contact { background:var(--bg2); }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; }
-    .contact-info p { color:var(--muted); margin-bottom:2rem; font-size:1rem; }
-    .contact-list { display:flex; flex-direction:column; }
-    .contact-row { display:flex; align-items:center; gap:1rem; font-size:0.88rem; color:var(--muted); text-decoration:none; padding:0.9rem 0; border-bottom:1px solid var(--border); transition:color 0.15s,padding-left 0.15s; }
-    .contact-row:hover { color:var(--text); padding-left:0.35rem; }
-    .contact-row-icon { width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; color:var(--text); font-family:var(--fm); }
-    .contact-form { display:flex; flex-direction:column; gap:1rem; }
-    .form-group { display:flex; flex-direction:column; gap:0.4rem; }
-    .form-label { font-family:var(--fm); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
-    .form-input,.form-textarea { background:rgba(255,255,255,0.05); border:1.5px solid rgba(255,255,255,0.1); border-radius:14px; padding:0.9rem 1.2rem; color:var(--text); font-family:var(--fb); font-size:0.95rem; outline:none; transition:border-color 0.15s,background 0.15s; width:100%; }
-    .form-input:focus,.form-textarea:focus { border-color:var(--accent); background:rgba(255,255,255,0.08); }
-    .form-textarea { height:140px; resize:vertical; }
-
-    /* FOOTER */
-    footer { background:#060e1a; color:rgba(248,245,239,0.4); padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; }
-    .footer-copy { font-family:var(--fm); font-size:0.68rem; letter-spacing:0.04em; }
-    .footer-back { font-family:var(--fm); font-size:0.68rem; color:rgba(248,245,239,0.4); text-decoration:none; transition:color 0.15s; }
-    .footer-back:hover { color:var(--cream); }
-
-    .travel-item { font-family:var(--fb); font-size:0.92rem; font-weight:500; color:rgba(248,245,239,0.7); padding:0.85rem 0; border-bottom:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; gap:0.6rem; transition:color 0.15s, padding-left 0.15s; cursor:default; }
-    .travel-item:hover { color:var(--cream); padding-left:0.4rem; }
-
-    /* PROJECT IMAGES */
-    .proj-img { width:100%; height:160px; border-radius:12px; overflow:hidden; margin-bottom:1.25rem; background:rgba(255,255,255,0.04); flex-shrink:0; }
-    .proj-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s ease; display:block; }
-    .proj-card:hover .proj-img img { transform:scale(1.04); }
-    .proj-img--placeholder { display:flex; align-items:center; justify-content:center; font-size:2rem; }
-
-    /* LIVE DOT */
-    .live-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:#10b981; margin-left:0.5rem; vertical-align:middle; box-shadow:0 0 0 2px rgba(16,185,129,0.3); animation:livePulse 2s infinite; }
-    @keyframes livePulse { 0%,100%{box-shadow:0 0 0 2px rgba(16,185,129,0.3)} 50%{box-shadow:0 0 0 5px rgba(16,185,129,0.08)} }
-
-    /* TAPLY FEATURED */
-    #taply-featured { background:linear-gradient(135deg,#0d1b33 0%,#0a1628 60%); border-top:1px solid rgba(37,99,255,0.18); border-bottom:1px solid rgba(37,99,255,0.18); padding:7rem 2.5rem; }
-    .taply-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
-    .taply-eyebrow { font-family:var(--fm); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
-    .taply-heading { font-family:var(--fh); font-weight:800; font-size:clamp(3rem,6vw,5rem); color:var(--text); letter-spacing:-0.05em; line-height:1; margin-bottom:0.5rem; }
-    .taply-sub { font-family:var(--fm); font-size:0.72rem; color:rgba(37,99,255,0.8); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.5rem; }
-    .taply-desc { color:var(--muted); font-size:1.05rem; line-height:1.8; margin-bottom:2rem; max-width:480px; }
-    .taply-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2.5rem; }
-    .taply-cta { display:inline-flex; align-items:center; gap:0.5rem; background:var(--accent); color:#fff; padding:0.85rem 2rem; border-radius:50px; font-family:var(--fb); font-size:0.9rem; font-weight:700; text-decoration:none; transition:all 0.15s; letter-spacing:-0.01em; }
-    .taply-cta:hover { background:#1d4ed8; transform:translateY(-2px); box-shadow:0 12px 32px rgba(37,99,255,0.4); }
-    .taply-visual { border-radius:var(--radius); overflow:hidden; box-shadow:0 40px 80px rgba(0,0,0,0.5); }
-    .taply-visual img { width:100%; height:auto; display:block; }
-    @media(max-width:900px){ .taply-grid{grid-template-columns:1fr;gap:3rem;} .taply-visual{max-width:420px;} }
-    @media(max-width:640px){ .taply-heading{font-size:clamp(2.5rem,8vw,3.5rem);} #taply-featured{padding:5rem 1.25rem;} }
-
-    @media (prefers-reduced-motion: reduce) {
-      .snap-up, .snap-in { animation: none; opacity: 1; }
-      .marquee-track { animation-play-state: paused; }
-      * { transition-duration: 0.01ms !important; }
-    }
-
-    /* ANIMATIONS */
-    @keyframes snapUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes snapIn { from{opacity:0;transform:scale(0.96)} to{opacity:1;transform:scale(1)} }
-    .snap-up { opacity:0; animation:snapUp 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
-    .snap-in { opacity:0; animation:snapIn 0.3s cubic-bezier(0.22,1,0.36,1) forwards; }
-    .d1{animation-delay:0.05s}.d2{animation-delay:0.12s}.d3{animation-delay:0.2s}.d4{animation-delay:0.28s}.d5{animation-delay:0.36s}
-
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      #hero{grid-template-columns:1fr;padding:6rem 1.5rem 0;}
-      .hero-right{display:none;}
-      .about-grid,.contact-grid,.edu-grid{grid-template-columns:1fr;gap:2.5rem;}
-      .skills-grid{grid-template-columns:1fr 1fr;}
-      .about-grid,.contact-grid{gap:3rem;}
-      .section-heading{margin-bottom:2.5rem;}
-      .proj-grid{grid-template-columns:repeat(6,1fr);}
-      .proj-card{grid-column:span 3;}
-      .proj-card:nth-child(1),.proj-card:nth-child(2){grid-column:span 6;}
-    }
-    @media(max-width:640px){
-      nav{padding:1rem 1.25rem;} .nav-links{display:none;}
-      section{padding:4rem 1.25rem;}
-      .skills-grid{grid-template-columns:1fr;}
-      .exp-item{grid-template-columns:1fr;gap:0.5rem;}
-      footer{flex-direction:column;gap:1rem;text-align:center;}
-      .proj-grid{grid-template-columns:1fr;}
-      .proj-card,.proj-card:nth-child(1),.proj-card:nth-child(2){grid-column:span 1;}
-      .proj-card:nth-child(1) .proj-title,.proj-card:nth-child(2) .proj-title{font-size:1.25rem;}
-      .hero-name{font-size:clamp(2.2rem,8vw,3.2rem);}
-      .section-heading{font-size:clamp(1.8rem,7vw,2.5rem);}
-    }
-    @media(max-width:480px){
-      .hero-ctas{flex-direction:column;}
-      .btn{min-height:44px;justify-content:center;}
-      section{padding:3rem 1rem;}
-      .hero-eyebrow{font-size:0.62rem;}
+    @media(max-width: 640px) {
+      nav { padding: 0 1.25rem; }
+      .nav-center { display: none; }
+      section { padding: 4rem 1.25rem; }
+      #hero { padding: 80px 1.25rem 3rem; }
+      .proj-secondary-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav aria-label="Primary navigation">
-  <a href="#hero" class="nav-logo">Frenkli<span>.</span></a>
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Frenkli
+  </a>
+  <ul class="nav-center" role="list">
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+  </ul>
   <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
-      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-      <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
-    </ul>
-    <div class="lang-toggle" role="group" aria-label="Language switcher">
-      <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch language to English" aria-pressed="true">EN</button>
-      <button type="button" class="lang-btn" data-lang="de" aria-label="Sprache auf Deutsch umstellen" aria-pressed="false">DE</button>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
     </div>
+    <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-blob blob-1"></div>
-  <div class="hero-blob blob-2"></div>
-
-  <div class="hero-left">
-    <div class="hero-eyebrow snap-up d1">
-      <span class="eyebrow-dot"></span>
-      <span data-i18n="hero.status">Available for opportunities</span>
-    </div>
-    <h1 class="hero-name snap-up d2">
-      Software<br/>engineer<br/>&amp; <em>builder.</em>
-    </h1>
-    <p class="hero-desc snap-up d3">
-      <span data-i18n="hero.desc">I'm <strong>Frenkli Zeqollari</strong> - a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> and <strong>Navi</strong>, two mobile apps focused on everyday impact.</span>
-    </p>
-    <div class="hero-ctas snap-up d4">
-      <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">See my work →</a>
-      <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Get in touch</a>
-    </div>
+<!-- ── HERO ── -->
+<div id="hero">
+  <div class="hero-status-bar">
+    <span class="hero-status-dot"></span>
+    <span data-i18n="hero.status">Available for opportunities</span>
   </div>
 
-  <div class="hero-right">
-    <div class="bento-grid snap-in d5">
-      <div class="bento-cell bento-name">
-        <img class="bento-avatar" src="frenkli.jpg" alt="Frenkli Zeqollari" width="46" height="46" loading="lazy" decoding="async"/>
-        <div>
-          <div class="bento-fullname">Frenkli Zeqollari</div>
-          <div class="bento-role" data-i18n="card.role">Software Engineering Student</div>
-        </div>
+  <div class="hero-grid">
+    <!-- Col 1: Bold headline + desc + CTAs -->
+    <div class="hero-left">
+      <h1 class="hero-title">Software<br/>engineer<br/>&amp; <em>builder.</em></h1>
+      <p class="hero-desc">
+        <span data-i18n="hero.desc">I'm <strong>Frenkli</strong> — a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-dark" data-i18n="hero.cta1">See my work →</a>
+        <a href="#contact" class="btn-light" data-i18n="hero.cta2">Get in touch</a>
       </div>
-      <div class="bento-cell bento-status">
-        <div class="bento-label" data-i18n="card.status">Status</div>
-        <span class="pill pill-green" data-i18n="card.open">Open to work</span>
+    </div>
+
+    <!-- Col 2: Minimal profile card -->
+    <div class="hero-profile-card">
+      <div class="hero-avatar">
+        <img src="frenkli.jpg" alt="Frenkli Zeqollari" onerror="this.style.display='none'"/>
       </div>
-      <div class="bento-cell bento-location">
-        <div class="bento-label" data-i18n="card.location">Location</div>
-        <div class="bento-value">Berlin, Germany</div>
-      </div>
-      <div class="bento-cell bento-builds">
-        <div class="bento-label" data-i18n="card.building">Building</div>
-        <div class="bento-pills">
-          <span class="pill pill-blue">Taply</span>
-          <span class="pill pill-blue">Navi</span>
-        </div>
-      </div>
-      <div class="bento-cell bento-langs">
-        <div class="bento-label" data-i18n="card.languages">Languages</div>
-        <div class="bento-value" data-i18n="card.lang5">5 languages</div>
-        <div class="bento-sublang">AL · EN · DE · IT · GR</div>
-      </div>
-      <div class="bento-cell bento-exp">
-        <div class="bento-label" data-i18n="card.experience">Experience</div>
-        <span class="pill pill-navy" data-i18n="card.roles">5 roles</span>
+      <div class="hero-profile-name">Frenkli</div>
+      <div class="hero-profile-title" data-i18n="card.role">Software Engineering Student</div>
+      <div class="hero-profile-loc">
+        <span style="opacity:0.5;font-size:0.8rem;">📍</span> Berlin, Germany
       </div>
     </div>
   </div>
+</div>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <div class="marquee-item"><span>📱</span> Flutter</div>
-      <div class="marquee-item"><span>🎯</span> Dart</div>
-      <div class="marquee-item"><span>⚛️</span> React</div>
-      <div class="marquee-item"><span>🟨</span> JavaScript</div>
-      <div class="marquee-item"><span>🔷</span> TypeScript</div>
-      <div class="marquee-item"><span>🐍</span> Python</div>
-      <div class="marquee-item"><span>☕</span> Java</div>
-      <div class="marquee-item"><span>⚙️</span> C++</div>
-      <div class="marquee-item"><span>☁️</span> AWS</div>
-      <div class="marquee-item"><span>🗄️</span> SQL</div>
-      <div class="marquee-item"><span>🤖</span> Machine Learning</div>
-      <div class="marquee-item"><span>🎨</span> Figma</div>
-      <div class="marquee-item"><span>🔐</span> IT Security</div>
-      <div class="marquee-item"><span>📊</span> Big Data</div>
-      <div class="marquee-item"><span>🚀</span> React Native</div>
-      <div class="marquee-item"><span>🏗️</span> Supabase</div>
-      <div class="marquee-item"><span>📱</span> Flutter</div>
-      <div class="marquee-item"><span>🎯</span> Dart</div>
-      <div class="marquee-item"><span>⚛️</span> React</div>
-      <div class="marquee-item"><span>🟨</span> JavaScript</div>
-      <div class="marquee-item"><span>🔷</span> TypeScript</div>
-      <div class="marquee-item"><span>🐍</span> Python</div>
-      <div class="marquee-item"><span>☕</span> Java</div>
-      <div class="marquee-item"><span>⚙️</span> C++</div>
-      <div class="marquee-item"><span>☁️</span> AWS</div>
-      <div class="marquee-item"><span>🗄️</span> SQL</div>
-      <div class="marquee-item"><span>🤖</span> Machine Learning</div>
-      <div class="marquee-item"><span>🎨</span> Figma</div>
-      <div class="marquee-item"><span>🔐</span> IT Security</div>
-      <div class="marquee-item"><span>📊</span> Big Data</div>
-      <div class="marquee-item"><span>🚀</span> React Native</div>
-      <div class="marquee-item"><span>🏗️</span> Supabase</div>
-    </div>
+<!-- ── MARQUEE ── -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-chip">📱 Flutter</div>
+    <div class="marquee-chip">🎯 Dart</div>
+    <div class="marquee-chip">⚛️ React</div>
+    <div class="marquee-chip">🟨 JavaScript</div>
+    <div class="marquee-chip">🔷 TypeScript</div>
+    <div class="marquee-chip">🐍 Python</div>
+    <div class="marquee-chip">☕ Java</div>
+    <div class="marquee-chip">⚙️ C++</div>
+    <div class="marquee-chip">☁️ AWS</div>
+    <div class="marquee-chip">🗄️ SQL</div>
+    <div class="marquee-chip">🤖 Machine Learning</div>
+    <div class="marquee-chip">🎨 Figma</div>
+    <div class="marquee-chip">🔐 IT Security</div>
+    <div class="marquee-chip">📊 Big Data</div>
+    <div class="marquee-chip">🚀 React Native</div>
+    <div class="marquee-chip">🏗️ Supabase</div>
+    <div class="marquee-chip">📱 Flutter</div>
+    <div class="marquee-chip">🎯 Dart</div>
+    <div class="marquee-chip">⚛️ React</div>
+    <div class="marquee-chip">🟨 JavaScript</div>
+    <div class="marquee-chip">🔷 TypeScript</div>
+    <div class="marquee-chip">🐍 Python</div>
+    <div class="marquee-chip">☕ Java</div>
+    <div class="marquee-chip">⚙️ C++</div>
+    <div class="marquee-chip">☁️ AWS</div>
+    <div class="marquee-chip">🗄️ SQL</div>
+    <div class="marquee-chip">🤖 Machine Learning</div>
+    <div class="marquee-chip">🎨 Figma</div>
+    <div class="marquee-chip">🔐 IT Security</div>
+    <div class="marquee-chip">📊 Big Data</div>
+    <div class="marquee-chip">🚀 React Native</div>
+    <div class="marquee-chip">🏗️ Supabase</div>
   </div>
-</section>
+</div>
 
-<!-- ABOUT -->
+<!-- ── ABOUT ── -->
 <section id="about">
-  <div class="section-inner">
+  <div class="sec-wrap">
     <div class="about-grid">
-      <div class="about-text">
-        <div class="section-label" data-i18n="about.label">About me</div>
-        <h2 class="section-heading" data-i18n="about.heading">Turning ideas<br/>into real products.</h2>
-        <p data-i18n="about.p1">I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam, with a passion for AI, mobile development, and building things that matter.</p>
-        <p data-i18n="about.p2">Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.</p>
-        <p data-i18n="about.p3">Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE - working with the university on strategic development and academic standards.</p>
-        <p data-i18n="about.p4">I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.</p>
-        <a href="#contact" class="btn btn-primary about-cta" data-i18n="about.cta">Let's work together →</a>
-      </div>
-      <div class="about-aside">
-        <div class="aside-card">
-          <div class="aside-title" data-i18n="about.languages">Languages</div>
+      <div class="about-photo-col">
+        <img src="frenkli.jpg" alt="Frenkli Zeqollari at UE Innovation Hub" class="about-photo" onerror="this.style.display='none'"/>
+        <div class="about-langs-card">
+          <div class="card-micro-label" data-i18n="about.languages">Languages</div>
           <div class="lang-row"><span class="lang-name">Albanian</span><span class="lang-lvl" data-i18n="lang.native">Native</span></div>
           <div class="lang-row"><span class="lang-name">English</span><span class="lang-lvl">C1 · Advanced</span></div>
           <div class="lang-row"><span class="lang-name">German</span><span class="lang-lvl">B2/C1 · Advanced</span></div>
           <div class="lang-row"><span class="lang-name">Italian</span><span class="lang-lvl">A2 · Beginner</span></div>
           <div class="lang-row"><span class="lang-name">Greek</span><span class="lang-lvl">A2 · Beginner</span></div>
         </div>
-        <div class="aside-card">
-          <div class="aside-title" data-i18n="about.soft">Soft Skills</div>
-          <div class="pills-wrap">
-            <span class="pill pill-navy" data-i18n="soft.teamwork">Teamwork</span>
-            <span class="pill pill-blue" data-i18n="soft.comm">Communication</span>
-            <span class="pill pill-navy" data-i18n="soft.problem">Problem Solving</span>
-            <span class="pill pill-blue" data-i18n="soft.leadership">Leadership</span>
-            <span class="pill pill-navy" data-i18n="soft.adapt">Adaptability</span>
+      </div>
+      <div class="about-text">
+        <div class="sec-eyebrow" data-i18n="about.label">About me</div>
+        <h2 class="sec-heading" data-i18n="about.heading">Turning ideas<br/>into real <em>products.</em></h2>
+        <p data-i18n="about.p1">I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam, with a passion for AI, mobile development, and building things that matter.</p>
+        <p data-i18n="about.p2">Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.</p>
+        <p data-i18n="about.p3">Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE — working with the university on strategic development and academic standards.</p>
+        <p data-i18n="about.p4">I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.</p>
+        <a href="#contact" class="btn-dark" style="margin-top:1.5rem;display:inline-flex;" data-i18n="about.cta">Let's work together →</a>
+        <div style="margin-top:1.5rem;">
+          <div class="card-micro-label" data-i18n="about.soft">Soft Skills</div>
+          <div class="soft-pills" style="margin-top:0.6rem;">
+            <span class="soft-pill" data-i18n="soft.teamwork">Teamwork</span>
+            <span class="soft-pill" data-i18n="soft.comm">Communication</span>
+            <span class="soft-pill" data-i18n="soft.problem">Problem Solving</span>
+            <span class="soft-pill" data-i18n="soft.leadership">Leadership</span>
+            <span class="soft-pill" data-i18n="soft.adapt">Adaptability</span>
+            <span class="soft-pill">Creative Thinking</span>
+            <span class="soft-pill">Initiative</span>
+            <span class="soft-pill">Collaboration</span>
+            <span class="soft-pill">Empathy</span>
+            <span class="soft-pill">Time Management</span>
           </div>
         </div>
       </div>
@@ -448,412 +440,508 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <div class="section-label" data-i18n="exp.label">Experience</div>
-    <h2 class="section-heading" data-i18n="exp.heading">Where I've worked.</h2>
-
-    <div class="exp-section-title" data-i18n="exp.tech">💻 Tech &amp; IT</div>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div>
-          <div class="exp-period">Jul 2023 – Dec 2024</div>
-          <div class="exp-loc">Frankfurt am Main</div>
-        </div>
-        <div>
-          <div class="exp-company">General Clean</div>
-          <div class="exp-role" data-i18n="role.webdev">Website Developer · Freelance</div>
-          <ul class="exp-bullets">
-            <li data-i18n="gc.1">Designed and maintained the company website</li>
-            <li data-i18n="gc.2">Executed digital marketing strategy via SEO</li>
-            <li data-i18n="gc.3">Built an internal platform connecting housekeeping with reception</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-section-title" data-i18n="exp.other">🎓 Leadership &amp; Other</div>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div>
-          <div class="exp-period">Nov 2025 – Present <span class="live-dot"></span></div>
-          <div class="exp-loc">Potsdam</div>
-        </div>
-        <div>
-          <div class="exp-company">University of Europe for Applied Sciences</div>
-          <div class="exp-role" data-i18n="role.president">Student Council President &amp; Quality Board Rep</div>
-          <ul class="exp-bullets">
-            <li data-i18n="ue1.1">Close collaboration with university leadership on strategic development of study programmes</li>
-            <li data-i18n="ue1.2">Active involvement in quality assurance, accreditation, and programme development</li>
-            <li data-i18n="ue1.3">Analysis of quality and evaluation reports to identify improvement potential</li>
-            <li data-i18n="ue1.4">Representing student interests in university decision-making and quality committees</li>
-          </ul>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div>
-          <div class="exp-period">Mar 2025 – Mar 2026</div>
-          <div class="exp-loc">Potsdam</div>
-        </div>
-        <div>
-          <div class="exp-company">University of Europe for Applied Sciences</div>
-          <div class="exp-role" data-i18n="role.peer">Peer Leader</div>
-          <ul class="exp-bullets">
-            <li data-i18n="pl.1">Primary point of contact for inquiries about university and student experience</li>
-            <li data-i18n="pl.2">Fostered meaningful social engagement and networking opportunities for new students</li>
-            <li data-i18n="pl.3">Led planning and execution of campus and off-campus events, including orientation</li>
-            <li data-i18n="pl.4">Collaborated with leadership through regular meetings and strategic task fulfillment</li>
-          </ul>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div>
-          <div class="exp-period">Nov 2024 – Present <span class="live-dot"></span></div>
-          <div class="exp-loc">Berlin · Milan</div>
-        </div>
-        <div>
-          <div class="exp-company">a&o Hostels &amp; Hotels</div>
-          <div class="exp-role" data-i18n="role.frontdesk">Front Desk &amp; Operations</div>
-          <ul class="exp-bullets">
-            <li data-i18n="ao.1">Main point of contact for national and international guests throughout their stay</li>
-            <li data-i18n="ao.2">Managing daily front desk operations and coordinating with other departments</li>
-            <li data-i18n="ao.3">Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)</li>
-            <li data-i18n="ao.4">Daily communication in German, English and Italian</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
+<!-- ── SKILLS ── -->
 <section id="skills">
-  <div class="section-inner">
-    <div class="section-label" data-i18n="skills.label">Skills</div>
-    <h2 class="section-heading" data-i18n="skills.heading">My tech stack.</h2>
+  <div class="sec-wrap">
+    <div class="sec-eyebrow" data-i18n="skills.label">Skills</div>
+    <h2 class="sec-heading" data-i18n="skills.heading">My tech <em>stack.</em></h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-card-title">📱 <span data-i18n="skills.mobile">Mobile &amp; Frontend</span></div>
-        <div class="tag-wrap">
-          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">React</span>
-          <span class="tag">React Native</span><span class="tag">TypeScript</span>
-          <span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span><span class="tag">Figma</span>
+      <div class="skill-card reveal">
+        <div class="skill-num">01</div>
+        <div class="skill-icon">📱</div>
+        <div class="skill-title" data-i18n="skills.mobile">Mobile &amp; Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Flutter</span><span class="skill-tag">Dart</span><span class="skill-tag">React</span>
+          <span class="skill-tag">React Native</span><span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Figma</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-title">⚙️ <span data-i18n="skills.backend">Backend &amp; Data</span></div>
-        <div class="tag-wrap">
-          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span>
-          <span class="tag">SQL</span><span class="tag">Supabase</span>
-          <span class="tag">Machine Learning</span><span class="tag">Big Data &amp; Analytics</span>
+      <div class="skill-card reveal">
+        <div class="skill-num">02</div>
+        <div class="skill-icon">⚙️</div>
+        <div class="skill-title" data-i18n="skills.backend">Backend &amp; Data</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C++</span>
+          <span class="skill-tag">SQL</span><span class="skill-tag">Supabase</span>
+          <span class="skill-tag">Machine Learning</span><span class="skill-tag">Big Data &amp; Analytics</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-title">☁️ <span data-i18n="skills.devops">DevOps &amp; IT</span></div>
-        <div class="tag-wrap">
-          <span class="tag">AWS</span><span class="tag">Cloud Computing</span>
-          <span class="tag">IT Security</span><span class="tag">Computer Architecture</span>
-          <span class="tag">SEO</span><span class="tag">Google Analytics</span>
-          <span class="tag">Microsoft Office</span>
+      <div class="skill-card reveal">
+        <div class="skill-num">03</div>
+        <div class="skill-icon">🔐</div>
+        <div class="skill-title">DevOps &amp; IT Security</div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS</span><span class="skill-tag">Cloud Computing</span>
+          <span class="skill-tag">IT Security</span><span class="skill-tag">Computer Architecture</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-num">04</div>
+        <div class="skill-icon">📈</div>
+        <div class="skill-title">Optimization &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SEO</span><span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Microsoft Office</span>
+          <span class="skill-tag">Start-Up Management</span><span class="skill-tag">Agile Development</span>
+          <span class="skill-tag">Google Analytics IQ</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow" data-i18n="exp.label">Experience</div>
+    <h2 class="sec-heading" data-i18n="exp.heading">Where I've <em>worked.</em></h2>
+
+    <!-- TECH & DEVELOPMENT -->
+    <div class="exp-category-header" data-i18n="exp.tech">💻 Tech &amp; Development</div>
+    <div class="exp-grid" style="margin-bottom:3rem;">
+      <div class="exp-card reveal">
+        <div class="exp-role-title" data-i18n="role.webdev">Website Developer · Freelance</div>
+        <div class="exp-company-row">
+          <span class="exp-company-name">General Clean</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-loc-text">Frankfurt am Main</span>
+        </div>
+        <div class="exp-meta-row">
+          <span class="exp-period-badge">Jul 2023 – Dec 2024</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-i18n="gc.1">Designed and maintained the company website</li>
+          <li data-i18n="gc.2">Executed digital marketing strategy via SEO</li>
+          <li data-i18n="gc.3">Built an internal platform connecting housekeeping with reception</li>
+        </ul>
+        <div class="exp-visit"><a href="https://general-clean.de" target="_blank" rel="noopener noreferrer" data-i18n="exp.visit">↗ Website</a></div>
+      </div>
+    </div>
+
+    <!-- ADMINISTRATION & LEADERSHIP -->
+    <div class="exp-category-header" data-i18n="exp.leadership">🎓 Administration &amp; Leadership</div>
+    <div class="exp-grid">
+
+      <!-- Most recent: Student Council President (Nov 2025 – Present) -->
+      <div class="exp-card current reveal">
+        <div class="exp-role-title" data-i18n="role.president">Student Council President &amp; Quality Board Rep</div>
+        <div class="exp-company-row">
+          <span class="exp-company-name">University of Europe for Applied Sciences</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-loc-text">Potsdam</span>
+        </div>
+        <div class="exp-meta-row">
+          <span class="exp-period-badge">Nov 2025 – Present</span>
+          <span class="current-badge" data-i18n="exp.current">Currently</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-i18n="ue1.1">Close collaboration with university leadership on strategic development of study programmes</li>
+          <li data-i18n="ue1.2">Active involvement in quality assurance, accreditation, and programme development</li>
+          <li data-i18n="ue1.3">Analysis of quality and evaluation reports to identify improvement potential</li>
+          <li data-i18n="ue1.4">Representing student interests in university decision-making and quality committees</li>
+        </ul>
+        <div class="exp-visit"><a href="https://www.ue-germany.com" target="_blank" rel="noopener noreferrer" data-i18n="exp.visit">↗ Website</a></div>
+      </div>
+
+      <!-- Peer Leader (Mar 2025 – Mar 2026) -->
+      <div class="exp-card reveal">
+        <div class="exp-role-title" data-i18n="role.peer">Peer Leader</div>
+        <div class="exp-company-row">
+          <span class="exp-company-name">University of Europe for Applied Sciences</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-loc-text">Potsdam</span>
+        </div>
+        <div class="exp-meta-row">
+          <span class="exp-period-badge">Mar 2025 – Mar 2026</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-i18n="pl.1">Primary point of contact for inquiries about university and student experience</li>
+          <li data-i18n="pl.2">Fostered meaningful social engagement and networking opportunities for new students</li>
+          <li data-i18n="pl.3">Led planning and execution of campus and off-campus events, including orientation</li>
+          <li data-i18n="pl.4">Collaborated with leadership through regular meetings and strategic task fulfillment</li>
+        </ul>
+        <div class="exp-visit"><a href="https://www.ue-germany.com" target="_blank" rel="noopener noreferrer" data-i18n="exp.visit">↗ Website</a></div>
+      </div>
+
+      <!-- Front Desk a&o (Nov 2024 – Present) -->
+      <div class="exp-card current reveal">
+        <div class="exp-role-title" data-i18n="role.frontdesk">Front Desk &amp; Operations</div>
+        <div class="exp-company-row">
+          <span class="exp-company-name">a&amp;o Hostels &amp; Hotels</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-loc-text">Berlin · Milan</span>
+        </div>
+        <div class="exp-meta-row">
+          <span class="exp-period-badge">Nov 2024 – Present</span>
+          <span class="current-badge" data-i18n="exp.current">Currently</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-i18n="ao.1">Main point of contact for national and international guests throughout their stay</li>
+          <li data-i18n="ao.2">Managing daily front desk operations and coordinating with other departments</li>
+          <li data-i18n="ao.3">Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)</li>
+          <li data-i18n="ao.4">Daily communication in German, English and Italian</li>
+        </ul>
+        <div class="exp-visit"><a href="https://www.aohostels.com/en/" target="_blank" rel="noopener noreferrer" data-i18n="exp.visit">↗ Website</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
 <section id="projects">
-  <div class="section-inner">
-    <div class="section-label" data-i18n="projects.label">Projects</div>
-    <h2 class="section-heading" data-i18n="projects.heading">Things I've built.</h2>
-    <div class="proj-grid">
-      <div class="proj-card">
-        <div class="proj-img proj-img--placeholder"><span>📱</span></div>
+  <div class="sec-wrap">
+    <div class="sec-eyebrow" data-i18n="projects.label">Projects</div>
+    <h2 class="sec-heading" data-i18n="projects.heading">Things I've <em>built.</em></h2>
+
+    <!-- Featured: Navi & Taply -->
+    <div class="proj-featured-row">
+      <div class="proj-featured navi reveal">
+        <div class="proj-featured-img">📱</div>
         <div class="proj-num">01</div>
-        <div class="proj-title">Navi</div>
+        <div class="proj-name">Navi</div>
         <div class="proj-sub" data-i18n="proj.navi.sub">Personal Life Assistant App</div>
         <p class="proj-desc" data-i18n="proj.navi.desc">A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.</p>
         <div class="proj-tags">
           <span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">Supabase</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Product Design</span>
         </div>
       </div>
-      <div class="proj-card">
-        <div class="proj-img"><img src="proj-taply.png" alt="Taply app" loading="lazy" decoding="async"/></div>
+      <div class="proj-featured taply reveal">
+        <div class="proj-featured-img"><img src="proj-taply.png" alt="Taply app" loading="lazy"/></div>
         <div class="proj-num">02</div>
-        <div class="proj-title">Taply</div>
+        <div class="proj-name">Taply</div>
         <div class="proj-sub" data-i18n="proj.taply.sub">AI-powered bill splitting</div>
         <p class="proj-desc" data-i18n="proj.taply.desc">An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.</p>
         <div class="proj-tags">
           <span class="proj-tag">Flutter</span><span class="proj-tag">Dart</span><span class="proj-tag">AI / ML</span><span class="proj-tag">Mobile</span>
         </div>
+        <div class="proj-links">
+          <a href="https://taply.com.de" target="_blank" rel="noopener noreferrer" class="proj-link primary" data-i18n="taply.cta">Visit Taply ↗</a>
+        </div>
       </div>
-      <div class="proj-card">
-        <div class="proj-img"><img src="proj-educampus.jpg" alt="EduCampus platform" loading="lazy" decoding="async"/></div>
+    </div>
+
+    <!-- Secondary: EduCampus, BAföG, Student Reg -->
+    <div class="proj-secondary-row">
+      <div class="proj-card reveal">
+        <div class="proj-card-img"><img src="proj-educampus.jpg" alt="EduCampus" loading="lazy"/></div>
         <div class="proj-num">03</div>
-        <div class="proj-title">EduCampus</div>
+        <div class="proj-name">EduCampus</div>
         <div class="proj-sub" data-i18n="proj.edu.sub">Student collaboration platform</div>
         <p class="proj-desc" data-i18n="proj.edu.desc">A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.</p>
-        <div class="proj-tags">
+        <div class="proj-tags" style="margin-bottom:1rem;">
           <span class="proj-tag">React</span><span class="proj-tag">TypeScript</span><span class="proj-tag">Tailwind</span><span class="proj-tag">Figma</span>
         </div>
-        <a href="https://github.com/Student-Collabaration-System/educampus-collaboration-platform" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Open EduCampus project on GitHub in a new tab">↗ View on GitHub</a>
+        <div class="proj-links" style="margin-top:auto;">
+          <a href="https://github.com/Student-Collabaration-System/educampus-collaboration-platform" target="_blank" rel="noopener noreferrer" class="proj-link">↗ View on GitHub</a>
+        </div>
       </div>
-      <div class="proj-card">
-        <div class="proj-img"><img src="proj-bafog.png" alt="BAföG Digital redesign" loading="lazy" decoding="async"/></div>
+      <div class="proj-card reveal">
+        <div class="proj-card-img"><img src="proj-bafog.png" alt="BAföG Digital" loading="lazy"/></div>
         <div class="proj-num">04</div>
-        <div class="proj-title">BAföG Digital</div>
+        <div class="proj-name">BAföG Digital</div>
         <div class="proj-sub" data-i18n="proj.bafog.sub">GovTech UX Redesign</div>
         <p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.</p>
-        <div class="proj-tags">
+        <div class="proj-tags" style="margin-bottom:1rem;">
           <span class="proj-tag">UX Design</span><span class="proj-tag">GUI Design</span><span class="proj-tag">Figma</span><span class="proj-tag">GovTech</span>
         </div>
-        <a href="https://badge-plugin-93538907.figma.site" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Open BAfoG Digital live demo in a new tab">↗ Live demo</a>
+        <div class="proj-links" style="margin-top:auto;">
+          <a href="https://badge-plugin-93538907.figma.site" target="_blank" rel="noopener noreferrer" class="proj-link">↗ Live demo</a>
+        </div>
       </div>
-      <div class="proj-card">
-        <div class="proj-img"><img src="proj-student-reg.png" alt="Student Registration System" loading="lazy" decoding="async"/></div>
+      <div class="proj-card reveal">
+        <div class="proj-card-img"><img src="proj-student-reg.png" alt="Student Registration System" loading="lazy"/></div>
         <div class="proj-num">05</div>
-        <div class="proj-title">Student Registration System</div>
+        <div class="proj-name">Student Registration System</div>
         <div class="proj-sub" data-i18n="proj.stu.sub">Python · Desktop App</div>
         <p class="proj-desc" data-i18n="proj.stu.desc">A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.</p>
-        <div class="proj-tags">
+        <div class="proj-tags" style="margin-bottom:1rem;">
           <span class="proj-tag">Python</span><span class="proj-tag">Tkinter</span><span class="proj-tag">CRUD</span><span class="proj-tag">File Storage</span>
         </div>
-        <a href="https://github.com/FrenkliZeqollari/student-registration-system" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Open Student Registration System project on GitHub in a new tab">↗ View on GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TAPLY FEATURED -->
-<section id="taply-featured">
-  <div class="section-inner">
-    <div class="taply-grid">
-      <div class="taply-content">
-        <div class="taply-eyebrow" data-i18n="taply.label">Featured Project</div>
-        <h2 class="taply-heading">Taply</h2>
-        <div class="taply-sub" data-i18n="proj.taply.sub">AI-powered bill splitting</div>
-        <p class="taply-desc" data-i18n="proj.taply.desc">An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.</p>
-        <div class="taply-tags">
-          <span class="proj-tag">Flutter</span>
-          <span class="proj-tag">Dart</span>
-          <span class="proj-tag">AI / ML</span>
-          <span class="proj-tag">Mobile</span>
+        <div class="proj-links" style="margin-top:auto;">
+          <a href="https://github.com/FrenkliZeqollari/student-registration-system" target="_blank" rel="noopener noreferrer" class="proj-link">↗ View on GitHub</a>
         </div>
-        <a href="https://taply.app" target="_blank" rel="noopener noreferrer" class="taply-cta" data-i18n="taply.cta">View Taply ↗</a>
-      </div>
-      <div class="taply-visual">
-        <img src="proj-taply.png" alt="Taply app screenshot" loading="lazy" decoding="async"/>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
+<!-- ── TAPLY SPOTLIGHT ── -->
+<section id="taply-featured" style="padding:6rem 2rem;">
+  <div class="taply-wrap">
+    <div>
+      <div class="taply-eyebrow" data-i18n="taply.label">Featured Project</div>
+      <h2 class="taply-title">Taply</h2>
+      <div class="taply-sub" data-i18n="proj.taply.sub">AI-powered bill splitting</div>
+      <p class="taply-desc" data-i18n="proj.taply.desc">An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.</p>
+      <div class="taply-tags">
+        <span class="taply-tag">Flutter</span>
+        <span class="taply-tag">Dart</span>
+        <span class="taply-tag">AI / ML</span>
+        <span class="taply-tag">Mobile</span>
+      </div>
+      <a href="https://taply.com.de" target="_blank" rel="noopener noreferrer" class="taply-cta" data-i18n="taply.cta">Visit Taply ↗</a>
+    </div>
+    <div class="taply-img-wrap">
+      <img src="proj-taply.png" alt="Taply app screenshot" loading="lazy" decoding="async"/>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
 <section id="education">
-  <div class="section-inner">
-    <div class="section-label" data-i18n="edu.label">Education &amp; Certifications</div>
-    <h2 class="section-heading" data-i18n="edu.heading">Always learning.</h2>
+  <div class="sec-wrap">
+    <div class="sec-eyebrow" data-i18n="edu.label">Education &amp; Certifications</div>
+    <h2 class="sec-heading" data-i18n="edu.heading">Always <em>learning.</em></h2>
     <div class="edu-grid">
-      <div class="edu-card">
+      <div class="edu-card reveal">
         <div class="edu-period">Sep 2024 – Aug 2027</div>
         <div class="edu-school">University of Europe for Applied Sciences</div>
         <div class="edu-degree" data-i18n="edu.degree">B.Sc. Software Engineering · Potsdam, Germany</div>
-        <div class="edu-courses">
-          <span class="tag">AI</span><span class="tag">Backend Dev</span><span class="tag">Cloud Computing</span>
-          <span class="tag">IT Security</span><span class="tag">Machine Learning</span><span class="tag">Big Data</span>
-          <span class="tag">Computer Architecture</span><span class="tag">Start-Up Management</span>
+        <div class="edu-tags">
+          <span class="edu-tag">AI</span><span class="edu-tag">Backend Dev</span><span class="edu-tag">Cloud Computing</span>
+          <span class="edu-tag">IT Security</span><span class="edu-tag">Machine Learning</span><span class="edu-tag">Big Data</span>
+          <span class="edu-tag">Computer Architecture</span><span class="edu-tag">Start-Up Management</span>
+          <span class="edu-tag">Parallel Programming</span><span class="edu-tag">Operating Systems</span>
+          <span class="edu-tag">Software Quality Assurance</span><span class="edu-tag">GUI Design &amp; Web Optimization</span>
+          <span class="edu-tag">Frontend Programming</span><span class="edu-tag">IT Agile Development</span>
+          <span class="edu-tag">Digital Media &amp; Communication</span>
+        </div>
+        <div style="margin-top:1.25rem;">
+          <a href="https://www.ue-germany.com" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;font-weight:600;color:var(--blue);text-decoration:none;">↗ ue-germany.com</a>
         </div>
       </div>
-      <div class="edu-card">
+      <div class="edu-card reveal">
         <div class="edu-period" data-i18n="edu.certs">Certifications</div>
         <div class="edu-school" data-i18n="edu.certsTitle">Licenses &amp; Certifications</div>
-        <div class="cert-pills">
-          <span class="cert-pill">✓ Google Analytics Individual Qualification</span>
-          <span class="cert-pill">✓ The Fundamentals of Digital Marketing — Google</span>
-          <span class="cert-pill">✓ Emergency Preparedness &amp; Response — UNICEF</span>
+        <div class="cert-list">
+          <div class="cert-item">
+            <div class="cert-icon">🔵</div>
+            <div>
+              <div class="cert-name">Google Analytics Individual Qualification</div>
+              <div class="cert-issuer">Google</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🟢</div>
+            <div>
+              <div class="cert-name">The Fundamentals of Digital Marketing</div>
+              <div class="cert-issuer">Google Digital Garage</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🔷</div>
+            <div>
+              <div class="cert-name">Emergency Preparedness &amp; Response</div>
+              <div class="cert-issuer">UNICEF</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ── CONTACT ── -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="section-label" data-i18n="contact.label">Contact</div>
-    <h2 class="section-heading" data-i18n="contact.heading">Let's build something<br/>great together.</h2>
+  <div class="sec-wrap">
+    <div class="sec-eyebrow" data-i18n="contact.label">Contact</div>
+    <h2 class="sec-heading" data-i18n="contact.heading">Let's build something<br/><em>great together.</em></h2>
     <div class="contact-grid">
-      <div class="contact-info">
-        <p data-i18n="contact.desc">Always open to discussing new projects, creative ideas, or opportunities. Drop me a message and I'll get back to you quickly.</p>
-        <div class="contact-list">
-          <a href="mailto:frenklif50@gmail.com" class="contact-row" aria-label="Send email to frenklif50@gmail.com"><span class="contact-row-icon">✉</span>frenklif50@gmail.com</a>
-          <a href="tel:00491783972640" class="contact-row" aria-label="Call +49 178 3972640"><span class="contact-row-icon">✆</span>+49 178 3972640</a>
-          <a href="https://www.linkedin.com/in/frenkli-zeqollari" target="_blank" rel="noopener noreferrer" class="contact-row" aria-label="Open LinkedIn profile in a new tab"><span class="contact-row-icon">in</span>linkedin.com/in/frenkli-zeqollari</a>
-          <a href="https://github.com/FrenkliZeqollari" target="_blank" rel="noopener noreferrer" class="contact-row" aria-label="Open GitHub profile in a new tab"><span class="contact-row-icon">gh</span>github.com/FrenkliZeqollari</a>
-        </div>
+      <!-- Form -->
+      <div class="contact-form-card reveal">
+        <div class="contact-form-title">Send a message</div>
+        <div class="contact-form-sub" data-i18n="contact.desc">Always open to discussing new projects, creative ideas, or opportunities. I'll get back to you quickly.</div>
+        <form onsubmit="handleSubmit(event)" action="https://formspree.io/f/xjgaqlpl">
+          <div class="form-group">
+            <label class="form-label" for="cname" data-i18n="form.name">Name</label>
+            <input id="cname" type="text" name="name" class="form-input" placeholder="Your name" autocomplete="name" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cemail" data-i18n="form.email">Email</label>
+            <input id="cemail" type="email" name="email" class="form-input" placeholder="you@example.com" autocomplete="email" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cmsg" data-i18n="form.message">Message</label>
+            <textarea id="cmsg" name="message" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn-dark" style="min-height:44px;width:100%;justify-content:center;" data-i18n="form.send">Send message →</button>
+        </form>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/xjgaqlpl" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label class="form-label" for="contact-name" data-i18n="form.name">Name</label>
-          <input id="contact-name" type="text" name="name" class="form-input" data-i18n-placeholder="form.namePh" placeholder="Your name" autocomplete="name" required/>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="contact-email" data-i18n="form.email">Email</label>
-          <input id="contact-email" type="email" name="email" class="form-input" placeholder="you@example.com" autocomplete="email" required/>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="contact-message" data-i18n="form.message">Message</label>
-          <textarea id="contact-message" name="message" class="form-textarea" data-i18n-placeholder="form.messagePh" placeholder="Tell me about your project or idea..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary form-submit" data-i18n="form.send">Send message →</button>
-      </form>
+      <!-- Links -->
+      <div class="contact-links-card reveal">
+        <div class="contact-links-headline" data-i18n="contact.heading">Let's build something great together.</div>
+        <p class="contact-links-sub" data-i18n="contact.desc">Always open to discussing new projects, creative ideas, or opportunities. Drop me a message and I'll get back to you quickly.</p>
+        <a href="mailto:frenklif50@gmail.com" class="contact-sticker" aria-label="Email Frenkli">
+          <div class="sticker-icon">✉</div>
+          <div class="sticker-text">
+            <span class="sticker-label">Email</span>
+            <span class="sticker-value">frenklif50@gmail.com</span>
+          </div>
+        </a>
+        <a href="tel:+491783972640" class="contact-sticker" aria-label="Call Frenkli">
+          <div class="sticker-icon">✆</div>
+          <div class="sticker-text">
+            <span class="sticker-label">Phone</span>
+            <span class="sticker-value">+49 178 3972640</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/frenkli-zeqollari" target="_blank" rel="noopener noreferrer" class="contact-sticker" aria-label="LinkedIn">
+          <div class="sticker-icon">in</div>
+          <div class="sticker-text">
+            <span class="sticker-label">LinkedIn</span>
+            <span class="sticker-value">frenkli-zeqollari</span>
+          </div>
+        </a>
+        <a href="https://github.com/FrenkliZeqollari" target="_blank" rel="noopener noreferrer" class="contact-sticker" aria-label="GitHub">
+          <div class="sticker-icon">gh</div>
+          <div class="sticker-text">
+            <span class="sticker-label">GitHub</span>
+            <span class="sticker-value">FrenkliZeqollari</span>
+          </div>
+        </a>
+        <a href="https://taply.com.de" target="_blank" rel="noopener noreferrer" class="contact-sticker" aria-label="Taply website">
+          <div class="sticker-icon">T</div>
+          <div class="sticker-text">
+            <span class="sticker-label">Startup</span>
+            <span class="sticker-value">taply.com.de</span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span class="footer-copy">© 2026 Frenkli Zeqollari · Berlin, Germany</span>
+  <span class="footer-copy">© 2026 Frenkli · Berlin, Germany</span>
   <a href="#hero" class="footer-back" data-i18n="footer.back">Back to top ↑</a>
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-const i18n = {
-  en: {
-    "nav.about":"About","nav.experience":"Experience","nav.skills":"Skills","nav.projects":"Projects","nav.contact":"Contact",
-    "hero.status":"Available for opportunities",
-    "hero.desc":"I'm <strong>Frenkli Zeqollari</strong> - a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> and <strong>Navi</strong>, two mobile apps focused on everyday impact.",
-    "hero.cta1":"See my work →","hero.cta2":"Get in touch",
-    "card.role":"Software Engineering Student","card.status":"Status","card.open":"Open to work",
-    "card.location":"Location","card.uni":"University","card.building":"Building",
-    "card.languages":"Languages","card.lang5":"5 languages","card.experience":"Experience","card.roles":"5 roles",
-    "about.label":"About me","about.heading":"Turning ideas<br/>into real products.",
-    "about.p1":"I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam (Sep 2024 – Aug 2027), with a passion for AI, mobile development, and building things that matter.",
-    "about.p2":"Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.",
-    "about.p3":"Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE - working with the university on strategic development and academic standards.",
-    "about.p4":"I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.",
-    "about.cta":"Let's work together →","about.languages":"Languages","about.soft":"Soft Skills",
-    "lang.native":"Native",
-    "soft.teamwork":"Teamwork","soft.comm":"Communication","soft.problem":"Problem Solving","soft.leadership":"Leadership","soft.adapt":"Adaptability",
-    "exp.label":"Experience","exp.heading":"Where I've worked.","exp.tech":"💻 Tech &amp; IT","exp.other":"🎓 Leadership &amp; Other",
-    "role.webdev":"Website Developer · Freelance","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
-    "gc.1":"Designed and maintained the company website","gc.2":"Executed digital marketing strategy via SEO","gc.3":"Built an internal platform connecting housekeeping with reception",
-    "ue1.1":"Close collaboration with university leadership on strategic development of study programmes","ue1.2":"Active involvement in quality assurance, accreditation, and programme development","ue1.3":"Analysis of quality and evaluation reports to identify improvement potential","ue1.4":"Representing student interests in university decision-making and quality committees",
-    "pl.1":"Primary point of contact for inquiries about university and student experience","pl.2":"Fostered meaningful social engagement and networking opportunities for new students","pl.3":"Led planning and execution of campus and off-campus events, including orientation","pl.4":"Collaborated with leadership through regular meetings and strategic task fulfillment",
-    "ao.1":"Main point of contact for national and international guests throughout their stay","ao.2":"Managing daily front desk operations and coordinating with other departments","ao.3":"Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)","ao.4":"Daily communication in German, English and Italian",
-    "skills.label":"Skills","skills.heading":"My tech stack.","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Data","skills.devops":"DevOps &amp; IT",
-    "projects.label":"Projects","projects.heading":"Things I've built.",
-    "proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, a travel planner, and AI-powered daily briefings. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.",
-    "proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.",
-    "proj.edu.sub":"Student collaboration platform","proj.edu.desc":"A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.",
-    "proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.",
-    "proj.stu.sub":"Python · Desktop App","proj.stu.desc":"A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.",
-    "edu.label":"Education &amp; Certifications","edu.heading":"Always learning.","edu.degree":"B.Sc. Software Engineering · Potsdam, Germany","edu.certs":"Certifications","edu.certsTitle":"Licenses &amp; Certifications",
-    "contact.label":"Contact","contact.heading":"Let's build something<br/>great together.","contact.desc":"Always open to discussing new projects, creative ideas, or opportunities. Drop me a message and I'll get back to you quickly.",
-    "form.name":"Name","form.namePh":"Your name","form.email":"Email","form.message":"Message","form.messagePh":"Tell me about your project or idea...","form.send":"Send message →",
-    "footer.back":"Back to top ↑",
-    "taply.label":"Featured Project","taply.cta":"View Taply ↗",
-    "travel.label":"Around the world","travel.heading":"Places I've been.","travel.countries":"Countries","travel.continents":"Continents","travel.note":"And counting... 🌍"
-  },
-  de: {
-    "nav.about":"Über mich","nav.experience":"Erfahrung","nav.skills":"Kenntnisse","nav.projects":"Projekte","nav.contact":"Kontakt",
-    "hero.status":"Offen für Möglichkeiten",
-    "hero.desc":"Ich bin <strong>Frenkli Zeqollari</strong> - Softwaretechnik-Student in Berlin. Ich entwickle KI-gestützte Produkte und moderne digitale Erlebnisse. Aktuell arbeite ich an <strong>Taply</strong> und <strong>Navi</strong>, zwei mobilen Apps mit praktischem Alltagsnutzen.",
-    "hero.cta1":"Meine Projekte →","hero.cta2":"Kontakt aufnehmen",
-    "card.role":"Softwaretechnik-Student","card.status":"Status","card.open":"Offen für Stellen",
-    "card.location":"Standort","card.uni":"Universität","card.building":"Aktuell",
-    "card.languages":"Sprachen","card.lang5":"5 Sprachen","card.experience":"Erfahrung","card.roles":"5 Stellen",
-    "about.label":"Über mich","about.heading":"Ideen in echte<br/>Produkte verwandeln.",
-    "about.p1":"Ich bin <strong>Softwaretechnik-Student</strong> an der University of Europe for Applied Sciences in Potsdam, mit Leidenschaft für KI, Mobile-Entwicklung und sinnvolle Produkte.",
-    "about.p2":"Derzeit entwickle ich <em>Taply</em> — eine KI-gestützte App zur Zahlungsaufteilung — und <em>Navi</em>, einen persönlichen Lebensassistenten für iOS mit Aufgabenverwaltung, Gewohnheitstracking und KI-Briefings.",
-    "about.p3":"Neben dem Studium bin ich <strong>Präsident des Studierendenrats Potsdam</strong> und studentischer Vertreter im Qualitätsbeirat der UE - im Einsatz für Studienprogrammqualität und akademische Standards.",
-    "about.p4":"Ich arbeite gern an der Schnittstelle zwischen technischer Tiefe und menschlicher Zusammenarbeit — ob Backend-Architektur oder Studierendenratssitzung.",
-    "about.cta":"Zusammenarbeiten →","about.languages":"Sprachen","about.soft":"Soziale Kompetenzen",
-    "lang.native":"Muttersprache",
-    "soft.teamwork":"Teamarbeit","soft.comm":"Kommunikation","soft.problem":"Problemlösung","soft.leadership":"Führung","soft.adapt":"Anpassungsfähigkeit",
-    "exp.label":"Erfahrung","exp.heading":"Wo ich gearbeitet habe.","exp.tech":"💻 Technik &amp; IT","exp.other":"🎓 Führung &amp; Weiteres",
-    "role.webdev":"Website-Entwickler · Freiberuflich","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
-    "gc.1":"Gestaltung und Pflege der Unternehmenswebsite","gc.2":"Digitale Marketingstrategie über SEO","gc.3":"Entwicklung einer internen Plattform zur Verbindung von Hauswirtschaft und Rezeption",
-    "ue1.1":"Enge Zusammenarbeit mit der Hochschulleitung zur Weiterentwicklung von Studienprogrammen","ue1.2":"Mitwirkung an Qualitätssicherung, Akkreditierung und Studiengangsweiterentwicklung","ue1.3":"Analyse von Qualitäts- und Evaluationsberichten zur Identifikation von Verbesserungspotenzialen","ue1.4":"Vertretung der Studierendeninteressen in universitären Entscheidungsprozessen und Qualitätsgremien",
-    "pl.1":"Erste Anlaufstelle für Anfragen zur Universität und zum Studentenleben","pl.2":"Förderung von sozialem Engagement und Vernetzungsmöglichkeiten für Erstsemester","pl.3":"Planung und Durchführung von Campus- und außercamplichen Veranstaltungen","pl.4":"Zusammenarbeit mit der Hochschulleitung bei strategischen Aufgaben",
-    "ao.1":"Hauptansprechpartner für nationale und internationale Gäste","ao.2":"Verwaltung des täglichen Rezeptionsbetriebs und Koordination mit anderen Abteilungen","ao.3":"Schlüsselrolle bei der Eröffnung des neuen a&o-Standorts in Mailand (Aug 2025)","ao.4":"Tägliche Kommunikation auf Deutsch, Englisch und Italienisch",
-    "skills.label":"Kenntnisse","skills.heading":"Mein Tech-Stack.","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Daten","skills.devops":"DevOps &amp; IT",
-    "projects.label":"Projekte","projects.heading":"Was ich gebaut habe.",
-    "proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-gestützte Tagesbriefings. Backend auf Supabase (PostgreSQL + Auth). App-Store-Launch geplant.",
-    "proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen — durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem. Als Start-up-Management-Abschlussprojekt entwickelt.",
-    "proj.edu.sub":"Studentische Kollaborationsplattform","proj.edu.desc":"Eine Webplattform für akademische Zusammenarbeit zwischen Studierenden in Potsdam. Ermöglicht Ressourcenteilung, Lerngruppen-Erstellung und Echtzeit-Kommunikation. Mit High-Fidelity-Figma-Prototyp und vollständigem React-Frontend.",
-    "proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals — bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt. Als Abschlussprojekt für GUI Design &amp; Web-Optimisation an der UE entwickelt.",
-    "proj.stu.sub":"Python · Desktop-App","proj.stu.desc":"Ein Python-basiertes Studentenverwaltungssystem mit Tkinter-GUI. CRUD-Operationen, automatische ID- &amp; E-Mail-Generierung, Altersberechnung, persistente Dateispeicherung und Suche. Für das Programmierpraktikum an der UE entwickelt.",
-    "edu.label":"Bildung &amp; Zertifikate","edu.heading":"Immer am Lernen.","edu.degree":"B.Sc. Softwaretechnik · Potsdam, Deutschland","edu.certs":"Zertifikate","edu.certsTitle":"Lizenzen &amp; Zertifikate",
-    "contact.label":"Kontakt","contact.heading":"Lass uns gemeinsam<br/>etwas aufbauen.","contact.desc":"Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten. Schreib mir — ich melde mich schnell.",
-    "form.name":"Name","form.namePh":"Dein Name","form.email":"E-Mail","form.message":"Nachricht","form.messagePh":"Erzähl mir von deinem Projekt oder deiner Idee...","form.send":"Nachricht senden →",
-    "footer.back":"Nach oben ↑",
-    "taply.label":"Ausgewähltes Projekt","taply.cta":"Taply ansehen ↗",
-    "travel.label":"Um die Welt","travel.heading":"Orte, die ich besucht habe.","travel.countries":"Länder","travel.continents":"Kontinente","travel.note":"Und es werden mehr... 🌍"
-  }
-};
-
-let currentLang = 'en';
-
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    const isActive = b.getAttribute('data-lang') === lang;
-    b.classList.toggle('active', isActive);
-    b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-  });
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
-  });
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (i18n[lang][key] !== undefined) el.placeholder = i18n[lang][key];
-  });
-}
-
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
-});
-
-async function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  const originalHTML = btn.innerHTML;
-  btn.disabled = true;
-  btn.textContent = currentLang === 'de' ? 'Wird gesendet…' : 'Sending…';
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST', body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      btn.textContent = currentLang === 'de' ? 'Gesendet ✓' : 'Sent! ✓';
-      btn.style.background = '#059669';
-      setTimeout(() => { btn.innerHTML = originalHTML; btn.style.background = ''; btn.disabled = false; form.reset(); }, 3000);
-    } else { btn.textContent = 'Error — try again'; btn.disabled = false; }
-  } catch { btn.textContent = 'Error — try again'; btn.disabled = false; }
-}
-
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = `opacity 0.32s cubic-bezier(0.22,1,0.36,1) ${i*0.06}s, transform 0.32s cubic-bezier(0.22,1,0.36,1) ${i*0.06}s`;
-      requestAnimationFrame(() => { el.style.opacity='1'; el.style.transform='translateY(0)'; });
-      io.unobserve(el);
+  /* ── i18n ── */
+  const i18n = {
+    en: {
+      "nav.about":"About","nav.experience":"Experience","nav.skills":"Skills","nav.projects":"Projects","nav.contact":"Contact",
+      "hero.status":"Available for opportunities",
+      "hero.desc":"I'm <strong>Frenkli</strong> — a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.",
+      "hero.cta1":"See my work →","hero.cta2":"Get in touch",
+      "card.role":"Software Engineering Student","card.status":"Status","card.open":"Open to work",
+      "card.building":"Currently Building","card.uni":"University","card.experience":"Experience","card.roles":"roles held",
+      "about.label":"About me","about.heading":"Turning ideas<br/>into real <em>products.</em>",
+      "about.p1":"I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam, with a passion for AI, mobile development, and building things that matter.",
+      "about.p2":"Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.",
+      "about.p3":"Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE — working with the university on strategic development and academic standards.",
+      "about.p4":"I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.",
+      "about.cta":"Let's work together →","about.languages":"Languages","about.soft":"Soft Skills",
+      "lang.native":"Native",
+      "soft.teamwork":"Teamwork","soft.comm":"Communication","soft.problem":"Problem Solving","soft.leadership":"Leadership","soft.adapt":"Adaptability",
+      "skills.label":"Skills","skills.heading":"My tech <em>stack.</em>","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Data","skills.devops":"DevOps &amp; IT",
+      "exp.label":"Experience","exp.heading":"Where I've <em>worked.</em>","exp.current":"Currently","exp.visit":"↗ Website","exp.tech":"💻 Tech &amp; Development","exp.leadership":"🎓 Administration &amp; Leadership",
+      "role.webdev":"Website Developer · Freelance","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
+      "gc.1":"Designed and maintained the company website","gc.2":"Executed digital marketing strategy via SEO","gc.3":"Built an internal platform connecting housekeeping with reception",
+      "ue1.1":"Close collaboration with university leadership on strategic development of study programmes","ue1.2":"Active involvement in quality assurance, accreditation, and programme development","ue1.3":"Analysis of quality and evaluation reports to identify improvement potential","ue1.4":"Representing student interests in university decision-making and quality committees",
+      "pl.1":"Primary point of contact for inquiries about university and student experience","pl.2":"Fostered meaningful social engagement and networking opportunities for new students","pl.3":"Led planning and execution of campus and off-campus events, including orientation","pl.4":"Collaborated with leadership through regular meetings and strategic task fulfillment",
+      "ao.1":"Main point of contact for national and international guests throughout their stay","ao.2":"Managing daily front desk operations and coordinating with other departments","ao.3":"Played a key role launching a&o's new hotel-style location in Milan (Aug 2025)","ao.4":"Daily communication in German, English and Italian",
+      "projects.label":"Projects","projects.heading":"Things I've <em>built.</em>",
+      "proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.",
+      "proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.",
+      "proj.edu.sub":"Student collaboration platform","proj.edu.desc":"A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.",
+      "proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.",
+      "proj.stu.sub":"Python · Desktop App","proj.stu.desc":"A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.",
+      "taply.label":"Featured Project","taply.cta":"Visit Taply ↗",
+      "edu.label":"Education &amp; Certifications","edu.heading":"Always <em>learning.</em>","edu.degree":"B.Sc. Software Engineering · Potsdam, Germany","edu.certs":"Certifications","edu.certsTitle":"Licenses &amp; Certifications",
+      "contact.label":"Contact","contact.heading":"Let's build something<br/><em>great together.</em>","contact.desc":"Always open to discussing new projects, creative ideas, or opportunities. Drop me a message and I'll get back to you quickly.",
+      "form.name":"Name","form.namePh":"Your name","form.email":"Email","form.message":"Message","form.messagePh":"Tell me about your project or idea...","form.send":"Send message →",
+      "footer.back":"Back to top ↑"
+    },
+    de: {
+      "nav.about":"Über mich","nav.experience":"Erfahrung","nav.skills":"Kenntnisse","nav.projects":"Projekte","nav.contact":"Kontakt",
+      "hero.status":"Offen für Möglichkeiten",
+      "hero.desc":"Ich bin <strong>Frenkli</strong> — Softwaretechnik-Student in Berlin, der KI-gestützte Produkte und moderne digitale Erfahrungen entwickelt. Aktuell arbeite ich an <strong>Taply</strong> &amp; <strong>Navi</strong>.",
+      "hero.cta1":"Meine Projekte →","hero.cta2":"Kontakt aufnehmen",
+      "card.role":"Softwaretechnik-Student","card.status":"Status","card.open":"Offen für Stellen",
+      "card.building":"Aktuell","card.uni":"Universität","card.experience":"Erfahrung","card.roles":"Positionen",
+      "about.label":"Über mich","about.heading":"Ideen in echte<br/><em>Produkte</em> verwandeln.",
+      "about.p1":"Ich bin <strong>Softwaretechnik-Student</strong> an der University of Europe for Applied Sciences in Potsdam, mit Leidenschaft für KI, Mobile-Entwicklung und sinnvolle Produkte.",
+      "about.p2":"Derzeit entwickle ich <em>Taply</em> — eine KI-gestützte App zur Zahlungsaufteilung — und <em>Navi</em>, einen persönlichen Lebensassistenten für iOS mit Aufgabenverwaltung, Gewohnheitstracking und KI-Briefings.",
+      "about.p3":"Neben dem Studium bin ich <strong>Präsident des Studierendenrats Potsdam</strong> und studentischer Vertreter im Qualitätsbeirat der UE — im Einsatz für Studienprogrammqualität und akademische Standards.",
+      "about.p4":"Ich arbeite gern an der Schnittstelle zwischen technischer Tiefe und menschlicher Zusammenarbeit — ob Backend-Architektur oder Studierendenratssitzung.",
+      "about.cta":"Zusammenarbeiten →","about.languages":"Sprachen","about.soft":"Soziale Kompetenzen",
+      "lang.native":"Muttersprache",
+      "soft.teamwork":"Teamarbeit","soft.comm":"Kommunikation","soft.problem":"Problemlösung","soft.leadership":"Führung","soft.adapt":"Anpassungsfähigkeit",
+      "skills.label":"Kenntnisse","skills.heading":"Mein Tech-<em>Stack.</em>","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Daten","skills.devops":"DevOps &amp; IT",
+      "exp.label":"Erfahrung","exp.heading":"Wo ich <em>gearbeitet</em> habe.","exp.current":"Aktuell","exp.visit":"↗ Website","exp.tech":"💻 Technik &amp; Entwicklung","exp.leadership":"🎓 Verwaltung &amp; Führung",
+      "role.webdev":"Website-Entwickler · Freiberuflich","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
+      "gc.1":"Gestaltung und Pflege der Unternehmenswebsite","gc.2":"Digitale Marketingstrategie über SEO","gc.3":"Entwicklung einer internen Plattform zur Verbindung von Hauswirtschaft und Rezeption",
+      "ue1.1":"Enge Zusammenarbeit mit der Hochschulleitung zur Weiterentwicklung von Studienprogrammen","ue1.2":"Mitwirkung an Qualitätssicherung, Akkreditierung und Studiengangsweiterentwicklung","ue1.3":"Analyse von Qualitäts- und Evaluationsberichten zur Identifikation von Verbesserungspotenzialen","ue1.4":"Vertretung der Studierendeninteressen in universitären Entscheidungsprozessen und Qualitätsgremien",
+      "pl.1":"Erste Anlaufstelle für Anfragen zur Universität und zum Studentenleben","pl.2":"Förderung von sozialem Engagement und Vernetzungsmöglichkeiten für Erstsemester","pl.3":"Planung und Durchführung von Campus- und außercamplichen Veranstaltungen","pl.4":"Zusammenarbeit mit der Hochschulleitung bei strategischen Aufgaben",
+      "ao.1":"Hauptansprechpartner für nationale und internationale Gäste","ao.2":"Verwaltung des täglichen Rezeptionsbetriebs und Koordination mit anderen Abteilungen","ao.3":"Schlüsselrolle bei der Eröffnung des neuen a&o-Standorts in Mailand (Aug 2025)","ao.4":"Tägliche Kommunikation auf Deutsch, Englisch und Italienisch",
+      "projects.label":"Projekte","projects.heading":"Was ich <em>gebaut</em> habe.",
+      "proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-gestützte Tagesbriefings. Backend auf Supabase (PostgreSQL + Auth). App-Store-Launch geplant.",
+      "proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen — durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem. Als Start-up-Management-Abschlussprojekt entwickelt.",
+      "proj.edu.sub":"Studentische Kollaborationsplattform","proj.edu.desc":"Eine Webplattform für akademische Zusammenarbeit zwischen Studierenden in Potsdam. Ermöglicht Ressourcenteilung, Lerngruppen-Erstellung und Echtzeit-Kommunikation. Mit High-Fidelity-Figma-Prototyp und vollständigem React-Frontend.",
+      "proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals — bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt. Als Abschlussprojekt für GUI Design &amp; Web-Optimisation an der UE entwickelt.",
+      "proj.stu.sub":"Python · Desktop-App","proj.stu.desc":"Ein Python-basiertes Studentenverwaltungssystem mit Tkinter-GUI. CRUD-Operationen, automatische ID- &amp; E-Mail-Generierung, Altersberechnung, persistente Dateispeicherung und Suche. Für das Programmierpraktikum an der UE entwickelt.",
+      "taply.label":"Ausgewähltes Projekt","taply.cta":"Taply ansehen ↗",
+      "edu.label":"Bildung &amp; Zertifikate","edu.heading":"Immer am <em>Lernen.</em>","edu.degree":"B.Sc. Softwaretechnik · Potsdam, Deutschland","edu.certs":"Zertifikate","edu.certsTitle":"Lizenzen &amp; Zertifikate",
+      "contact.label":"Kontakt","contact.heading":"Lass uns gemeinsam<br/><em>etwas aufbauen.</em>","contact.desc":"Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten. Schreib mir — ich melde mich schnell.",
+      "form.name":"Name","form.namePh":"Dein Name","form.email":"E-Mail","form.message":"Nachricht","form.messagePh":"Erzähl mir von deinem Projekt oder deiner Idee...","form.send":"Nachricht senden →",
+      "footer.back":"Nach oben ↑"
     }
-  });
-}, { threshold: 0.08 });
+  };
 
-document.querySelectorAll('.skill-card,.proj-card,.edu-card,.exp-item,.aside-card,.bento-cell').forEach(el => io.observe(el));
+  let lang = 'en';
+  function setLang(l) {
+    lang = l;
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      const a = b.getAttribute('data-lang') === l;
+      b.classList.toggle('active', a);
+      b.setAttribute('aria-pressed', a);
+    });
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (i18n[l][k] != null) el.innerHTML = i18n[l][k];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const k = el.getAttribute('data-i18n-placeholder');
+      if (i18n[l][k] != null) el.placeholder = i18n[l][k];
+    });
+  }
+  document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setLang(b.getAttribute('data-lang'))));
 
-}); // end DOMContentLoaded
+  /* ── Contact form ── */
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    const orig = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = lang === 'de' ? 'Wird gesendet…' : 'Sending…';
+    try {
+      const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (r.ok) {
+        btn.textContent = lang === 'de' ? 'Gesendet ✓' : 'Sent! ✓';
+        btn.style.background = '#059669';
+        setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; form.reset(); }, 3000);
+      } else { btn.textContent = 'Error – try again'; btn.disabled = false; }
+    } catch { btn.textContent = 'Error – try again'; btn.disabled = false; }
+  }
+  window.handleSubmit = handleSubmit;
+
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+});
 </script>
 </body>
 </html>
