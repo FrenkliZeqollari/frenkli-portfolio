@@ -72,16 +72,17 @@
     .page { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
     /* ─── HERO ─── */
-    #hero { padding: 100px 2rem 60px; max-width: var(--max); margin: 0 auto; }
+    #hero { padding: 100px 2rem 40px; max-width: var(--max); margin: 0 auto; }
     .hero-status-bar { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.3rem 0.85rem; font-size: 0.72rem; font-weight: 500; color: var(--muted); margin-bottom: 2rem; box-shadow: var(--shadow); }
     .hero-status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: glow 2s ease-in-out infinite; }
     @keyframes glow { 0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,0.4)} 50%{box-shadow:0 0 0 5px rgba(16,185,129,0)} }
 
-    .hero-grid { display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; align-items: center; }
+    /* Asymmetric 5/7 grid */
+    .hero-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 2.5rem; align-items: stretch; min-height: 520px; }
 
-    /* Hero Left */
-    .hero-left { display: flex; flex-direction: column; justify-content: space-between; padding: 0; }
-    .hero-title { font-size: clamp(3rem, 6vw, 5.8rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.05em; color: var(--ink); margin-bottom: 1.5rem; }
+    /* ── Left col ── */
+    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 0; }
+    .hero-title { font-size: clamp(2.8rem, 5.5vw, 5.5rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.05em; color: var(--ink); margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; font-weight: 300; color: var(--muted); }
     .hero-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 420px; margin-bottom: 2rem; }
     .hero-desc strong { color: var(--ink); font-weight: 600; }
@@ -91,31 +92,99 @@
     .btn-light { background: var(--white); color: var(--ink); border: 1.5px solid var(--border); border-radius: 50px; padding: 0.8rem 1.75rem; font-size: 0.88rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; box-shadow: var(--shadow); }
     .btn-light:hover { border-color: var(--ink); transform: translateY(-2px); }
 
-    /* Hero Middle */
-    .hero-middle { display: flex; flex-direction: column; gap: 0.75rem; }
-    .hero-profile-card { background: var(--white); border-radius: var(--r); padding: 2.5rem 2rem; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
-    .hero-avatar { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); flex-shrink: 0; background: #eee; }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-    .hero-profile-name { font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--ink); }
-    .hero-profile-title { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
-    .hero-profile-loc { display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--muted); }
-    .hero-langs-card { background: var(--white); border-radius: var(--r); padding: 1.25rem; box-shadow: var(--shadow); border: 1px solid var(--border); }
-    .card-micro-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted2); margin-bottom: 0.65rem; }
-    .lang-mini-row { display: flex; justify-content: space-between; align-items: center; padding: 0.22rem 0; font-size: 0.75rem; border-bottom: 1px solid var(--border); }
-    .lang-mini-row:last-child { border-bottom: none; }
-    .lang-mini-name { font-weight: 500; color: var(--ink); }
-    .lang-mini-lvl { font-size: 0.65rem; color: var(--muted); background: var(--bg); padding: 0.1rem 0.45rem; border-radius: 50px; }
+    /* ── Right col: bento stack ── */
+    .hero-right-bento { display: grid; grid-template-rows: 1fr auto; gap: 1rem; height: 100%; }
 
-    /* Hero Right */
-    .hero-right { background: var(--white); border-radius: var(--r); padding: 1.75rem; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 1.25rem; }
-    .hero-widget { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
-    .hero-widget:last-child { border-bottom: none; padding-bottom: 0; }
-    .hw-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted2); }
-    .hw-value { font-size: 0.92rem; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+    /* Taply spotlight card */
+    .hero-taply-card {
+      background: linear-gradient(145deg, #1a56db 0%, #2563ff 40%, #1d4ed8 100%);
+      border-radius: var(--r); overflow: hidden; position: relative;
+      display: flex; flex-direction: column;
+      text-decoration: none; cursor: pointer;
+      box-shadow: 0 8px 40px rgba(37,99,255,0.3), 0 2px 8px rgba(37,99,255,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      min-height: 380px;
+    }
+    .hero-taply-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(37,99,255,0.4); }
+
+    /* Subtle radial glow inside card */
+    .hero-taply-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .taply-card-badge {
+      position: absolute; top: 1.25rem; left: 1.25rem; z-index: 2;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25); border-radius: 50px;
+      padding: 0.3rem 0.85rem; font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: white;
+    }
+    .taply-card-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #fbbf24; flex-shrink: 0; }
+
+    .taply-card-img-area {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 2.5rem 2rem 1.5rem; position: relative; z-index: 1;
+    }
+    .taply-card-img-area img {
+      width: 100%; max-width: 340px; height: 200px;
+      object-fit: cover; object-position: top;
+      border-radius: 12px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .taply-card-img-placeholder {
+      width: 100%; max-width: 340px; height: 200px;
+      background: rgba(255,255,255,0.08); border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .taply-card-img-placeholder .taply-logo-text {
+      font-size: 2.5rem; font-weight: 800; letter-spacing: -0.05em; color: white;
+    }
+    .taply-card-img-placeholder .taply-sub-text {
+      font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.04em;
+    }
+
+    .taply-card-footer {
+      padding: 1.25rem 1.75rem 1.5rem; position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .taply-card-info {}
+    .taply-card-name { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.04em; color: white; line-height: 1; margin-bottom: 0.2rem; }
+    .taply-card-desc { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+    .taply-card-arrow {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1rem; flex-shrink: 0;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .hero-taply-card:hover .taply-card-arrow { background: rgba(255,255,255,0.25); transform: translate(2px, -2px); }
+
+    /* Profile card — slim strip below Taply */
+    .hero-profile-card {
+      background: var(--white); border-radius: var(--r);
+      padding: 1.1rem 1.5rem; box-shadow: var(--shadow); border: 1px solid var(--border);
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-avatar { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); flex-shrink: 0; background: #eee; }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .hero-profile-name { font-weight: 700; font-size: 0.92rem; letter-spacing: -0.02em; color: var(--ink); }
+    .hero-profile-title { font-size: 0.72rem; color: var(--muted); font-weight: 400; }
+    .hero-profile-loc { display: flex; align-items: center; gap: 0.25rem; font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; }
+    .hero-profile-loc-badge { margin-left: auto; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.18); border-radius: 50px; padding: 0.22rem 0.65rem; font-size: 0.62rem; font-weight: 600; color: #065f46; display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
+    .hero-profile-loc-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); display: inline-block; animation: glow 2s infinite; }
+
+    /* ── unused old classes (kept to avoid breaking anything) ── */
+    .hero-middle { display: none; }
+    .hero-right { display: none; }
+    .card-micro-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted2); margin-bottom: 0.65rem; }
     .hw-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 0.2rem 0.6rem; font-size: 0.72rem; font-weight: 500; color: var(--ink); }
     .hw-badge.green { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2); color: #065f46; }
     .hw-badge.blue { background: rgba(37,99,255,0.08); border-color: rgba(37,99,255,0.15); color: var(--blue); }
-    .hw-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: glow 2s ease-in-out infinite; }
 
     /* ─── MARQUEE ─── */
     .marquee-section { padding: 2rem 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
@@ -282,8 +351,8 @@
 
     /* ─── RESPONSIVE ─── */
     @media(max-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-profile-card { max-width: 320px; }
+      .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right-bento { display: none; }
       .about-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; }
       .about-photo-col { display: none; }
       .proj-featured-row { grid-template-columns: 1fr; }
@@ -333,7 +402,7 @@
   </div>
 
   <div class="hero-grid">
-    <!-- Col 1: Bold headline + desc + CTAs -->
+    <!-- Col 1 (5fr): Bold headline + desc + CTAs -->
     <div class="hero-left">
       <h1 class="hero-title">Software<br/>engineer<br/>&amp; <em>builder.</em></h1>
       <p class="hero-desc">
@@ -345,16 +414,50 @@
       </div>
     </div>
 
-    <!-- Col 2: Minimal profile card -->
-    <div class="hero-profile-card">
-      <div class="hero-avatar">
-        <img src="frenkli.jpg" alt="Frenkli Zeqollari" onerror="this.style.display='none'"/>
+    <!-- Col 2 (7fr): Taply spotlight + slim profile -->
+    <div class="hero-right-bento">
+
+      <!-- Taply Featured Card -->
+      <a href="#taply-featured" class="hero-taply-card" aria-label="View Taply project">
+        <!-- Badge -->
+        <div class="taply-card-badge">
+          <span class="taply-card-badge-dot"></span>
+          Most Proud Of
+        </div>
+
+        <!-- Image area -->
+        <div class="taply-card-img-area">
+          <img src="proj-taply.png" alt="Taply app interface"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="taply-card-img-placeholder" style="display:none;">
+            <div class="taply-logo-text">Taply</div>
+            <div class="taply-sub-text">AI-powered bill splitting</div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="taply-card-footer">
+          <div class="taply-card-info">
+            <div class="taply-card-name">Taply</div>
+            <div class="taply-card-desc">AI-powered bill splitting · taply.com.de</div>
+          </div>
+          <div class="taply-card-arrow">↗</div>
+        </div>
+      </a>
+
+      <!-- Slim profile card -->
+      <div class="hero-profile-card">
+        <div class="hero-avatar">
+          <img src="frenkli.jpg" alt="Frenkli Zeqollari" onerror="this.style.display='none'"/>
+        </div>
+        <div>
+          <div class="hero-profile-name">Frenkli Zeqollari</div>
+          <div class="hero-profile-title" data-i18n="card.role">Software Engineering Student</div>
+          <div class="hero-profile-loc">📍 Berlin, Germany</div>
+        </div>
+        <div class="hero-profile-loc-badge" data-i18n="card.open">Open to work</div>
       </div>
-      <div class="hero-profile-name">Frenkli</div>
-      <div class="hero-profile-title" data-i18n="card.role">Software Engineering Student</div>
-      <div class="hero-profile-loc">
-        <span style="opacity:0.5;font-size:0.8rem;">📍</span> Berlin, Germany
-      </div>
+
     </div>
   </div>
 </div>
