@@ -8,15 +8,15 @@
   <meta name="theme-color" content="#111111"/>
   <link rel="canonical" href="https://frenkli.dev/"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Frenkli — Software Engineer & Builder"/>
+  <meta property="og:title" content="Frenkli: Software Engineer & Builder"/>
   <meta property="og:description" content="Portfolio of Frenkli Zeqollari: software engineering, AI-powered products, and digital experiences."/>
   <meta property="og:url" content="https://frenkli.dev/"/>
   <meta property="og:image" content="https://frenkli.dev/frenkli.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Frenkli — Software Engineer & Builder"/>
+  <meta name="twitter:title" content="Frenkli: Software Engineer & Builder"/>
   <meta name="twitter:description" content="Portfolio of Frenkli Zeqollari with projects, experience, and contact details."/>
   <meta name="twitter:image" content="https://frenkli.dev/frenkli.jpg"/>
-  <title>Frenkli — Software Engineer & Builder</title>
+  <title>Frenkli: Software Engineer & Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
@@ -259,11 +259,12 @@
     /* ─── PROJECTS ─── */
     #projects { background: var(--bg); }
     /* Featured row */
-    .proj-featured-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .proj-featured-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 1.25rem; }
     .proj-featured { border-radius: var(--r); padding: 2.5rem; display: flex; flex-direction: column; border: 1px solid transparent; transition: box-shadow 0.2s, transform 0.2s; min-height: 480px; }
     .proj-featured:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .proj-featured.navi { background: linear-gradient(145deg, #eef2ff 0%, #e0e7ff 100%); border-color: rgba(99,102,241,0.2); }
     .proj-featured.taply { background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%); border-color: rgba(37,99,255,0.2); }
+    .proj-featured.invest { background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 100%); border-color: rgba(16,185,129,0.2); }
     .proj-featured-img { width: 100%; height: 200px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 1.5rem; background: rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
     .proj-featured-img img { width: 100%; height: 100%; object-fit: cover; }
     .proj-num { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.6rem; text-transform: uppercase; }
@@ -406,7 +407,7 @@
     <div class="hero-left">
       <h1 class="hero-title">Software<br/>engineer<br/>&amp; <em>builder.</em></h1>
       <p class="hero-desc">
-        <span data-i18n="hero.desc">I'm <strong>Frenkli</strong> — a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.</span>
+        <span data-i18n="hero.desc">I'm <strong>Frenkli</strong>, a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.</span>
       </p>
       <div class="hero-ctas">
         <a href="#projects" class="btn-dark" data-i18n="hero.cta1">See my work →</a>
@@ -519,9 +520,9 @@
         <div class="sec-eyebrow" data-i18n="about.label">About me</div>
         <h2 class="sec-heading" data-i18n="about.heading">Turning ideas<br/>into real <em>products.</em></h2>
         <p data-i18n="about.p1">I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam, with a passion for AI, mobile development, and building things that matter.</p>
-        <p data-i18n="about.p2">Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.</p>
-        <p data-i18n="about.p3">Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE — working with the university on strategic development and academic standards.</p>
-        <p data-i18n="about.p4">I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.</p>
+        <p data-i18n="about.p2">Currently building <em>Taply</em>, an AI-powered bill-splitting app, and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.</p>
+        <p data-i18n="about.p3">Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE, working with the university on strategic development and academic standards.</p>
+        <p data-i18n="about.p4">I thrive at the intersection of technical depth and human collaboration, whether architecting a mobile backend or leading a student council session.</p>
         <a href="#contact" class="btn-dark" style="margin-top:1.5rem;display:inline-flex;" data-i18n="about.cta">Let's work together →</a>
         <div style="margin-top:1.5rem;">
           <div class="card-micro-label" data-i18n="about.soft">Soft Skills</div>
@@ -602,6 +603,25 @@
     <!-- TECH & DEVELOPMENT -->
     <div class="exp-category-header" data-i18n="exp.tech">💻 Tech &amp; Development</div>
     <div class="exp-grid" style="margin-bottom:3rem;">
+      <div class="exp-card current reveal">
+        <div class="exp-role-title" data-i18n="role.taply">Founder &amp; Chief Product Designer</div>
+        <div class="exp-company-row">
+          <span class="exp-company-name">Taply</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-loc-text">Self-employed · Berlin</span>
+        </div>
+        <div class="exp-meta-row">
+          <span class="exp-period-badge">Mar 2025 – Present</span>
+          <span class="current-badge" data-i18n="exp.current">Currently</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-i18n="taply.1">Founded and built Taply from the ground up, defining the product vision and leading all technical and design decisions</li>
+          <li data-i18n="taply.2">Responsible for go-to-market strategy, product roadmap, and stakeholder alignment</li>
+          <li data-i18n="taply.3">Managing full-cycle development of a live AI-powered mobile app from brand identity to technical architecture</li>
+          <li data-i18n="taply.4">Building the future of shared payments at taply.com.de</li>
+        </ul>
+        <div class="exp-visit"><a href="https://taply.com.de" target="_blank" rel="noopener noreferrer" data-i18n="exp.visit">↗ Website</a></div>
+      </div>
       <div class="exp-card reveal">
         <div class="exp-role-title" data-i18n="role.webdev">Website Developer · Freelance</div>
         <div class="exp-company-row">
@@ -697,7 +717,7 @@
     <div class="sec-eyebrow" data-i18n="projects.label">Projects</div>
     <h2 class="sec-heading" data-i18n="projects.heading">Things I've <em>built.</em></h2>
 
-    <!-- Featured: Navi & Taply -->
+    <!-- Featured: Navi, Taply & INVEST. -->
     <div class="proj-featured-row">
       <div class="proj-featured navi reveal">
         <div class="proj-featured-img">📱</div>
@@ -722,13 +742,26 @@
           <a href="https://taply.com.de" target="_blank" rel="noopener noreferrer" class="proj-link primary" data-i18n="taply.cta">Visit Taply ↗</a>
         </div>
       </div>
+      <div class="proj-featured invest reveal">
+        <div class="proj-featured-img"><img src="proj-invest.png" alt="INVEST. app" loading="lazy"/></div>
+        <div class="proj-num">03</div>
+        <div class="proj-name">INVEST.</div>
+        <div class="proj-sub" data-i18n="proj.invest.sub">Stock Market Tracker · Web &amp; Mobile</div>
+        <p class="proj-desc" data-i18n="proj.invest.desc">A cross-platform stock market app available as both a Flutter mobile app and a responsive web app, sharing a single Firebase backend so one account works across all devices. Pulls live quotes, charts, and market news from financial APIs, with portfolio tracking, watchlists, and email-verified authentication.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Flutter</span><span class="proj-tag">Dart</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Firebase</span><span class="proj-tag">Chart.js</span><span class="proj-tag">Live APIs</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://invest-48017.web.app/splash.html" target="_blank" rel="noopener noreferrer" class="proj-link primary">↗ Live Demo</a>
+        </div>
+      </div>
     </div>
 
     <!-- Secondary: EduCampus, BAföG, Student Reg -->
     <div class="proj-secondary-row">
       <div class="proj-card reveal">
         <div class="proj-card-img"><img src="proj-educampus.jpg" alt="EduCampus" loading="lazy"/></div>
-        <div class="proj-num">03</div>
+        <div class="proj-num">04</div>
         <div class="proj-name">EduCampus</div>
         <div class="proj-sub" data-i18n="proj.edu.sub">Student collaboration platform</div>
         <p class="proj-desc" data-i18n="proj.edu.desc">A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.</p>
@@ -741,10 +774,10 @@
       </div>
       <div class="proj-card reveal">
         <div class="proj-card-img"><img src="proj-bafog.png" alt="BAföG Digital" loading="lazy"/></div>
-        <div class="proj-num">04</div>
+        <div class="proj-num">05</div>
         <div class="proj-name">BAföG Digital</div>
         <div class="proj-sub" data-i18n="proj.bafog.sub">GovTech UX Redesign</div>
-        <p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.</p>
+        <p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid (BAföG) portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.</p>
         <div class="proj-tags" style="margin-bottom:1rem;">
           <span class="proj-tag">UX Design</span><span class="proj-tag">GUI Design</span><span class="proj-tag">Figma</span><span class="proj-tag">GovTech</span>
         </div>
@@ -754,7 +787,7 @@
       </div>
       <div class="proj-card reveal">
         <div class="proj-card-img"><img src="proj-student-reg.png" alt="Student Registration System" loading="lazy"/></div>
-        <div class="proj-num">05</div>
+        <div class="proj-num">06</div>
         <div class="proj-name">Student Registration System</div>
         <div class="proj-sub" data-i18n="proj.stu.sub">Python · Desktop App</div>
         <p class="proj-desc" data-i18n="proj.stu.desc">A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.</p>
@@ -882,13 +915,6 @@
             <span class="sticker-value">frenklif50@gmail.com</span>
           </div>
         </a>
-        <a href="tel:+491783972640" class="contact-sticker" aria-label="Call Frenkli">
-          <div class="sticker-icon">✆</div>
-          <div class="sticker-text">
-            <span class="sticker-label">Phone</span>
-            <span class="sticker-value">+49 178 3972640</span>
-          </div>
-        </a>
         <a href="https://www.linkedin.com/in/frenkli-zeqollari" target="_blank" rel="noopener noreferrer" class="contact-sticker" aria-label="LinkedIn">
           <div class="sticker-icon">in</div>
           <div class="sticker-text">
@@ -928,21 +954,22 @@ document.addEventListener('DOMContentLoaded', function () {
     en: {
       "nav.about":"About","nav.experience":"Experience","nav.skills":"Skills","nav.projects":"Projects","nav.contact":"Contact",
       "hero.status":"Available for opportunities",
-      "hero.desc":"I'm <strong>Frenkli</strong> — a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.",
+      "hero.desc":"I'm <strong>Frenkli</strong>, a software engineering student based in Berlin, building AI-powered products and clean digital experiences. Currently crafting <strong>Taply</strong> &amp; <strong>Navi</strong>, smart mobile apps.",
       "hero.cta1":"See my work →","hero.cta2":"Get in touch",
       "card.role":"Software Engineering Student","card.status":"Status","card.open":"Open to work",
       "card.building":"Currently Building","card.uni":"University","card.experience":"Experience","card.roles":"roles held",
       "about.label":"About me","about.heading":"Turning ideas<br/>into real <em>products.</em>",
       "about.p1":"I'm a <strong>Software Engineering student</strong> at the University of Europe for Applied Sciences in Potsdam, with a passion for AI, mobile development, and building things that matter.",
-      "about.p2":"Currently building <em>Taply</em> — an AI-powered bill-splitting app — and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.",
-      "about.p3":"Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE — working with the university on strategic development and academic standards.",
-      "about.p4":"I thrive at the intersection of technical depth and human collaboration — whether architecting a mobile backend or leading a student council session.",
+      "about.p2":"Currently building <em>Taply</em>, an AI-powered bill-splitting app, and <em>Navi</em>, a personal life assistant for iOS with task management, habit tracking, and AI-powered daily briefings.",
+      "about.p3":"Beyond coding, I serve as <strong>President of the Student Council Potsdam</strong> and a student representative on the Quality Board at UE, working with the university on strategic development and academic standards.",
+      "about.p4":"I thrive at the intersection of technical depth and human collaboration, whether architecting a mobile backend or leading a student council session.",
       "about.cta":"Let's work together →","about.languages":"Languages","about.soft":"Soft Skills",
       "lang.native":"Native",
       "soft.teamwork":"Teamwork","soft.comm":"Communication","soft.problem":"Problem Solving","soft.leadership":"Leadership","soft.adapt":"Adaptability",
       "skills.label":"Skills","skills.heading":"My tech <em>stack.</em>","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Data","skills.devops":"DevOps &amp; IT",
       "exp.label":"Experience","exp.heading":"Where I've <em>worked.</em>","exp.current":"Currently","exp.visit":"↗ Website","exp.tech":"💻 Tech &amp; Development","exp.leadership":"🎓 Administration &amp; Leadership",
-      "role.webdev":"Website Developer · Freelance","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
+      "role.taply":"Founder &amp; Chief Product Designer","role.webdev":"Website Developer · Freelance","role.president":"Student Council President &amp; Quality Board Rep","role.peer":"Peer Leader","role.frontdesk":"Front Desk &amp; Operations",
+      "taply.1":"Founded and built Taply from the ground up, defining the product vision and leading all technical and design decisions","taply.2":"Responsible for go-to-market strategy, product roadmap, and stakeholder alignment","taply.3":"Managing full-cycle development of a live AI-powered mobile app from brand identity to technical architecture","taply.4":"Building the future of shared payments at taply.com.de",
       "gc.1":"Designed and maintained the company website","gc.2":"Executed digital marketing strategy via SEO","gc.3":"Built an internal platform connecting housekeeping with reception",
       "ue1.1":"Close collaboration with university leadership on strategic development of study programmes","ue1.2":"Active involvement in quality assurance, accreditation, and programme development","ue1.3":"Analysis of quality and evaluation reports to identify improvement potential","ue1.4":"Representing student interests in university decision-making and quality committees",
       "pl.1":"Primary point of contact for inquiries about university and student experience","pl.2":"Fostered meaningful social engagement and networking opportunities for new students","pl.3":"Led planning and execution of campus and off-campus events, including orientation","pl.4":"Collaborated with leadership through regular meetings and strategic task fulfillment",
@@ -950,8 +977,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "projects.label":"Projects","projects.heading":"Things I've <em>built.</em>",
       "proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.",
       "proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.",
+      "proj.invest.sub":"Stock Market Tracker · Web &amp; Mobile","proj.invest.desc":"A cross-platform stock market app available as both a Flutter mobile app and a responsive web app, sharing a single Firebase backend so one account works across all devices. Pulls live quotes, charts, and market news from financial APIs, with portfolio tracking, watchlists, and email-verified authentication.",
       "proj.edu.sub":"Student collaboration platform","proj.edu.desc":"A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.",
-      "proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid (BAföG) portal — replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.",
+      "proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid (BAföG) portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.",
       "proj.stu.sub":"Python · Desktop App","proj.stu.desc":"A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.",
       "taply.label":"Featured Project","taply.cta":"Visit Taply ↗",
       "edu.label":"Education &amp; Certifications","edu.heading":"Always <em>learning.</em>","edu.degree":"B.Sc. Software Engineering · Potsdam, Germany","edu.certs":"Certifications","edu.certsTitle":"Licenses &amp; Certifications",
@@ -962,34 +990,36 @@ document.addEventListener('DOMContentLoaded', function () {
     de: {
       "nav.about":"Über mich","nav.experience":"Erfahrung","nav.skills":"Kenntnisse","nav.projects":"Projekte","nav.contact":"Kontakt",
       "hero.status":"Offen für Möglichkeiten",
-      "hero.desc":"Ich bin <strong>Frenkli</strong> — Softwaretechnik-Student in Berlin, der KI-gestützte Produkte und moderne digitale Erfahrungen entwickelt. Aktuell arbeite ich an <strong>Taply</strong> &amp; <strong>Navi</strong>.",
+      "hero.desc":"Ich bin <strong>Frenkli</strong>, Softwaretechnik-Student in Berlin, der KI-gestützte Produkte und moderne digitale Erfahrungen entwickelt. Aktuell arbeite ich an <strong>Taply</strong> &amp; <strong>Navi</strong>.",
       "hero.cta1":"Meine Projekte →","hero.cta2":"Kontakt aufnehmen",
       "card.role":"Softwaretechnik-Student","card.status":"Status","card.open":"Offen für Stellen",
       "card.building":"Aktuell","card.uni":"Universität","card.experience":"Erfahrung","card.roles":"Positionen",
       "about.label":"Über mich","about.heading":"Ideen in echte<br/><em>Produkte</em> verwandeln.",
       "about.p1":"Ich bin <strong>Softwaretechnik-Student</strong> an der University of Europe for Applied Sciences in Potsdam, mit Leidenschaft für KI, Mobile-Entwicklung und sinnvolle Produkte.",
-      "about.p2":"Derzeit entwickle ich <em>Taply</em> — eine KI-gestützte App zur Zahlungsaufteilung — und <em>Navi</em>, einen persönlichen Lebensassistenten für iOS mit Aufgabenverwaltung, Gewohnheitstracking und KI-Briefings.",
-      "about.p3":"Neben dem Studium bin ich <strong>Präsident des Studierendenrats Potsdam</strong> und studentischer Vertreter im Qualitätsbeirat der UE — im Einsatz für Studienprogrammqualität und akademische Standards.",
-      "about.p4":"Ich arbeite gern an der Schnittstelle zwischen technischer Tiefe und menschlicher Zusammenarbeit — ob Backend-Architektur oder Studierendenratssitzung.",
+      "about.p2":"Derzeit entwickle ich <em>Taply</em>, eine KI-gestützte App zur Zahlungsaufteilung, und <em>Navi</em>, einen persönlichen Lebensassistenten für iOS mit Aufgabenverwaltung, Gewohnheitstracking und KI-Briefings.",
+      "about.p3":"Neben dem Studium bin ich <strong>Präsident des Studierendenrats Potsdam</strong> und studentischer Vertreter im Qualitätsbeirat der UE, im Einsatz für Studienprogrammqualität und akademische Standards.",
+      "about.p4":"Ich arbeite gern an der Schnittstelle zwischen technischer Tiefe und menschlicher Zusammenarbeit, ob Backend-Architektur oder Studierendenratssitzung.",
       "about.cta":"Zusammenarbeiten →","about.languages":"Sprachen","about.soft":"Soziale Kompetenzen",
       "lang.native":"Muttersprache",
       "soft.teamwork":"Teamarbeit","soft.comm":"Kommunikation","soft.problem":"Problemlösung","soft.leadership":"Führung","soft.adapt":"Anpassungsfähigkeit",
       "skills.label":"Kenntnisse","skills.heading":"Mein Tech-<em>Stack.</em>","skills.mobile":"Mobile &amp; Frontend","skills.backend":"Backend &amp; Daten","skills.devops":"DevOps &amp; IT",
       "exp.label":"Erfahrung","exp.heading":"Wo ich <em>gearbeitet</em> habe.","exp.current":"Aktuell","exp.visit":"↗ Website","exp.tech":"💻 Technik &amp; Entwicklung","exp.leadership":"🎓 Verwaltung &amp; Führung",
-      "role.webdev":"Website-Entwickler · Freiberuflich","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
+      "role.taply":"Gründer &amp; Chief Product Designer","role.webdev":"Website-Entwickler · Freiberuflich","role.president":"Studierendenratspräsident &amp; Qualitätsbeirat","role.peer":"Peer Leader","role.frontdesk":"Rezeption &amp; Betrieb",
+      "taply.1":"Taply von Grund auf gegründet und aufgebaut, Produktvision definiert und alle technischen und gestalterischen Entscheidungen geleitet","taply.2":"Verantwortlich für Go-to-Market-Strategie, Produkt-Roadmap und Stakeholder-Abstimmung","taply.3":"Vollständige Entwicklung einer live KI-gestützten Mobile-App von der Markenidentität bis zur technischen Architektur","taply.4":"Die Zukunft des geteilten Zahlens wird bei taply.com.de gebaut",
       "gc.1":"Gestaltung und Pflege der Unternehmenswebsite","gc.2":"Digitale Marketingstrategie über SEO","gc.3":"Entwicklung einer internen Plattform zur Verbindung von Hauswirtschaft und Rezeption",
       "ue1.1":"Enge Zusammenarbeit mit der Hochschulleitung zur Weiterentwicklung von Studienprogrammen","ue1.2":"Mitwirkung an Qualitätssicherung, Akkreditierung und Studiengangsweiterentwicklung","ue1.3":"Analyse von Qualitäts- und Evaluationsberichten zur Identifikation von Verbesserungspotenzialen","ue1.4":"Vertretung der Studierendeninteressen in universitären Entscheidungsprozessen und Qualitätsgremien",
       "pl.1":"Erste Anlaufstelle für Anfragen zur Universität und zum Studentenleben","pl.2":"Förderung von sozialem Engagement und Vernetzungsmöglichkeiten für Erstsemester","pl.3":"Planung und Durchführung von Campus- und außercamplichen Veranstaltungen","pl.4":"Zusammenarbeit mit der Hochschulleitung bei strategischen Aufgaben",
       "ao.1":"Hauptansprechpartner für nationale und internationale Gäste","ao.2":"Verwaltung des täglichen Rezeptionsbetriebs und Koordination mit anderen Abteilungen","ao.3":"Schlüsselrolle bei der Eröffnung des neuen a&o-Standorts in Mailand (Aug 2025)","ao.4":"Tägliche Kommunikation auf Deutsch, Englisch und Italienisch",
       "projects.label":"Projekte","projects.heading":"Was ich <em>gebaut</em> habe.",
       "proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-gestützte Tagesbriefings. Backend auf Supabase (PostgreSQL + Auth). App-Store-Launch geplant.",
-      "proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen — durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem. Als Start-up-Management-Abschlussprojekt entwickelt.",
+      "proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen: durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem. Als Start-up-Management-Abschlussprojekt entwickelt.",
+      "proj.invest.sub":"Börsenkurs-Tracker · Web &amp; Mobile","proj.invest.desc":"Eine plattformübergreifende Börsen-App als Flutter-Mobile-App und responsive Web-App mit gemeinsamem Firebase-Backend, sodass ein Konto auf allen Geräten funktioniert. Liefert Live-Kurse, Charts und Marktnachrichten aus Finanz-APIs, mit Portfolio-Tracking, Watchlists und E-Mail-verifizierter Authentifizierung.",
       "proj.edu.sub":"Studentische Kollaborationsplattform","proj.edu.desc":"Eine Webplattform für akademische Zusammenarbeit zwischen Studierenden in Potsdam. Ermöglicht Ressourcenteilung, Lerngruppen-Erstellung und Echtzeit-Kommunikation. Mit High-Fidelity-Figma-Prototyp und vollständigem React-Frontend.",
-      "proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals — bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt. Als Abschlussprojekt für GUI Design &amp; Web-Optimisation an der UE entwickelt.",
+      "proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals. Bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt. Als Abschlussprojekt für GUI Design &amp; Web-Optimisation an der UE entwickelt.",
       "proj.stu.sub":"Python · Desktop-App","proj.stu.desc":"Ein Python-basiertes Studentenverwaltungssystem mit Tkinter-GUI. CRUD-Operationen, automatische ID- &amp; E-Mail-Generierung, Altersberechnung, persistente Dateispeicherung und Suche. Für das Programmierpraktikum an der UE entwickelt.",
       "taply.label":"Ausgewähltes Projekt","taply.cta":"Taply ansehen ↗",
       "edu.label":"Bildung &amp; Zertifikate","edu.heading":"Immer am <em>Lernen.</em>","edu.degree":"B.Sc. Softwaretechnik · Potsdam, Deutschland","edu.certs":"Zertifikate","edu.certsTitle":"Lizenzen &amp; Zertifikate",
-      "contact.label":"Kontakt","contact.heading":"Lass uns gemeinsam<br/><em>etwas aufbauen.</em>","contact.desc":"Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten. Schreib mir — ich melde mich schnell.",
+      "contact.label":"Kontakt","contact.heading":"Lass uns gemeinsam<br/><em>etwas aufbauen.</em>","contact.desc":"Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten. Schreib mir, ich melde mich schnell.",
       "form.name":"Name","form.namePh":"Dein Name","form.email":"E-Mail","form.message":"Nachricht","form.messagePh":"Erzähl mir von deinem Projekt oder deiner Idee...","form.send":"Nachricht senden →",
       "footer.back":"Nach oben ↑"
     }
