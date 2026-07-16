@@ -265,6 +265,7 @@
     .proj-featured.navi { background: linear-gradient(145deg, #eef2ff 0%, #e0e7ff 100%); border-color: rgba(99,102,241,0.2); }
     .proj-featured.taply { background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%); border-color: rgba(37,99,255,0.2); }
     .proj-featured.invest { background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 100%); border-color: rgba(16,185,129,0.2); }
+    .proj-featured.praxis { background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%); border-color: rgba(245,158,11,0.2); }
     .proj-featured-img { width: 100%; height: 200px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 1.5rem; background: rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
     .proj-featured-img img { width: 100%; height: 100%; object-fit: cover; }
     .proj-num { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.6rem; text-transform: uppercase; }
@@ -717,21 +718,11 @@
     <div class="sec-eyebrow" data-i18n="projects.label">Projects</div>
     <h2 class="sec-heading" data-i18n="projects.heading">Things I've <em>built.</em></h2>
 
-    <!-- Featured: Navi, Taply & INVEST. -->
+    <!-- Featured: Taply, INVEST. & Praxis -->
     <div class="proj-featured-row">
-      <div class="proj-featured navi reveal">
-        <div class="proj-featured-img">📱</div>
-        <div class="proj-num">01</div>
-        <div class="proj-name">Navi</div>
-        <div class="proj-sub" data-i18n="proj.navi.sub">Personal Life Assistant App</div>
-        <p class="proj-desc" data-i18n="proj.navi.desc">A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.</p>
-        <div class="proj-tags">
-          <span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">Supabase</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Product Design</span>
-        </div>
-      </div>
       <div class="proj-featured taply reveal">
         <div class="proj-featured-img"><img src="proj-taply.png" alt="Taply app" loading="lazy"/></div>
-        <div class="proj-num">02</div>
+        <div class="proj-num">01</div>
         <div class="proj-name">Taply</div>
         <div class="proj-sub" data-i18n="proj.taply.sub">AI-powered bill splitting</div>
         <p class="proj-desc" data-i18n="proj.taply.desc">An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.</p>
@@ -744,7 +735,7 @@
       </div>
       <div class="proj-featured invest reveal">
         <div class="proj-featured-img"><img src="proj-invest.png" alt="INVEST. app" loading="lazy"/></div>
-        <div class="proj-num">03</div>
+        <div class="proj-num">02</div>
         <div class="proj-name">INVEST.</div>
         <div class="proj-sub" data-i18n="proj.invest.sub">Stock Market Tracker · Web &amp; Mobile</div>
         <p class="proj-desc" data-i18n="proj.invest.desc">A cross-platform stock market app available as both a Flutter mobile app and a responsive web app, sharing a single Firebase backend so one account works across all devices. Pulls live quotes, charts, and market news from financial APIs, with portfolio tracking, watchlists, and email-verified authentication.</p>
@@ -755,13 +746,36 @@
           <a href="https://invest-48017.web.app/splash.html" target="_blank" rel="noopener noreferrer" class="proj-link primary">↗ Live Demo</a>
         </div>
       </div>
+      <div class="proj-featured praxis reveal">
+        <div class="proj-featured-img"><img src="proj-praxis.png" alt="Praxis internship log" loading="lazy"/></div>
+        <div class="proj-num">03</div>
+        <div class="proj-name">Praxis</div>
+        <div class="proj-sub" data-i18n="proj.praxis.sub">Internship Daily Log · React + TypeScript + Supabase</div>
+        <p class="proj-desc" data-i18n="proj.praxis.desc">A daily logging tool built to solve a real problem: turning six months of internship work into a 20-page university report without relying on memory. One or two lines per workday, flagged and sorted into report sections, exportable as Markdown when it's time to write. A plant on the dashboard grows with every logged day. At 120 days it is in full bloom, so consistency has a visible reward.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">React</span><span class="proj-tag">TypeScript</span><span class="proj-tag">Vite</span><span class="proj-tag">Tailwind CSS</span><span class="proj-tag">Supabase</span><span class="proj-tag">Vitest</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://praxis-log.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-link primary">↗ Live Demo</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Secondary: EduCampus, BAföG, Student Reg -->
+    <!-- Secondary: Navi, EduCampus, BAföG, Student Reg, Wedding -->
     <div class="proj-secondary-row">
       <div class="proj-card reveal">
-        <div class="proj-card-img"><img src="proj-educampus.jpg" alt="EduCampus" loading="lazy"/></div>
+        <div class="proj-card-img"></div>
         <div class="proj-num">04</div>
+        <div class="proj-name">Navi</div>
+        <div class="proj-sub" data-i18n="proj.navi.sub">Personal Life Assistant App</div>
+        <p class="proj-desc" data-i18n="proj.navi.desc">A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.</p>
+        <div class="proj-tags" style="margin-bottom:1rem;">
+          <span class="proj-tag">React Native</span><span class="proj-tag">Expo</span><span class="proj-tag">Supabase</span><span class="proj-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-card-img"><img src="proj-educampus.jpg" alt="EduCampus" loading="lazy"/></div>
+        <div class="proj-num">05</div>
         <div class="proj-name">EduCampus</div>
         <div class="proj-sub" data-i18n="proj.edu.sub">Student collaboration platform</div>
         <p class="proj-desc" data-i18n="proj.edu.desc">A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.</p>
@@ -774,7 +788,7 @@
       </div>
       <div class="proj-card reveal">
         <div class="proj-card-img"><img src="proj-bafog.png" alt="BAföG Digital" loading="lazy"/></div>
-        <div class="proj-num">05</div>
+        <div class="proj-num">06</div>
         <div class="proj-name">BAföG Digital</div>
         <div class="proj-sub" data-i18n="proj.bafog.sub">GovTech UX Redesign</div>
         <p class="proj-desc" data-i18n="proj.bafog.desc">A redesign of the German student aid (BAföG) portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.</p>
@@ -787,7 +801,7 @@
       </div>
       <div class="proj-card reveal">
         <div class="proj-card-img"><img src="proj-student-reg.png" alt="Student Registration System" loading="lazy"/></div>
-        <div class="proj-num">06</div>
+        <div class="proj-num">07</div>
         <div class="proj-name">Student Registration System</div>
         <div class="proj-sub" data-i18n="proj.stu.sub">Python · Desktop App</div>
         <p class="proj-desc" data-i18n="proj.stu.desc">A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.</p>
@@ -796,6 +810,19 @@
         </div>
         <div class="proj-links" style="margin-top:auto;">
           <a href="https://github.com/FrenkliZeqollari/student-registration-system" target="_blank" rel="noopener noreferrer" class="proj-link">↗ View on GitHub</a>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-card-img"><img src="proj-wedding.png" alt="Olgen & Anarda Wedding Invitation" loading="lazy"/></div>
+        <div class="proj-num">08</div>
+        <div class="proj-name">Olgen &amp; Anarda</div>
+        <div class="proj-sub" data-i18n="proj.wedding.sub">Digital Wedding Invitation · HTML/CSS/JS</div>
+        <p class="proj-desc" data-i18n="proj.wedding.desc">A bilingual, mobile-first wedding invitation site for a September 2026 wedding in Albania, inspired by the elegance of Lake Como. Features a wax-seal opening animation, illustrated hero scene, a live countdown that transforms into a full-page celebration on the wedding day, and a phone-based RSVP flow. Deployed as two personalized instances for each partner.</p>
+        <div class="proj-tags" style="margin-bottom:1rem;">
+          <span class="proj-tag">HTML5</span><span class="proj-tag">CSS3</span><span class="proj-tag">JavaScript</span><span class="proj-tag">SVG</span><span class="proj-tag">Responsive</span>
+        </div>
+        <div class="proj-links" style="margin-top:auto;">
+          <a href="https://olgen.netlify.app" target="_blank" rel="noopener noreferrer" class="proj-link">↗ Live Site</a>
         </div>
       </div>
     </div>
@@ -978,6 +1005,8 @@ document.addEventListener('DOMContentLoaded', function () {
       "proj.navi.sub":"Personal Life Assistant App","proj.navi.desc":"A personal life assistant for iOS built with React Native and Expo. Features task management with subtasks, habit tracking, subscription monitoring, travel planner, and an AI-powered daily briefings system. Backend on Supabase (PostgreSQL + Auth). App Store launch planned.",
       "proj.taply.sub":"AI-powered bill splitting","proj.taply.desc":"An AI-powered mobile app that simplifies shared payments by scanning receipts, splitting costs automatically, and rewarding users via a smart loyalty point system. Built as a startup management capstone, managing all product development end-to-end.",
       "proj.invest.sub":"Stock Market Tracker · Web &amp; Mobile","proj.invest.desc":"A cross-platform stock market app available as both a Flutter mobile app and a responsive web app, sharing a single Firebase backend so one account works across all devices. Pulls live quotes, charts, and market news from financial APIs, with portfolio tracking, watchlists, and email-verified authentication.",
+      "proj.praxis.sub":"Internship Daily Log · React + TypeScript + Supabase","proj.praxis.desc":"A daily logging tool built to solve a real problem: turning six months of internship work into a 20-page university report without relying on memory. One or two lines per workday, flagged and sorted into report sections, exportable as Markdown when it's time to write. A plant on the dashboard grows with every logged day. At 120 days it is in full bloom, so consistency has a visible reward.",
+      "proj.wedding.sub":"Digital Wedding Invitation · HTML/CSS/JS","proj.wedding.desc":"A bilingual, mobile-first wedding invitation site for a September 2026 wedding in Albania, inspired by the elegance of Lake Como. Features a wax-seal opening animation, illustrated hero scene, a live countdown that transforms into a full-page celebration on the wedding day, and a phone-based RSVP flow. Deployed as two personalized instances for each partner.",
       "proj.edu.sub":"Student collaboration platform","proj.edu.desc":"A web platform for academic collaboration across Potsdam's universities. Enables peer-to-peer resource sharing, study group formation, and real-time communication. Delivered with high-fidelity Figma prototype and full React frontend.",
       "proj.bafog.sub":"GovTech UX Redesign","proj.bafog.desc":"A redesign of the German student aid (BAföG) portal, replacing confusing bureaucratic flows with clear steps, plain language, and real-time feedback. Built as the GUI Design &amp; Web Optimisation final project at UE. A personal mission as someone who went through the process.",
       "proj.stu.sub":"Python · Desktop App","proj.stu.desc":"A Python-based student management system with a Tkinter GUI. Features CRUD operations, automatic ID &amp; email generation, age calculation from birthdate, persistent file storage, and search by name or email. Built for Programming at UE with Roudi Al Asmar.",
@@ -1014,6 +1043,8 @@ document.addEventListener('DOMContentLoaded', function () {
       "proj.navi.sub":"Persönlicher Lebensassistent","proj.navi.desc":"Ein persönlicher Lebensassistent für iOS, entwickelt mit React Native und Expo. Funktionen: Aufgabenverwaltung, Gewohnheitstracking, Abonnement-Monitoring, Reiseplaner und KI-gestützte Tagesbriefings. Backend auf Supabase (PostgreSQL + Auth). App-Store-Launch geplant.",
       "proj.taply.sub":"KI-gestützte Zahlungsaufteilung","proj.taply.desc":"Eine KI-gestützte mobile App zur Vereinfachung gemeinsamer Zahlungen: durch Belegscanning, automatische Kostenverteilung und ein smartes Treuepunktesystem. Als Start-up-Management-Abschlussprojekt entwickelt.",
       "proj.invest.sub":"Börsenkurs-Tracker · Web &amp; Mobile","proj.invest.desc":"Eine plattformübergreifende Börsen-App als Flutter-Mobile-App und responsive Web-App mit gemeinsamem Firebase-Backend, sodass ein Konto auf allen Geräten funktioniert. Liefert Live-Kurse, Charts und Marktnachrichten aus Finanz-APIs, mit Portfolio-Tracking, Watchlists und E-Mail-verifizierter Authentifizierung.",
+      "proj.praxis.sub":"Praktikums-Tageslog · React + TypeScript + Supabase","proj.praxis.desc":"Ein Tagesprotokoll-Tool für ein reales Problem: sechs Monate Praktikumsarbeit in einen 20-seitigen Hochschulbericht verwandeln, ohne auf das Gedächtnis angewiesen zu sein. Ein bis zwei Zeilen pro Arbeitstag, nach Berichtsabschnitten markiert und sortiert, als Markdown exportierbar. Eine Pflanze im Dashboard wächst mit jedem eingetragenen Tag. Bei 120 Tagen steht sie in voller Blüte.",
+      "proj.wedding.sub":"Digitale Hochzeitseinladung · HTML/CSS/JS","proj.wedding.desc":"Eine zweisprachige, mobile-first Hochzeitseinladungsseite für eine Hochzeit im September 2026 in Albanien, inspiriert von der Eleganz des Comer Sees. Mit Siegelöffnungsanimation, illustrierter Hero-Szene, einem Live-Countdown der sich am Hochzeitstag in eine Festseite verwandelt, und telefonbasiertem RSVP-Flow. Als zwei personalisierte Instanzen für jede Brautpartei bereitgestellt.",
       "proj.edu.sub":"Studentische Kollaborationsplattform","proj.edu.desc":"Eine Webplattform für akademische Zusammenarbeit zwischen Studierenden in Potsdam. Ermöglicht Ressourcenteilung, Lerngruppen-Erstellung und Echtzeit-Kommunikation. Mit High-Fidelity-Figma-Prototyp und vollständigem React-Frontend.",
       "proj.bafog.sub":"GovTech UX-Redesign","proj.bafog.desc":"Ein Redesign des deutschen BAföG-Portals. Bürokratische Abläufe werden durch klare Schritte, verständliche Sprache und Echtzeit-Feedback ersetzt. Als Abschlussprojekt für GUI Design &amp; Web-Optimisation an der UE entwickelt.",
       "proj.stu.sub":"Python · Desktop-App","proj.stu.desc":"Ein Python-basiertes Studentenverwaltungssystem mit Tkinter-GUI. CRUD-Operationen, automatische ID- &amp; E-Mail-Generierung, Altersberechnung, persistente Dateispeicherung und Suche. Für das Programmierpraktikum an der UE entwickelt.",
