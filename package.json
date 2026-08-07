@@ -1,0 +1,14 @@
+{
+  "name": "frenkli-portfolio",
+  "version": "1.0.0",
+  "description": "Frenkli Zeqollari's portfolio website",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static HTML site - no build required'",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  },
+  "private": true
+}
